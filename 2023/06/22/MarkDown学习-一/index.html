@@ -2111,7 +2111,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1687920326106),
+    lastupdate: new Date(1688046913026),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2326,7 +2326,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="MarkDOwn初识"><a href="#MarkDOwn初识" class="headerlink" title="MarkDOwn初识"></a>MarkDOwn初识</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>要创建标题，请在单词或短语前面添加井号 (#) 。# 的数量代表了标题的级别。例如，添加三个 # 表示创建一个三级标题 (</p><h3>) (例如：### My Header)。<p></p>
+    <h1 id="MarkDOwn初识"><a href="#MarkDOwn初识" class="headerlink" title="MarkDOwn初识"></a>MarkDOwn初识</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>要创建标题，请在单词或短语前面添加井号 (#) 。# 的数量代表了标题的级别。例如，添加三个 # 表示创建一个三级标题 (<h3>) (例如：### My Header)。</p>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 1级标题</span><br><span class="line">## 2级标题</span><br><span class="line">### 3级标题</span><br><span class="line">#### 四级标题 </span><br><span class="line">##### 五级标题  </span><br><span class="line">###### 六级标题</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -2377,9 +2377,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <h3 id="复选框列表（CheckBoxList）"><a href="#复选框列表（CheckBoxList）" class="headerlink" title="复选框列表（CheckBoxList）"></a>复选框列表（CheckBoxList）</h3> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- [ ] List Item 1 unchecked</span><br><span class="line">- [x] List Item 2 checked</span><br><span class="line">- [X] List Item 3 checked </span><br></pre></td></tr></table></figure>
 <ul>
-<li><input disabled type="checkbox"> List Item 1 unchecked</li>
-<li><input checked disabled type="checkbox"> List Item 2 checked</li>
-<li><input checked disabled type="checkbox"> List Item 3 checked</li>
+<li><input disabled="" type="checkbox"> List Item 1 unchecked</li>
+<li><input checked="" disabled="" type="checkbox"> List Item 2 checked</li>
+<li><input checked="" disabled="" type="checkbox"> List Item 3 checked</li>
 </ul>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#[derive(Debug)]</span></span><br><span class="line"><span class="keyword">pub</span> <span class="keyword">enum</span> <span class="title class_">State</span> &#123;</span><br><span class="line">    Start,</span><br><span class="line">    Transient,</span><br><span class="line">    Closed,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">From</span>&lt;&amp;<span class="symbol">&#x27;a</span> <span class="type">str</span>&gt; <span class="keyword">for</span> <span class="title class_">State</span> &#123;</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">from</span>(s: &amp;<span class="symbol">&#x27;a</span> <span class="type">str</span>) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> &#123;</span><br><span class="line">        <span class="keyword">match</span> s &#123;</span><br><span class="line">            <span class="string">&quot;start&quot;</span> =&gt; State::Start,</span><br><span class="line">            <span class="string">&quot;closed&quot;</span> =&gt; State::Closed,</span><br><span class="line">            _ =&gt; <span class="built_in">unreachable!</span>(),</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -2417,7 +2417,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>这是一个链接 <a target="_blank" rel="noopener" href="https://baidu.com/">百度</a>。</p>
 <h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片alt](图片链接 &quot;图片title&quot;)</span><br></pre></td></tr></table></figure>
 <p><img src="https://image.6kw.com/index/news/h004/h09/img201909291115320.jpg" class="lazyload" data-srcset="https://image.6kw.com/index/news/h004/h09/img201909291115320.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图片"></p>
-</h3>
+
   </div>
   
   
