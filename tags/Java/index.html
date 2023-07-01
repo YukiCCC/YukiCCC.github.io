@@ -712,122 +712,6 @@ button {
   -moz-opacity: 1;
   border-bottom: 2px solid var(--color-site-inner);
 }
-.cover-wrapper.dock .menu,
-.cover-wrapper.featured .menu,
-.cover-wrapper.focus .menu {
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-}
-.cover-wrapper.dock .menu .list-h a,
-.cover-wrapper.featured .menu .list-h a,
-.cover-wrapper.focus .menu .list-h a {
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  align-items: center;
-  padding: 12px;
-  line-height: 24px;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-bottom: none;
-  text-align: center;
-  align-content: flex-end;
-  color: rgba(68,68,68,0.7);
-  font-size: 1.5rem;
-}
-@media screen and (max-width: 500px) {
-  .cover-wrapper.dock .menu .list-h a,
-  .cover-wrapper.featured .menu .list-h a,
-  .cover-wrapper.focus .menu .list-h a {
-    padding: 12px 8px;
-  }
-}
-.cover-wrapper.dock .menu .list-h a i,
-.cover-wrapper.featured .menu .list-h a i,
-.cover-wrapper.focus .menu .list-h a i {
-  margin: 8px;
-}
-.cover-wrapper.dock .menu .list-h a p,
-.cover-wrapper.featured .menu .list-h a p,
-.cover-wrapper.focus .menu .list-h a p {
-  font-size: 0.875rem;
-}
-.cover-wrapper.dock .menu .list-h a.active,
-.cover-wrapper.featured .menu .list-h a.active,
-.cover-wrapper.focus .menu .list-h a.active {
-  background: var(--color-card);
-  backdrop-filter: none;
-}
-.cover-wrapper.dock .menu .list-h a.active i,
-.cover-wrapper.featured .menu .list-h a.active i,
-.cover-wrapper.focus .menu .list-h a.active i,
-.cover-wrapper.dock .menu .list-h a.active i+p,
-.cover-wrapper.featured .menu .list-h a.active i+p,
-.cover-wrapper.focus .menu .list-h a.active i+p {
-  color: #3dd9b6;
-}
-.cover-wrapper.dock .menu .list-h a.active img+p,
-.cover-wrapper.featured .menu .list-h a.active img+p,
-.cover-wrapper.focus .menu .list-h a.active img+p {
-  color: var(--color-text);
-}
-.cover-wrapper.dock .menu .list-h a:hover,
-.cover-wrapper.featured .menu .list-h a:hover,
-.cover-wrapper.focus .menu .list-h a:hover {
-  background: var(--color-card);
-}
-.cover-wrapper.dock .top {
-  margin-bottom: 48px;
-}
-.cover-wrapper.dock .menu {
-  background: rgba(255,255,255,0.5);
-  position: absolute;
-  bottom: 0;
-  max-width: 100%;
-}
-.cover-wrapper.dock .menu .list-h {
-  flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -khtml-flex-wrap: nowrap;
-  -moz-flex-wrap: nowrap;
-  -o-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  margin: 4px;
-}
-.cover-wrapper.dock .menu .list-h a+a {
-  margin-left: 4px;
-}
-@media screen and (max-width: 500px) {
-  .cover-wrapper.dock .menu .list-h {
-    overflow-x: scroll;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar {
-    height: 0;
-    width: 0;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-track-piece {
-    background: transparent;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb {
-    background: #3dd9b6;
-    cursor: pointer;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-  }
-  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb:hover {
-    background: #ff5722;
-  }
-}
-@supports (backdrop-filter: blur(20px)) {
-  .cover-wrapper.dock .menu {
-    background: rgba(255,255,255,0.5);
-    backdrop-filter: saturate(200%) blur(20px);
-  }
-}
 @font-face {
   font-family: 'UbuntuMono';
   src: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
@@ -2108,7 +1992,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1688058646140),
+    lastupdate: new Date(1688205368650),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2199,8 +2083,102 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
             
             
-              <li class='header'>
-                <i class='fa-solid fa-rss fa-fw'></i>YukiCCC的博客
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                target="_blank" rel="noopener" href="https://yukiccc.github.io/" title="博客"
+                  
+                  
+                  
+                    active-action="action-https:yukicccgithubio"
+                  >
+                  <i class='fa-solid fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/friends/" title="友链"
+                  
+                  
+                  
+                    active-action="action-friends"
+                  >
+                  <i class='fa-solid fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                </a>
+                
               </li>
             
           
@@ -2226,8 +2204,102 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               
             
-              <li class='header'>
-                <i class='fa-solid fa-rss fa-fw'></i>YukiCCC的博客
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                target="_blank" rel="noopener" href="https://yukiccc.github.io/" title="博客"
+                  
+                  
+                  
+                    active-action="action-https:yukicccgithubio"
+                  >
+                  <i class='fa-solid fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/friends/" title="友链"
+                  
+                  
+                  
+                    active-action="action-friends"
+                  >
+                  <i class='fa-solid fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                </a>
+                
               </li>
             
           
@@ -2311,6 +2383,14 @@ API
       <div>
         
         <time itemprop="dateCreated datePublished" datetime="2023-06-29T22:07:43+08:00">2023-06-29</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Java/">Java</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Java/" itemprop="url"><span itemprop="name">Java</span></a>
+            </span>
+          
         
       </div>
       
@@ -2402,6 +2482,14 @@ JDK
       <div>
         
         <time itemprop="dateCreated datePublished" datetime="2023-06-29T21:46:51+08:00">2023-06-29</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Java/">Java</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Java/" itemprop="url"><span itemprop="name">Java</span></a>
+            </span>
+          
         
       </div>
       
@@ -2506,6 +2594,33 @@ JDK
     
     
       
+  
+  <section class="widget category desktop">
+    
+  <header>
+    
+      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/Java/" href="/categories/Java/"
+            active-action="action-categoriesJava"
+            ><div class='name'>Java</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E5%89%8D%E7%AB%AF/" href="/categories/%E5%89%8D%E7%AB%AF/"
+            active-action="action-categoriesE5898DE7ABAF"
+            ><div class='name'>前端</div><div class='badge'>(3)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
 
     
   
@@ -2525,7 +2640,7 @@ JDK
 
 
     <div class='content'>
-      <a href="/tags/Java/" style="font-size: 14px; color: #999">Java</a>
+      <a href="/tags/ES6/" style="font-size: 14px; color: #999">ES6</a> <a href="/tags/JS/" style="font-size: 14px; color: #999">JS</a> <a href="/tags/Java/" style="font-size: 24px; color: #555">Java</a> <a href="/tags/MarkDown/" style="font-size: 14px; color: #999">MarkDown</a>
     </div>
   </section>
 
@@ -2565,9 +2680,30 @@ JDK
         <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
           
             
-          
+              <a href="/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
             
           
+            
+              <a href="mailto:1298246637@qq.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+            
+              <a href="https://github.com/YukiCCC"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
             
           
         </div>
@@ -2586,7 +2722,7 @@ JDK
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright © since 2017 XXX</a></p>
+        <p><a href="/">Copyright © 2017-2021 XXX</a></p>
 
         </div>
       
