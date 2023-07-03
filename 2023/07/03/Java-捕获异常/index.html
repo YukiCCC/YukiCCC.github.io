@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2023/07/03/mysql安装过程详解/"/>
+  <link rel="canonical" href="http://example.com/2023/07/03/java-捕获异常/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,22 +34,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Mysql安装过程详解 - YukiCCC的博客</title>
-  <meta name="keywords" content="工具,Mysql,null">
+  <title>Java-捕获异常 - YukiCCC的博客</title>
+  <meta name="keywords" content="Java,null">
   <meta desc name="description" content="YukiCCC的博客 - John Doe - YukiCCC的博客">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mysql安装过程详解">
-<meta property="og:url" content="http://example.com/2023/07/03/Mysql%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3/index.html">
+<meta property="og:title" content="Java-捕获异常">
+<meta property="og:url" content="http://example.com/2023/07/03/Java-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/index.html">
 <meta property="og:site_name" content="YukiCCC的博客">
-<meta property="og:description" content="Mysql安装&#x2F;卸载1 卸载  2 安装下载https:&#x2F;&#x2F;downloads.mysql.com&#x2F;archives&#x2F;installer&#x2F;  安装        卸载不干净，无法安装 【解决方案】 https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_43147354&#x2F;article&#x2F;details&#x2F;117241786 MicrosoftProgram_Install_and_Uni">
+<meta property="og:description" content="捕获异常使用 try 和 catch 关键字可以捕获异常。try&#x2F;catch 代码块放在异常可能发生的地方。try&#x2F;catch代码块中的代码称为保护代码，使用 try&#x2F;catch 的语法如下： 1234567try&amp;#123;   &#x2F;&#x2F; 程序代码&amp;#125;catch(ExceptionName e1)&amp;#123;   &#x2F;&#x2F;Catch 块&amp;#125; Catch 语句">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-07-03T03:48:58.000Z">
-<meta property="article:modified_time" content="2023-07-03T10:39:03.787Z">
+<meta property="article:published_time" content="2023-07-03T11:09:06.000Z">
+<meta property="article:modified_time" content="2023-07-03T11:35:12.222Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="工具">
-<meta property="article:tag" content="Mysql">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2337,7 +2336,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/03/Mysql安装过程详解/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/03/Java-捕获异常/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="YukiCCC的博客">
   </span>
@@ -2358,7 +2357,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Mysql安装过程详解
+        Java-捕获异常
       </h1>
       <div class='new-meta-box'>
         
@@ -2380,10 +2379,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/Mysql/">Mysql</a>
+    <a class="category-link" href="/categories/Java/">Java</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/Mysql/" itemprop="url"><span itemprop="name">Mysql</span></a>
+        <a href="/categories/Java/" itemprop="url"><span itemprop="name">Java</span></a>
       </span>
     
   </div>
@@ -2394,7 +2393,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-07-03T11:48:58+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-07-03T19:09:06+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：Jul 3, 2023</p>
@@ -2420,21 +2419,33 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="Mysql安装-x2F-卸载"><a href="#Mysql安装-x2F-卸载" class="headerlink" title="Mysql安装&#x2F;卸载"></a>Mysql安装&#x2F;卸载</h1><h2 id="1-卸载"><a href="#1-卸载" class="headerlink" title="1 卸载"></a>1 卸载</h2><p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220428220300456.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220428220300456.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220428220300456"></p>
-<p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220428220807631.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220428220807631.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220428220807631"></p>
-<h2 id="2-安装"><a href="#2-安装" class="headerlink" title="2 安装"></a>2 安装</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a target="_blank" rel="noopener" href="https://downloads.mysql.com/archives/installer/">https://downloads.mysql.com/archives/installer/</a></p>
-<p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220428223318610.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220428223318610.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220428223318610"></p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220429000801478.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220429000801478.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220429000801478"></p>
-<p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220429000822190.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220429000822190.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220429000822190"></p>
-<p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220429000845407.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220429000845407.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220429000845407"></p>
-<p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220429000920826.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220429000920826.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220429000920826"></p>
-<p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220429001026135.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220429001026135.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220429001026135"></p>
-<p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220429001201378.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220429001201378.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220429001201378"></p>
-<p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220429001239911.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220429001239911.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220429001239911"></p>
-<p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220429001319377.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220429001319377.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220429001319377"></p>
-<p>卸载不干净，无法安装 【解决方案】</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43147354/article/details/117241786">https://blog.csdn.net/weixin_43147354/article/details/117241786</a></p>
-<p>MicrosoftProgram_Install_and_Uninstall.meta.diagcab</p>
+    <h2 id="捕获异常"><a href="#捕获异常" class="headerlink" title="捕获异常"></a>捕获异常</h2><p>使用 try 和 catch 关键字可以捕获异常。try&#x2F;catch 代码块放在异常可能发生的地方。<br>try&#x2F;catch代码块中的代码称为保护代码，使用 try&#x2F;catch 的语法如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="comment">// 程序代码</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(ExceptionName e1)</span><br><span class="line">&#123;</span><br><span class="line">   <span class="comment">//Catch 块</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Catch 语句包含要捕获异常类型的声明。当保护代码块中发生一个异常时，try 后面的 catch 块就会被检查。<br>如果发生的异常包含在 catch 块中，异常会被传递到该 catch 块，这和传递一个参数到方法是一样。</p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例:"></a>实例:</h3><p>下面的例子中声明有两个元素的一个数组，当代码试图访问数组的第四个元素的时候就会抛出一个异常。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 文件名 : ExcepTest.java</span></span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ExcepTest</span>&#123;</span><br><span class="line"> </span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String args[])</span>&#123;</span><br><span class="line">      <span class="keyword">try</span>&#123;</span><br><span class="line">         <span class="type">int</span> a[] = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">2</span>];</span><br><span class="line">         System.out.println(<span class="string">&quot;Access element three :&quot;</span> + a[<span class="number">3</span>]);</span><br><span class="line">      &#125;<span class="keyword">catch</span>(ArrayIndexOutOfBoundsException e)&#123;</span><br><span class="line">         System.out.println(<span class="string">&quot;Exception thrown  :&quot;</span> + e);</span><br><span class="line">      &#125;</span><br><span class="line">      System.out.println(<span class="string">&quot;Out of the block&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上代码编译运行输出结果如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Exception thrown  :java.lang.ArrayIndexOutOfBoundsException: 3</span><br><span class="line">Out of the block</span><br></pre></td></tr></table></figure>
+
+<h2 id="多重捕获块"><a href="#多重捕获块" class="headerlink" title="多重捕获块"></a>多重捕获块</h2><p>一个 try 代码块后面跟随多个 catch 代码块的情况就叫多重捕获。<br>多重捕获块的语法如下所示：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">   <span class="comment">// 程序代码</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类型<span class="number">1</span> 异常的变量名<span class="number">1</span>)&#123;</span><br><span class="line">  <span class="comment">// 程序代码</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类型<span class="number">2</span> 异常的变量名<span class="number">2</span>)&#123;</span><br><span class="line">  <span class="comment">// 程序代码</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类型<span class="number">3</span> 异常的变量名<span class="number">3</span>)&#123;</span><br><span class="line">  <span class="comment">// 程序代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面的代码段包含了 3 个 catch块。<br>可以在 try 语句后面添加任意数量的 catch 块。<br>如果保护代码中发生异常，异常被抛给第一个 catch 块。<br>如果抛出异常的数据类型与 ExceptionType1 匹配，它在这里就会被捕获。<br>如果不匹配，它会被传递给第二个 catch 块。<br>如此，直到异常被捕获或者通过所有的 catch 块。</p>
+<h3 id="实例-1"><a href="#实例-1" class="headerlink" title="实例:"></a>实例:</h3><p>该实例展示了怎么使用多重 try&#x2F;catch。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    file = <span class="keyword">new</span> <span class="title class_">FileInputStream</span>(fileName);</span><br><span class="line">    x = (<span class="type">byte</span>) file.read();</span><br><span class="line">&#125; <span class="keyword">catch</span>(FileNotFoundException f) &#123; <span class="comment">// Not valid!</span></span><br><span class="line">    f.printStackTrace();</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125; <span class="keyword">catch</span>(IOException i) &#123;</span><br><span class="line">    i.printStackTrace();</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="throws-x2F-throw-关键字"><a href="#throws-x2F-throw-关键字" class="headerlink" title="throws&#x2F;throw 关键字"></a>throws&#x2F;throw 关键字</h2><p>在Java中， throw 和 throws 关键字是用于处理异常的。<br>throw 关键字用于在代码中抛出异常，而 throws 关键字用于在方法声明中指定可能会抛出的异常类型。</p>
+<h3 id="throw-关键字"><a href="#throw-关键字" class="headerlink" title="throw 关键字"></a>throw 关键字</h3><p>throw 关键字用于在当前方法中抛出一个异常。<br>通常情况下，当代码执行到某个条件下无法继续正常执行时，可以使用 throw 关键字抛出异常，以告知调用者当前代码的执行状态。<br>例如，下面的代码中，在方法中判断 num 是否小于 0，如果是，则抛出一个 IllegalArgumentException 异常。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">checkNumber</span><span class="params">(<span class="type">int</span> num)</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (num &lt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IllegalArgumentException</span>(<span class="string">&quot;Number must be positive&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="throws-关键字"><a href="#throws-关键字" class="headerlink" title="throws 关键字"></a>throws 关键字</h3><p>throws 关键字用于在方法声明中指定该方法可能抛出的异常。当方法内部抛出指定类型的异常时，该异常会被传递给调用该方法的代码，并在该代码中处理异常。<br>例如，下面的代码中，当 readFile 方法内部发生 IOException 异常时，会将该异常传递给调用该方法的代码。在调用该方法的代码中，必须捕获或声明处理 IOException 异常。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">readFile</span><span class="params">(String filePath)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">  <span class="type">BufferedReader</span> <span class="variable">reader</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BufferedReader</span>(<span class="keyword">new</span> <span class="title class_">FileReader</span>(filePath));</span><br><span class="line">  <span class="type">String</span> <span class="variable">line</span> <span class="operator">=</span> reader.readLine();</span><br><span class="line">  <span class="keyword">while</span> (line != <span class="literal">null</span>) &#123;</span><br><span class="line">    System.out.println(line);</span><br><span class="line">    line = reader.readLine();</span><br><span class="line">  &#125;</span><br><span class="line">  reader.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>一个方法可以声明抛出多个异常，多个异常之间用逗号隔开。<br>例如，下面的方法声明抛出 RemoteException 和 InsufficientFundsException：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">className</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">withdraw</span><span class="params">(<span class="type">double</span> amount)</span> <span class="keyword">throws</span> RemoteException,</span><br><span class="line">                              InsufficientFundsException</span><br><span class="line">   &#123;</span><br><span class="line">       <span class="comment">// Method implementation</span></span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">//Remainder of class definition</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="finally关键字"><a href="#finally关键字" class="headerlink" title="finally关键字"></a>finally关键字</h2><p>finally 关键字用来创建在 try 代码块后面执行的代码块。<br>无论是否发生异常，finally 代码块中的代码总会被执行。<br>在 finally 代码块中，可以运行清理类型等收尾善后性质的语句。<br>finally 代码块出现在 catch 代码块最后，语法如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">  <span class="comment">// 程序代码</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类型<span class="number">1</span> 异常的变量名<span class="number">1</span>)&#123;</span><br><span class="line">  <span class="comment">// 程序代码</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类型<span class="number">2</span> 异常的变量名<span class="number">2</span>)&#123;</span><br><span class="line">  <span class="comment">// 程序代码</span></span><br><span class="line">&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">  <span class="comment">// 程序代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="实例-2"><a href="#实例-2" class="headerlink" title="实例:"></a>实例:</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ExcepTest</span>&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String args[])</span>&#123;</span><br><span class="line">    <span class="type">int</span> a[] = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">2</span>];</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">       System.out.println(<span class="string">&quot;Access element three :&quot;</span> + a[<span class="number">3</span>]);</span><br><span class="line">    &#125;<span class="keyword">catch</span>(ArrayIndexOutOfBoundsException e)&#123;</span><br><span class="line">       System.out.println(<span class="string">&quot;Exception thrown  :&quot;</span> + e);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">finally</span>&#123;</span><br><span class="line">       a[<span class="number">0</span>] = <span class="number">6</span>;</span><br><span class="line">       System.out.println(<span class="string">&quot;First element value: &quot;</span> +a[<span class="number">0</span>]);</span><br><span class="line">       System.out.println(<span class="string">&quot;The finally statement is executed&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上实例编译运行结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Exception thrown  :java.lang.ArrayIndexOutOfBoundsException: 3</span><br><span class="line">First element value: 6</span><br><span class="line">The finally statement is executed</span><br></pre></td></tr></table></figure>
+<p>注意下面事项：</p>
+<p>1.catch 不能独立于 try 存在。<br>2.在 try&#x2F;catch 后面添加 finally 块并非强制性要求的。<br>3.try 代码后不能既没 catch 块也没 finally 块。<br>4.try, catch, finally 块之间不能添加任何代码。</p>
 
   </div>
   
@@ -2459,7 +2470,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-07-03T18:39:03+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-07-03T19:35:12+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Jul 3, 2023</p>
@@ -2473,8 +2484,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%B7%A5%E5%85%B7/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>工具</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Mysql/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Mysql</p></a></div>
-  <span hidden itemprop="keywords">工具 Mysql</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Java/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Java</p></a></div>
+  <span hidden itemprop="keywords">Java</span>
   
 
 
@@ -2488,7 +2499,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/07/03/Mysql%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3/&title=Mysql安装过程详解 - YukiCCC的博客&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/07/03/Java-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/&title=Java-捕获异常 - YukiCCC的博客&summary="
           
           >
           
@@ -2500,7 +2511,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/07/03/Mysql%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3/&title=Mysql安装过程详解 - YukiCCC的博客&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/07/03/Java-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/&title=Java-捕获异常 - YukiCCC的博客&summary="
           
           >
           
@@ -2512,7 +2523,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/07/03/Mysql%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3/&title=Mysql安装过程详解 - YukiCCC的博客&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/07/03/Java-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/&title=Java-捕获异常 - YukiCCC的博客&summary="
           
           >
           
@@ -2545,17 +2556,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/07/03/Mysql-%E6%9F%A5%E8%AF%A2%E5%9F%BA%E7%A1%80/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Mysql-查询基础</p>
+      
+        <a class='next' href='/2023/07/03/Mysql-%E6%9F%A5%E8%AF%A2%E5%9F%BA%E7%A1%80/'>
+          <p class='title'>Mysql-查询基础<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>1. 查询基础1.0 基本概念12345678DDL:[数据定义语言]  create , alter , drop , truncate  语句 【事务自动提交】DML:[数据操作语言]  i...</p>
-        </a>
-      
-      
-        <a class='next' href='/2023/07/01/Java-IO%E6%B5%81/'>
-          <p class='title'>Java-IO流<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>1. File1.1 File与流
-
-1.2 File练习例11234567891011121314151617181920/*使用File对象，在C盘创建aaa/bbb/ccc的文件夹，在此文...</p>
         </a>
       
     </div>
@@ -2574,7 +2578,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/07/03/Mysql%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/07/03/Java-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/index.html#comments">
     </span>
     <p ct><i class='fas fa-comments'></i> 评论</p>
     
@@ -2616,7 +2620,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%8D%B8%E8%BD%BD"><span class="toc-text">1 卸载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85"><span class="toc-text">2 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD"><span class="toc-text">下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8"><span class="toc-text">捕获异常</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-text">实例:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E9%87%8D%E6%8D%95%E8%8E%B7%E5%9D%97"><span class="toc-text">多重捕获块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B-1"><span class="toc-text">实例:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#throws-x2F-throw-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">throws&#x2F;throw 关键字</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#throw-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">throw 关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#throws-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">throws 关键字</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#finally%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">finally关键字</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B-2"><span class="toc-text">实例:</span></a></li></ol></li></ol>
   </div>
 </section>
 
@@ -3224,7 +3228,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YukiCCC的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/Mysql/","name":"Mysql"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/07/03/Mysql安装过程详解/","name":"Mysql安装过程详解"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"YukiCCC的博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Mysql安装过程详解","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/07/03/Mysql%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YukiCCC的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/07/03/Mysql%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3/","wordCount":0,"datePublished":"2023-07-03T03:48:58.000Z","dateModified":"2023-07-03T10:39:03.787Z","articleSection":"Mysql","keywords":"工具,Mysql","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YukiCCC的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/Java/","name":"Java"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/07/03/Java-捕获异常/","name":"Java-捕获异常"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"YukiCCC的博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Java-捕获异常","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/07/03/Java-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YukiCCC的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/07/03/Java-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/","wordCount":0,"datePublished":"2023-07-03T11:09:06.000Z","dateModified":"2023-07-03T11:35:12.222Z","articleSection":"Java","keywords":"Java","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
