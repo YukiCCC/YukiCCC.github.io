@@ -5,8 +5,8 @@
   <meta name="Volantis" content="6.0.0-alpha.1">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://example.com/tags/"/>
+  
+  <link rel="canonical" href="http://example.com/2023/07/11/jdbc/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,18 +34,22 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>所有标签 - YukiCCC的博客</title>
-  <meta name="keywords" content="null">
+  <title>JDBC - YukiCCC的博客</title>
+  <meta name="keywords" content="Java,JDBC,null">
   <meta desc name="description" content="YukiCCC的博客 - John Doe - YukiCCC的博客">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="所有标签">
-<meta property="og:url" content="http://example.com/tags/index.html">
+  
+<meta property="og:type" content="article">
+<meta property="og:title" content="JDBC">
+<meta property="og:url" content="http://example.com/2023/07/11/JDBC/index.html">
 <meta property="og:site_name" content="YukiCCC的博客">
+<meta property="og:description" content="JDBC API 允许用户访问任何形式的表格数据，尤其是存储在关系数据库中的数据。 1. JDBC1.1 简介 1.2 工作原理 1.3 JDBC API 1.4 JDBC 驱动  1.5 Connection[会话] 1.6 Statement【执行SQL】Statement用于执行静态 SQL 语句    PreparedStatement表示预编译的 SQL 语句的对象。   Callabl">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-07-01T08:26:59.883Z">
-<meta property="article:modified_time" content="2023-07-01T08:26:59.883Z">
+<meta property="article:published_time" content="2023-07-11T10:37:55.000Z">
+<meta property="article:modified_time" content="2023-07-11T14:40:03.148Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="JDBC">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1986,7 +1990,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2331,23 +2335,286 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/11/JDBC/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="YukiCCC的博客">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="YukiCCC的博客">
+    <meta itemprop="description" content="">
+  </span>
   
+
+
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  <div class="article-meta" id="top">
     
-      <div class='post-wrapper'>
-        <article id="tag" class="post article white-box reveal shadow floatable blur">
-          <h2>所有标签</h2>
-          <div class="all-tags">
-            
-            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/" rel="tag">ES6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JDBC/" rel="tag">JDBC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/" rel="tag">JS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/" rel="tag">Tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E5%8F%91/" rel="tag">开发</a><span class="tag-list-count">1</span></li></ul>
-          </div>
-          <br>
+    
+    
+      <h1 class="title" itemprop="name headline">
+        JDBC
+      </h1>
+      <div class='new-meta-box'>
+        
           
-        </article>
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">yukiCCC</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  
+  
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url"><span itemprop="name">数据库</span></a>
+      </span>
+    
+  </div>
+  
+
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-07-11T18:37:55+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jul 11, 2023</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
     
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>JDBC API 允许用户访问任何形式的表格数据，尤其是存储在关系数据库中的数据。</p>
+<h2 id="1-JDBC"><a href="#1-JDBC" class="headerlink" title="1. JDBC"></a>1. JDBC</h2><h3 id="1-1-简介"><a href="#1-1-简介" class="headerlink" title="1.1 简介"></a>1.1 简介</h3><p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506202345258.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506202345258.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220506202345258"></p>
+<h3 id="1-2-工作原理"><a href="#1-2-工作原理" class="headerlink" title="1.2 工作原理"></a>1.2 工作原理</h3><p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506202452003.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506202452003.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220506202452003"></p>
+<h3 id="1-3-JDBC-API"><a href="#1-3-JDBC-API" class="headerlink" title="1.3 JDBC API"></a>1.3 JDBC API</h3><p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506202537196.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506202537196.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220506202537196"></p>
+<h3 id="1-4-JDBC-驱动"><a href="#1-4-JDBC-驱动" class="headerlink" title="1.4 JDBC 驱动"></a>1.4 JDBC 驱动</h3><p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506202623525.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506202623525.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220506202623525"></p>
+<p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506202656291.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506202656291.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220506202656291"></p>
+<h2 id="1-5-Connection-会话"><a href="#1-5-Connection-会话" class="headerlink" title="1.5 Connection[会话]"></a>1.5 Connection[会话]</h2><p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506203007872.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506203007872.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220506203007872"></p>
+<h3 id="1-6-Statement【执行SQL】"><a href="#1-6-Statement【执行SQL】" class="headerlink" title="1.6 Statement【执行SQL】"></a>1.6 Statement【执行SQL】</h3><h4 id="Statement"><a href="#Statement" class="headerlink" title="Statement"></a>Statement</h4><p>用于执行静态 SQL 语句</p>
+<p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506204152891.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506204152891.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220506204152891"></p>
+<p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506204629191.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506204629191.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220506204629191"></p>
+<p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506204512610.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506204512610.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220506204512610"></p>
+<h4 id="PreparedStatement"><a href="#PreparedStatement" class="headerlink" title="PreparedStatement"></a>PreparedStatement</h4><p>表示预编译的 SQL 语句的对象。</p>
+<p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506204254289.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506204254289.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220506204254289"></p>
+<p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506204400101.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506204400101.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220506204400101"></p>
+<h4 id="CallableStatement"><a href="#CallableStatement" class="headerlink" title="CallableStatement"></a>CallableStatement</h4><p>用于执行 SQL 存储过程的接口。</p>
+<h4 id="存储过程定义"><a href="#存储过程定义" class="headerlink" title="存储过程定义"></a>存储过程定义</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">DELIMITER $$</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">PROCEDURE</span> p_save_dept(v_deptno <span class="type">INT</span>,v_dname <span class="type">VARCHAR</span>(<span class="number">20</span>),v_loc <span class="type">VARCHAR</span>(<span class="number">20</span>) ,<span class="keyword">OUT</span> v_rs <span class="type">INT</span> )</span><br><span class="line"> <span class="keyword">BEGIN</span></span><br><span class="line">   <span class="keyword">DECLARE</span> cut <span class="type">INT</span>(<span class="number">1</span>) ;</span><br><span class="line">   <span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="number">0</span>) <span class="keyword">INTO</span> cut <span class="keyword">FROM</span> dept <span class="keyword">WHERE</span> deptno <span class="operator">=</span> v_deptno ;</span><br><span class="line">   IF cut <span class="operator">=</span> <span class="number">1</span> <span class="keyword">THEN</span> </span><br><span class="line">     <span class="keyword">SET</span> v_rs <span class="operator">=</span> <span class="number">-1</span> ; </span><br><span class="line">   <span class="keyword">END</span> IF ;</span><br><span class="line">   IF cut <span class="operator">=</span> <span class="number">0</span> <span class="keyword">THEN</span> </span><br><span class="line">     <span class="keyword">SET</span> v_rs <span class="operator">=</span> <span class="number">1</span> ;</span><br><span class="line">     <span class="keyword">INSERT</span> <span class="keyword">INTO</span> dept (deptno,dname,loc) <span class="keyword">VALUES</span> (v_deptno,v_dname,v_loc) ;</span><br><span class="line">     <span class="keyword">COMMIT</span> ;</span><br><span class="line">   <span class="keyword">END</span> IF ;</span><br><span class="line"><span class="keyword">END</span>  $$</span><br><span class="line"></span><br><span class="line">DELIMITER ;</span><br></pre></td></tr></table></figure>
+
+<h4 id="数据库直接调用"><a href="#数据库直接调用" class="headerlink" title="数据库直接调用"></a>数据库直接调用</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CALL</span> p_save_dept(<span class="number">11</span>,<span class="string">&#x27;aa&#x27;</span>,<span class="string">&#x27;NJ&#x27;</span>,<span class="variable">@rs</span>) ;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="variable">@rs</span> ;</span><br></pre></td></tr></table></figure>
+
+<h4 id="JDBC调用"><a href="#JDBC调用" class="headerlink" title="JDBC调用"></a>JDBC调用</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Connection</span> <span class="variable">conn</span> <span class="operator">=</span> DriverManager.getConnection(<span class="string">&quot;jdbc:mysql://localhost:3306/test&quot;</span>, <span class="string">&quot;root&quot;</span>, <span class="string">&quot;root&quot;</span>);</span><br><span class="line"><span class="type">CallableStatement</span> <span class="variable">cs</span> <span class="operator">=</span> conn.prepareCall(<span class="string">&quot;&#123;call p_save_dept(?,?,?,?)&#125;&quot;</span>);</span><br><span class="line">cs.setInt(<span class="number">1</span>,<span class="number">12</span>);</span><br><span class="line">cs.setString(<span class="number">2</span>,<span class="string">&quot;dev&quot;</span>);</span><br><span class="line">cs.setString(<span class="number">3</span>,<span class="string">&quot;NJ&quot;</span>);</span><br><span class="line">cs.registerOutParameter(<span class="number">4</span>, JDBCType.INTEGER);</span><br><span class="line">cs.execute() ;</span><br><span class="line"><span class="type">int</span> <span class="variable">out</span> <span class="operator">=</span> cs.getInt(<span class="number">4</span>);</span><br><span class="line">System.out.println(out);</span><br><span class="line">cs.close();</span><br><span class="line">conn.close();</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-7-ResultSet-【查询结果集】"><a href="#1-7-ResultSet-【查询结果集】" class="headerlink" title="1.7 ResultSet 【查询结果集】"></a>1.7 ResultSet 【查询结果集】</h3><p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506204212423.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506204212423.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220506204212423"></p>
+<h2 id="2-DAO"><a href="#2-DAO" class="headerlink" title="2. DAO"></a>2. DAO</h2><h3 id="2-1-什么是DAO"><a href="#2-1-什么是DAO" class="headerlink" title="2.1 什么是DAO"></a>2.1 什么是DAO</h3><p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506210707068.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506210707068.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220506210707068"></p>
+<h3 id="2-2-DAO作用"><a href="#2-2-DAO作用" class="headerlink" title="2.2 DAO作用"></a>2.2 DAO作用</h3><p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506210831671.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506210831671.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220506210831671"></p>
+<h3 id="2-3-组成部分"><a href="#2-3-组成部分" class="headerlink" title="2.3 组成部分"></a>2.3 组成部分</h3><p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506210903737.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506210903737.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220506210903737"></p>
+<h3 id="2-4-示例"><a href="#2-4-示例" class="headerlink" title="2.4 示例"></a>2.4 示例</h3><p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506210953246.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20220506210953246.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220506210953246"></p>
+<h2 id="3-Dbutils"><a href="#3-Dbutils" class="headerlink" title="3.Dbutils"></a>3.Dbutils</h2><p>Dbutils：主要是封装了JDBC的代码，简化dao层的操作。<br>作用：帮助java程序员，开发Dao层代码的简单框架。<br>框架的作用：帮助程序员，提高程序的开发效率。</p>
+<h3 id="3-1-环境搭建"><a href="#3-1-环境搭建" class="headerlink" title="3.1 环境搭建"></a>3.1 环境搭建</h3><p>jar包下载</p>
+<p><a target="_blank" rel="noopener" href="https://mvnrepository.com/artifact/commons-dbutils/commons-dbutils/1.7">https://mvnrepository.com/artifact/commons-dbutils/commons-dbutils/1.7</a></p>
+<p><img src="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20230704123211576.png" class="lazyload" data-srcset="https://raw.githubusercontent.com/YukiCCC/figure/main/image-20230704123211576.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230704123211576"></p>
+<h3 id="3-2-官网地址"><a href="#3-2-官网地址" class="headerlink" title="3.2 官网地址"></a>3.2 官网地址</h3><p><a target="_blank" rel="noopener" href="https://commons.apache.org/proper/commons-dbutils/examples.html">https://commons.apache.org/proper/commons-dbutils/examples.html</a></p>
+<h3 id="3-3-Dbutils三个核心类介绍"><a href="#3-3-Dbutils三个核心类介绍" class="headerlink" title="3.3 Dbutils三个核心类介绍"></a>3.3 Dbutils三个核心类介绍</h3><p>1：DbUtils：连接数据库对象—-jdbc辅助方法的集合类，线程安全<br>构造方法：DbUtils()<br>作用：控制连接，控制事务，控制驱动加载额一个类。</p>
+<p>2：QueryRunner：SQL语句的操作对象，可以设置查询结果集的封装策略，线程安全。<br>构造方法：<br>（1）QueryRunner()：创建一个与数据库无关的QueryRunner对象，后期再操作数据库的会后，需要手动给一个Connection对象，它可以手动控制事务。<br>Connection.setAutoCommit(false);     设置手动管理事务<br>Connection.commit();     提交事务</p>
+<p>（2）QueryRunner(DataSource ds)：创建一个与数据库关联的queryRunner对象，后期再操作数据库的时候，不需要Connection对象，自动管理事务。<br>DataSource：数据库连接池对象。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//构造函数与增删改查方法的组合：</span></span><br><span class="line">QueryRunner()</span><br><span class="line">      update(Connection conn, String sql, Object... params)</span><br><span class="line">      query(Connection conn, String sql, ResultSetHandler&lt;T&gt; rsh, Object... params)</span><br><span class="line"> </span><br><span class="line">QueryRunner(DataSource ds)     </span><br><span class="line">      update(String sql, Object... params)</span><br><span class="line">      query(String sql, ResultSetHandler&lt;T&gt; rsh, Object... params)</span><br></pre></td></tr></table></figure>
+<p>3：ResultSetHandle：封装数据的策略对象——将封装结果集中的数据，转换到另一个对象<br>策略：封装数据到对象的方式（示例：将数据库保存在User、保存到数组、保存到集合）<br>方法介绍：handle（ResultSet rs）</p>
+<h3 id="3-4-创建DBCP连接池"><a href="#3-4-创建DBCP连接池" class="headerlink" title="3.4 创建DBCP连接池"></a>3.4 创建DBCP连接池</h3><p>1、创建DBCP链接池配置文件：名称为 dbcp.properties      内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">driverClassName=com.mysql.jdbc.Driver</span><br><span class="line">username=root</span><br><span class="line">password=123456</span><br><span class="line">url=jdbc:mysql://127.0.0.1:3306/long1?characterEncoding=UTF8</span><br><span class="line">maxActive=2</span><br></pre></td></tr></table></figure>
+<p>2、读取配置文件，创建 DataSource 连接池实例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.test.dbcp;</span><br><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.util.Properties;</span><br><span class="line"><span class="keyword">import</span> javax.sql.DataSource;</span><br><span class="line"><span class="keyword">import</span> org.apache.commons.dbcp.BasicDataSourceFactory;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DbcpDataSource</span> &#123;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 重点：创建一个DataSource</span></span><br><span class="line"><span class="comment"> * 步骤为：1、用Properties类读取配置文件。</span></span><br><span class="line"><span class="comment"> * 2、通过工厂类，读取这个Properties类获取的配置文件，创建出DataSource</span></span><br><span class="line"><span class="comment"> * DataSource作用：</span></span><br><span class="line"><span class="comment"> * 创建DataSource可以返回多个连接。可以实现dbutil简化操作数据库的流程。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">//1、创建一个静态的datasource</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> DataSource ds;</span><br><span class="line"><span class="comment">//2、在静态代码块中，给ds赋值</span></span><br><span class="line"><span class="keyword">static</span>&#123;</span><br><span class="line">	<span class="comment">//读取资源文件</span></span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">		<span class="type">Properties</span> <span class="variable">p</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Properties</span>();</span><br><span class="line">			p.load(DbcpDataSource.class.getClassLoader().getResourceAsStream(<span class="string">&quot;dbcp.properties&quot;</span>));</span><br><span class="line">		<span class="comment">//在dbcp中有一个工厂类，读取一个资源文件,创建一个datasource</span></span><br><span class="line">			ds = BasicDataSourceFactory.createDataSource(p);</span><br><span class="line">			System.out.println(<span class="string">&quot;创建DataSource为&quot;</span>+ds);</span><br><span class="line">		&#125;<span class="keyword">catch</span>(Exception e)&#123;</span><br><span class="line">		<span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">//提供一个方法用于获取整个datasource对象</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> DataSource <span class="title function_">getDataSource</span><span class="params">()</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> ds;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">//提供一个方法，获取connection连接</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Connection <span class="title function_">getConnection</span><span class="params">()</span>&#123;</span><br><span class="line">	<span class="type">Connection</span> <span class="variable">con</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">			con = ds.getConnection();</span><br><span class="line">			System.out.println(<span class="string">&quot;通过DataSource获取connection连接&quot;</span>+con);</span><br><span class="line">		&#125;<span class="keyword">catch</span>(Exception e)&#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">return</span> con;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>另外也可以不配置文件直接使用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> &#123;</span><br><span class="line">    <span class="comment">//模拟初始化数据</span></span><br><span class="line">    <span class="type">Properties</span> <span class="variable">prop</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Properties</span>();</span><br><span class="line">    prop.setProperty(<span class="string">&quot;driverClassName&quot;</span>,<span class="string">&quot;com.mysql.jdbc.Driver&quot;</span>);</span><br><span class="line">    prop.setProperty(<span class="string">&quot;url&quot;</span>,<span class="string">&quot;jdbc:mysql://localhost:3306/customer?useSSL=false&amp;characterEncoding=utf8&quot;</span>);</span><br><span class="line">    prop.setProperty(<span class="string">&quot;password&quot;</span>,<span class="string">&quot;root&quot;</span>);</span><br><span class="line">    prop.setProperty(<span class="string">&quot;username&quot;</span>,<span class="string">&quot;root&quot;</span>);</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        dataSource = DruidDataSourceFactory.createDataSource(prop);</span><br><span class="line">    &#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//初始化 连接池</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-5-DBUtil-增删改查"><a href="#3-5-DBUtil-增删改查" class="headerlink" title="3.5 DBUtil 增删改查"></a>3.5 DBUtil 增删改查</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.test.ts;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> javax.persistence.Version;</span><br><span class="line"><span class="keyword">import</span> org.apache.commons.dbutils.QueryRunner;</span><br><span class="line"><span class="keyword">import</span> org.apache.commons.dbutils.handlers.ArrayHandler;</span><br><span class="line"><span class="keyword">import</span> org.apache.commons.dbutils.handlers.ArrayListHandler;</span><br><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"><span class="keyword">import</span> com.test.dbcp.DbcpDataSource;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DbutilTests</span> &#123;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * dbutil向数据库新增数据</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">add</span><span class="params">()</span> <span class="keyword">throws</span> SQLException&#123;</span><br><span class="line">	<span class="comment">//1、申明QueryRunner对象执行SQL语句</span></span><br><span class="line">	<span class="type">QueryRunner</span> <span class="variable">run1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">QueryRunner</span>(DbcpDataSource.getDataSource()); <span class="comment">//申明对象，获取DataSource链接池</span></span><br><span class="line">	<span class="comment">//2、书写SQL字符串语句</span></span><br><span class="line">	<span class="type">String</span> <span class="variable">sq1</span> <span class="operator">=</span> <span class="string">&quot;INSERT INTO student(id,namee,sex,birth,department,address)&quot;</span></span><br><span class="line">				+ <span class="string">&quot;VALUES(3,&#x27;王思&#x27;,&#x27;男&#x27;,1995,&#x27;英文系&#x27;,&#x27;山东沧州&#x27;)&quot;</span>;</span><br><span class="line">	<span class="comment">//3、执行sql语句</span></span><br><span class="line">	<span class="type">int</span> <span class="variable">result1</span> <span class="operator">=</span> run1.update(sq1);</span><br><span class="line">		System.out.println(<span class="string">&quot;新增数据库结果，更新了数据有：&quot;</span>+result1+<span class="string">&quot;条&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * dbutil 修改数据库数据</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">update</span><span class="params">()</span> <span class="keyword">throws</span> SQLException&#123;</span><br><span class="line">	<span class="comment">//1、申明QueryRunner对象执行SQL语句</span></span><br><span class="line">	<span class="type">QueryRunner</span> <span class="variable">run2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">QueryRunner</span>(DbcpDataSource.getDataSource());<span class="comment">//申明对象，获取DataSource连接池</span></span><br><span class="line">	<span class="comment">//2、书写SQL字符串语句</span></span><br><span class="line">	<span class="type">String</span> <span class="variable">sq2</span> <span class="operator">=</span> <span class="string">&quot;UPDATE student SET sex=? WHERE id=?&quot;</span>;</span><br><span class="line">	<span class="comment">//3、执行SQL语句</span></span><br><span class="line">	<span class="type">int</span> <span class="variable">result2</span> <span class="operator">=</span> run2.update(sq2, <span class="string">&quot;男&quot;</span>,<span class="number">16</span>);</span><br><span class="line">		System.out.println(<span class="string">&quot;更新数据库结果，更新了数据有：&quot;</span>+result2+<span class="string">&quot;条&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * dbutil 删除数据库数据</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">delete</span><span class="params">()</span> <span class="keyword">throws</span> SQLException&#123;</span><br><span class="line">	<span class="comment">//1、申明QueryRunner对象执行SQL语句</span></span><br><span class="line">	<span class="type">QueryRunner</span> <span class="variable">run3</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">QueryRunner</span>(DbcpDataSource.getDataSource());<span class="comment">//申明对象，获取DataSource连接池</span></span><br><span class="line">	<span class="comment">//2、书写SQL字符串语句（这个sql语句的作用是每次删除ID号最大的数据）</span></span><br><span class="line">	<span class="type">String</span> <span class="variable">sq3</span> <span class="operator">=</span> <span class="string">&quot;DELETE FROM student WHERE id IN &quot;</span></span><br><span class="line">				+ <span class="string">&quot;(SELECT a.id FROM &quot;</span></span><br><span class="line">				+ <span class="string">&quot;(SELECT MAX(id) id FROM student a WHERE id IN&quot;</span></span><br><span class="line">				+ <span class="string">&quot;(SELECT id FROM student b WHERE a.id=b.id ORDER BY id DESC)) a)&quot;</span>;</span><br><span class="line">	<span class="comment">//3、执行SQL语句</span></span><br><span class="line">	<span class="type">int</span> <span class="variable">result3</span> <span class="operator">=</span> run3.update(sq3);</span><br><span class="line">		System.out.println(<span class="string">&quot;更新数据库结果，更新了数据有：&quot;</span>+result3+<span class="string">&quot;条&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * dbutil 查询，将结果封装成Object对象，返回第一行数据</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">query</span><span class="params">()</span> <span class="keyword">throws</span> SQLException&#123;</span><br><span class="line">	<span class="comment">//1、申明QueryRunner对象执行SQL语句</span></span><br><span class="line">	<span class="type">QueryRunner</span> <span class="variable">run</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">QueryRunner</span>(DbcpDataSource.getDataSource());<span class="comment">//申明对象，获取DataSource链接池</span></span><br><span class="line">	<span class="comment">//2、查询</span></span><br><span class="line">	<span class="type">String</span> <span class="variable">sq4</span> <span class="operator">=</span> <span class="string">&quot;Select * from student&quot;</span>;</span><br><span class="line">		Object[] <span class="keyword">var</span> = run.query(sq4, <span class="keyword">new</span> <span class="title class_">ArrayHandler</span>());</span><br><span class="line">	<span class="keyword">if</span>(<span class="keyword">var</span> !=<span class="literal">null</span>)&#123;</span><br><span class="line">			System.out.print(<span class="string">&quot;输出学生表查询的信息&quot;</span>+<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">		<span class="keyword">for</span>(Object o :<span class="keyword">var</span>)&#123;</span><br><span class="line">				System.out.print(o+<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * dbutil 查询 ，将结果封装成Object对象，返回所有的数据</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">query2</span><span class="params">()</span> <span class="keyword">throws</span> SQLException&#123;</span><br><span class="line">	<span class="comment">//1、申明QueryRunner对象执行SQL语句</span></span><br><span class="line">	<span class="type">QueryRunner</span> <span class="variable">run5</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">QueryRunner</span>(DbcpDataSource.getDataSource());</span><br><span class="line">	<span class="comment">//2、书写sql语句</span></span><br><span class="line">	<span class="type">String</span> <span class="variable">sq5</span> <span class="operator">=</span> <span class="string">&quot;select * from student&quot;</span>;</span><br><span class="line">	<span class="comment">//3、查询sql</span></span><br><span class="line">		List&lt;Object[]&gt; list = run5.query(sq5, <span class="keyword">new</span> <span class="title class_">ArrayListHandler</span>());</span><br><span class="line">	<span class="comment">//4、遍历结果</span></span><br><span class="line">	<span class="keyword">if</span>(list!=<span class="literal">null</span>)&#123;</span><br><span class="line">		<span class="keyword">for</span>(Object[] os:list)&#123;</span><br><span class="line">			<span class="keyword">for</span>(Object o :os)&#123;</span><br><span class="line">					System.out.println(<span class="string">&quot;ArrayListHandler()显示查询到的所有数据：&quot;</span>+o+<span class="string">&quot;\t&quot;</span>);</span><br><span class="line">				&#125;</span><br><span class="line">				System.out.println(<span class="string">&quot;\n--------------------------------------------&quot;</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+  </div>
   
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-07-11T22:40:03+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jul 11, 2023</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Java/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Java</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JDBC/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>JDBC</p></a></div>
+  <span hidden itemprop="keywords">Java JDBC</span>
+  
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/07/11/JDBC/&title=JDBC - YukiCCC的博客&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/07/11/JDBC/&title=JDBC - YukiCCC的博客&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/07/11/JDBC/&title=JDBC - YukiCCC的博客&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2023/07/11/Tomcat-servlet/'>
+          <p class='title'>Tomcat-servlet<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Tomcat是web容器。在进行web项目开发的时候，经常需要http协议，也就是基于请求和响应，比如你在百度输入一行内容搜索，那么百度服务器如何处理这个请求呢？它需要创建servlet来处理，...</p>
+        </a>
+      
+    </div>
+  
+  <!-- 文章推荐 -->
+  
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2023/07/11/JDBC/index.html#comments">
+    </span>
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2376,7 +2643,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-JDBC"><span class="toc-text">1. JDBC</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E7%AE%80%E4%BB%8B"><span class="toc-text">1.1 简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">1.2 工作原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-JDBC-API"><span class="toc-text">1.3 JDBC API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-JDBC-%E9%A9%B1%E5%8A%A8"><span class="toc-text">1.4 JDBC 驱动</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-Connection-%E4%BC%9A%E8%AF%9D"><span class="toc-text">1.5 Connection[会话]</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-Statement%E3%80%90%E6%89%A7%E8%A1%8CSQL%E3%80%91"><span class="toc-text">1.6 Statement【执行SQL】</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Statement"><span class="toc-text">Statement</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PreparedStatement"><span class="toc-text">PreparedStatement</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CallableStatement"><span class="toc-text">CallableStatement</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E5%AE%9A%E4%B9%89"><span class="toc-text">存储过程定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B4%E6%8E%A5%E8%B0%83%E7%94%A8"><span class="toc-text">数据库直接调用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JDBC%E8%B0%83%E7%94%A8"><span class="toc-text">JDBC调用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-7-ResultSet-%E3%80%90%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E9%9B%86%E3%80%91"><span class="toc-text">1.7 ResultSet 【查询结果集】</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-DAO"><span class="toc-text">2. DAO</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E4%BB%80%E4%B9%88%E6%98%AFDAO"><span class="toc-text">2.1 什么是DAO</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-DAO%E4%BD%9C%E7%94%A8"><span class="toc-text">2.2 DAO作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="toc-text">2.3 组成部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E7%A4%BA%E4%BE%8B"><span class="toc-text">2.4 示例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Dbutils"><span class="toc-text">3.Dbutils</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">3.1 环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%AE%98%E7%BD%91%E5%9C%B0%E5%9D%80"><span class="toc-text">3.2 官网地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-Dbutils%E4%B8%89%E4%B8%AA%E6%A0%B8%E5%BF%83%E7%B1%BB%E4%BB%8B%E7%BB%8D"><span class="toc-text">3.3 Dbutils三个核心类介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E5%88%9B%E5%BB%BADBCP%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="toc-text">3.4 创建DBCP连接池</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-DBUtil-%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5"><span class="toc-text">3.5 DBUtil 增删改查</span></a></li></ol></li></ol>
   </div>
 </section>
 
@@ -2388,6 +2655,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <!-- Custom Files side end -->
 </aside>
+
 
 
         </div>
@@ -2983,7 +3251,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YukiCCC的博客"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"YukiCCC的博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"所有标签","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/tags/index.html"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YukiCCC的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/tags/index.html","wordCount":0,"datePublished":"2023-07-01T08:26:59.883Z","dateModified":"2023-07-01T08:26:59.883Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YukiCCC的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/数据库/","name":"数据库"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/07/11/JDBC/","name":"JDBC"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"YukiCCC的博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"JDBC","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/07/11/JDBC/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YukiCCC的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/07/11/JDBC/","wordCount":0,"datePublished":"2023-07-11T10:37:55.000Z","dateModified":"2023-07-11T14:40:03.148Z","articleSection":"数据库","keywords":"Java,JDBC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
