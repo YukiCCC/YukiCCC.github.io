@@ -35,17 +35,20 @@
   <!-- feed -->
   <!-- 页面元数据 -->
   <title>Java-常见异常 - YukiCCC的博客</title>
-  <meta name="keywords" content="null">
+  <meta name="keywords" content="Java,null">
   <meta desc name="description" content="YukiCCC的博客 - John Doe - YukiCCC的博客">
-  <meta property="og:type" content="article">
+  
+<meta property="og:type" content="article">
 <meta property="og:title" content="Java-常见异常">
 <meta property="og:url" content="http://example.com/2023/07/20/Java-%E5%B8%B8%E8%A7%81%E5%BC%82%E5%B8%B8/index.html">
 <meta property="og:site_name" content="YukiCCC的博客">
+<meta property="og:description" content="1.ClassCastException(类转换异常)数据类型转换错误，比如有个String temp&#x3D;”abc”; 如果设为(int)temp就会报错了，因为它们类型不一样，但是设为(object)temp就可以，因为object是它们的父类 2.IndexOutOfBoundsException(数组越界)这个异常我们在操作数组的时候会经常遇到，异常的解释是“数组下标越界”，现在程序">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-07-20T10:54:44.000Z">
-<meta property="article:modified_time" content="2023-07-20T10:54:44.354Z">
+<meta property="article:modified_time" content="2023-08-03T01:27:16.127Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2157,7 +2160,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1690717834557),
+    lastupdate: new Date(1691030262826),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2554,6 +2557,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  
+  
+  
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/Java/">Java</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/Java/" itemprop="url"><span itemprop="name">Java</span></a>
+      </span>
+    
+  </div>
+  
+
 
 
           
@@ -2585,7 +2602,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    
+    <h2 id="1-ClassCastException-类转换异常"><a href="#1-ClassCastException-类转换异常" class="headerlink" title="1.ClassCastException(类转换异常)"></a>1.ClassCastException(类转换异常)</h2><p>数据类型转换错误，比如有个String temp&#x3D;”abc”;</p>
+<p>如果设为(int)temp就会报错了，因为它们类型不一样，但是设为(object)temp就可以，因为object是它们的父类</p>
+<h2 id="2-IndexOutOfBoundsException-数组越界"><a href="#2-IndexOutOfBoundsException-数组越界" class="headerlink" title="2.IndexOutOfBoundsException(数组越界)"></a>2.IndexOutOfBoundsException(数组越界)</h2><p>这个异常我们在操作数组的时候会经常遇到，异常的解释是“数组下标越界”，现在程序中大多都有对数组的操作，因此在调用数组的时候一定要认真检查，看自己调用的下标是不是超出了数组的范围，一般来说，显示(即直接用常数当下标)调用不太容易出这样的错，但隐式(即用变量表示下标)调用就经常出错了，还有一种情况，是程序中定义的数组的长度是通过某些特定方法决定的，不是事先声明的，这个时候，最好先查看一下数组的length，以免出现这个异常。</p>
+<h2 id="3-NullPointerException-空指针"><a href="#3-NullPointerException-空指针" class="headerlink" title="3.NullPointerException(空指针)"></a>3.NullPointerException(空指针)</h2><p>这个异常在编程时也经常遇到，异常的解释是 “程序遇上了空指针”，简单地说就是调用了未经初始化的对象或者是不存在的对象，这个错误经常出现在调用数组这些操作中，对数组操作中出现空指针，很多情况下是一些刚开始学习编程的人常犯的错误，即把数组的初始化和数组元素的初始化混淆起来了。数组的初始化是对数组分配需要的空间，而初始化后的数组，其中的元素并没有实例化，依然是空的，所以还需要对每个元素都进行初始化(如果要调用的话)。</p>
+<h2 id="4-IllegalAccessException-安全权限异常"><a href="#4-IllegalAccessException-安全权限异常" class="headerlink" title="4.IllegalAccessException(安全权限异常)"></a>4.IllegalAccessException(安全权限异常)</h2><p>这个异常的解释是“没有访问权限“，当应用程序要调用一个类，但当前的方法即没有对该类的访问权限便会出现这个异常。对程序中用了Package的情况下要注意这个异常。</p>
+<h2 id="5-IOException-输入输出异常"><a href="#5-IOException-输入输出异常" class="headerlink" title="5. IOException(输入输出异常)"></a>5. IOException(输入输出异常)</h2><p>一般读写文件会出现这个异常,比如你想从磁盘上读一个文件到你写的程序,如果硬盘上没有这文件,java虚拟机就会报这个异常</p>
+
   </div>
   
   
@@ -2609,10 +2632,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-07-20T18:54:44+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-08-03T09:27:16+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jul 20, 2023</p>
+    <p>更新于：Aug 3, 2023</p>
   </a>
 </div>
 
@@ -2620,6 +2643,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Java/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Java</p></a></div>
+  <span hidden itemprop="keywords">Java</span>
+  
+
 
         
       
@@ -2759,7 +2789,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-ClassCastException-%E7%B1%BB%E8%BD%AC%E6%8D%A2%E5%BC%82%E5%B8%B8"><span class="toc-text">1.ClassCastException(类转换异常)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-IndexOutOfBoundsException-%E6%95%B0%E7%BB%84%E8%B6%8A%E7%95%8C"><span class="toc-text">2.IndexOutOfBoundsException(数组越界)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-NullPointerException-%E7%A9%BA%E6%8C%87%E9%92%88"><span class="toc-text">3.NullPointerException(空指针)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-IllegalAccessException-%E5%AE%89%E5%85%A8%E6%9D%83%E9%99%90%E5%BC%82%E5%B8%B8"><span class="toc-text">4.IllegalAccessException(安全权限异常)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-IOException-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%BC%82%E5%B8%B8"><span class="toc-text">5. IOException(输入输出异常)</span></a></li></ol>
   </div>
 </section>
 
@@ -3482,7 +3512,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YukiCCC的博客"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/07/20/Java-常见异常/","name":"Java-常见异常"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"YukiCCC的博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Java-常见异常","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/07/20/Java-%E5%B8%B8%E8%A7%81%E5%BC%82%E5%B8%B8/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YukiCCC的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/07/20/Java-%E5%B8%B8%E8%A7%81%E5%BC%82%E5%B8%B8/","wordCount":0,"datePublished":"2023-07-20T10:54:44.000Z","dateModified":"2023-07-20T10:54:44.354Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YukiCCC的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/Java/","name":"Java"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/07/20/Java-常见异常/","name":"Java-常见异常"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"YukiCCC的博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Java-常见异常","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/07/20/Java-%E5%B8%B8%E8%A7%81%E5%BC%82%E5%B8%B8/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YukiCCC的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/07/20/Java-%E5%B8%B8%E8%A7%81%E5%BC%82%E5%B8%B8/","wordCount":0,"datePublished":"2023-07-20T10:54:44.000Z","dateModified":"2023-08-03T01:27:16.127Z","articleSection":"Java","keywords":"Java","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
