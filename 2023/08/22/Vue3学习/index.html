@@ -35,17 +35,20 @@
   <!-- feed -->
   <!-- 页面元数据 -->
   <title>Vue3学习 - YukiCCC的博客</title>
-  <meta name="keywords" content="null">
+  <meta name="keywords" content="vue,null">
   <meta desc name="description" content="YukiCCC的博客 - John Doe - YukiCCC的博客">
-  <meta property="og:type" content="article">
+  
+<meta property="og:type" content="article">
 <meta property="og:title" content="Vue3学习">
 <meta property="og:url" content="http://example.com/2023/08/22/Vue3%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="YukiCCC的博客">
+<meta property="og:description" content="一、简介1. 介绍​	Vue 2 将于 2023 年 12 月 31 日停止维护，详见 Vue 2 延长 LTS。 ​	Vue 3是Vue.js的下一个主要版本，最初于2020年9月发布，Vue 3支持Vue 2的大多数特性。 2. 优点 更快更省   Object.defineProperty ——&gt; Proxy   重构 Virtual DOM   运行速度更快，打包体积更小  更好的T">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-08-22T08:31:19.000Z">
-<meta property="article:modified_time" content="2023-08-22T08:31:19.128Z">
+<meta property="article:modified_time" content="2023-08-23T00:52:03.095Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2157,7 +2160,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1692693238485),
+    lastupdate: new Date(1692751955722),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2554,6 +2557,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  
+  
+  
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url"><span itemprop="name">前端</span></a>
+      </span>
+    
+  </div>
+  
+
 
 
           
@@ -2585,7 +2602,141 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    
+    <h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h3><p>​	Vue 2 将于 2023 年 12 月 31 日停止维护，详见 <a target="_blank" rel="noopener" href="https://v2.cn.vuejs.org/lts/">Vue 2 延长 LTS</a>。</p>
+<p>​	Vue 3是Vue.js的下一个主要版本，最初于2020年9月发布，Vue 3支持Vue 2的大多数特性。</p>
+<h3 id="2-优点"><a href="#2-优点" class="headerlink" title="2. 优点"></a>2. 优点</h3><ul>
+<li><p>更快更省</p>
+<p>  Object.defineProperty ——&gt; Proxy</p>
+<p>  重构 Virtual DOM</p>
+<p>  运行速度更快，打包体积更小</p>
+</li>
+<li><p>更好的TypeScript集成</p>
+<p>  团队开发更轻松</p>
+<p>  架构更灵活，阅读源码更轻松</p>
+<p>  可以独立使用Vue内部模块</p>
+</li>
+<li><p>组合式API（Composition API）</p>
+<p>  一组低侵入式的、函数式的 API</p>
+<p>  更好的逻辑复用与代码组织</p>
+<p>  更好的类型推导</p>
+</li>
+</ul>
+<h2 id="二、创建Vue3项目"><a href="#二、创建Vue3项目" class="headerlink" title="二、创建Vue3项目"></a>二、创建Vue3项目</h2><h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h3><p>Vue.js官方提供了两种创建Vue 3项目的方式：vue-cli 或 vite</p>
+<p>区别如下:</p>
+<ol>
+<li>运行方式不同</li>
+</ol>
+<p>vue-cli使用Webpack进行项目打包，这意味着启动和打包速度相对较慢</p>
+<p>vite使用ES模块系统，利用浏览器原生的模块解析器来运行，启动速度更快，打包速度也更快。</p>
+<ol start="2">
+<li>默认配置有区别</li>
+</ol>
+<p>vue-cli提供了更多的默认配置和插件，可以帮助开发者更快地创建和部署Vue.js项目</p>
+<p>vite则采用更加精简的配置和插件，让开发者自由地选择第三方插件和配置模块。</p>
+<h3 id="2-使用-vite"><a href="#2-使用-vite" class="headerlink" title="2. 使用 vite"></a>2. 使用 vite</h3><p>Vite是一种新型前端构建工具，能够显著提升前端开发体验。</p>
+<p>特点：</p>
+<ul>
+<li>快速的冷启动，不需要等待打包操作</li>
+<li>即时的热模块更新，替换性能和模块数量的解耦让更新飞起</li>
+<li>真正的按需编译，不再等待整个应用编译完成，这是一个巨大的改变</li>
+</ul>
+<p>操作步骤：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建项目</span></span><br><span class="line">npm init vue@latest <span class="comment"># 基于Vite</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装依赖</span></span><br><span class="line"><span class="built_in">cd</span> vue3-project</span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行项目</span></span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="三、API-风格"><a href="#三、API-风格" class="headerlink" title="三、API 风格"></a>三、API 风格</h2><p>Vue 的组件可以按两种不同的风格书写：<strong>选项式 API</strong> 和<strong>组合式 API</strong></p>
+<h3 id="1-选项式-API-Options-API"><a href="#1-选项式-API-Options-API" class="headerlink" title="1. 选项式 API (Options API)"></a>1. 选项式 API (Options API)</h3><p>使用选项式 API，我们可以用包含多个选项的对象来描述组件的逻辑，例如 <code>data</code>、<code>methods</code> 和 <code>mounted</code>。</p>
+<p>选项所定义的属性都会暴露在函数内部的 <code>this</code> 上，它会指向当前的组件实例。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  // data() 返回的属性将会成为响应式的状态，并且暴露在 this 上</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      count: 0</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  // methods 是一些用来更改状态与触发更新的函数，它们可以在模板中作为事件处理器绑定</span><br><span class="line">  methods: &#123;</span><br><span class="line">    increment() &#123;</span><br><span class="line">      this.count++</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 生命周期钩子会在组件生命周期的各个不同阶段被调用，例如这个函数就会在组件挂载完成后被调用</span><br><span class="line">  mounted() &#123;</span><br><span class="line">    console.log(`The initial count is $&#123;this.count&#125;.`)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;button @click=&quot;increment&quot;&gt;Count is: &#123;&#123; count &#125;&#125;&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-组合式-API-Composition-API"><a href="#2-组合式-API-Composition-API" class="headerlink" title="2. 组合式 API (Composition API)"></a>2. 组合式 API (Composition API)</h3><p>通过组合式 API，我们可以使用导入的 API 函数来描述组件逻辑。</p>
+<p>在单文件组件中，组合式 API 通常会与<code>&lt;script setup&gt;</code>搭配使用。这个 <code>setup</code> 属性是一个标识，告诉 Vue 需要在编译时进行一些处理，让我们可以更简洁地使用组合式 API。比如，<code>&lt;script setup&gt;</code> 中的导入和顶层变量&#x2F;函数都能够在模板中直接使用。</p>
+<p>下面是使用了组合式 API 与 <code>&lt;script setup&gt;</code> 改造后和上面的模板完全一样的组件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; ref, onMounted &#125; from &#x27;vue&#x27;</span><br><span class="line"></span><br><span class="line">// 响应式状态</span><br><span class="line">const count = ref(0)</span><br><span class="line"></span><br><span class="line">// 用来修改状态、触发更新的函数</span><br><span class="line">function increment() &#123;</span><br><span class="line">  count.value++</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 生命周期钩子</span><br><span class="line">onMounted(() =&gt; &#123;</span><br><span class="line">  console.log(`The initial count is $&#123;count.value&#125;.`)</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;button @click=&quot;increment&quot;&gt;Count is: &#123;&#123; count &#125;&#125;&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、响应式API"><a href="#四、响应式API" class="headerlink" title="四、响应式API"></a>四、响应式API</h2><p>Vue 3 提供的一组具有响应式特性的函数式API，都是以函数形式提供的</p>
+<h3 id="1-reactive"><a href="#1-reactive" class="headerlink" title="1. reactive"></a>1. reactive</h3><p><code>reactive()</code>函数接收一个<code>普通对象</code>，返回该普通对象的响应式代理对象</p>
+<p>简单来说，就是用来创建响应式的数据对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">    <span class="comment">// 导入reactive函数</span></span><br><span class="line">    <span class="keyword">import</span> &#123; reactive &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建响应式数据对象，是一个代理对象</span></span><br><span class="line">    <span class="keyword">const</span> user = <span class="title function_">reactive</span>(&#123;</span><br><span class="line">        <span class="attr">name</span>:<span class="string">&#x27;tom&#x27;</span>,</span><br><span class="line">        <span class="attr">age</span>:<span class="number">18</span></span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-ref"><a href="#2-ref" class="headerlink" title="2. ref"></a>2. ref</h3><p><code>ref()</code>函数接收一个参数值，返回一个响应式的数据对象。该对象只包含一个指向内部值的 <code>.value</code> 属性</p>
+<p>在模板中访问时，无需通过.value属性，它会自动展开 </p>
+<h3 id="3-toRef"><a href="#3-toRef" class="headerlink" title="3. toRef"></a>3. toRef</h3><p><code>toRef()</code>函数用来将 reactive 对象的一个属性创建为一个 ref，并且这个 ref 具有响应性，可以被传递。</p>
+<h3 id="4-toRefs"><a href="#4-toRefs" class="headerlink" title="4. toRefs"></a>4. toRefs</h3><p><code>toRefs()</code>函数用来将 reactive 对象创建为一个普通对象，但该普通对象的每个属性都是一个 ref，并且这个 ref 具有响应性，可以被传递。</p>
+<h3 id="5-computed"><a href="#5-computed" class="headerlink" title="5. computed"></a>5. computed</h3><p><code>computed()</code> 函数用来创建计算属性，函数的返回值是一个 <code>ref</code> 的实例</p>
+<h3 id="6-watch"><a href="#6-watch" class="headerlink" title="6. watch"></a>6. watch</h3><p><code>watch()</code> 函数用来监视数据的变化，从而触发特定的操作</p>
+<h3 id="6-watchEffect"><a href="#6-watchEffect" class="headerlink" title="6. watchEffect"></a>6. watchEffect</h3><p><code>watchEffect()</code>函数接收一个函数作为参数，并立即执行该函数，同时响应式追踪其依赖，并在其依赖变更时重新运行该函数。</p>
+<h2 id="五、组件间数据传递"><a href="#五、组件间数据传递" class="headerlink" title="五、组件间数据传递"></a>五、组件间数据传递</h2><h3 id="1-父子组件"><a href="#1-父子组件" class="headerlink" title="1. 父子组件"></a>1. 父子组件</h3><p>父向子传递数据：属性绑定+数据拦截</p>
+<ul>
+<li>使用defineProps接收父组件传递的数据</li>
+</ul>
+<p>子向父传递数据：事件监听+事件触发</p>
+<ul>
+<li>使用defineEmits自定义事件，然后触发事件</li>
+</ul>
+<p>注：<code>defineProps</code> 和 <code>defineEmits</code>是自动导入的，不需要手动导入</p>
+<h3 id="2-依赖注入"><a href="#2-依赖注入" class="headerlink" title="2. 依赖注入"></a>2. 依赖注入</h3><p>依赖注入就是祖先组件向后代组件传递数据，使用<code>provide()</code> 和 <code>inject()</code> 函数来实现</p>
+<ul>
+<li>在祖先组件中使用<code>provide()</code>函数向下传递数据</li>
+<li>在后代组件中使用<code>inject()</code>函数获取上层传递过来的数据</li>
+</ul>
+<h2 id="六、生命周期钩子函数"><a href="#六、生命周期钩子函数" class="headerlink" title="六、生命周期钩子函数"></a>六、生命周期钩子函数</h2><p>Vue 3 中的生命周期函数和 Vue 2.x 相比做了一些调整和变化，对应关系如下：</p>
+<ul>
+<li><code>beforeCreate</code> -&gt; 使用 <code>setup()</code></li>
+<li><code>created</code> -&gt; 使用 <code>setup()</code></li>
+<li><code>beforeMount</code> -&gt; <code>onBeforeMount</code></li>
+<li><code>mounted</code> -&gt; <code>onMounted</code></li>
+<li><code>beforeUpdate</code> -&gt; <code>onBeforeUpdate</code></li>
+<li><code>updated</code> -&gt; <code>onUpdated</code></li>
+<li><code>beforeDestroy</code> -&gt; <code>onBeforeUnmount</code></li>
+<li><code>destroyed</code> -&gt; <code>onUnmounted</code></li>
+<li><code>errorCaptured</code> -&gt; <code>onErrorCaptured</code></li>
+</ul>
+<h2 id="七、模板-Refs"><a href="#七、模板-Refs" class="headerlink" title="七、模板 Refs"></a>七、模板 Refs</h2><p>通过 <code>ref()</code>函数还可以引用页面上的元素或组件，功能类似于 vue 2.x中的 <code>vm.$refs</code></p>
+<p>步骤：</p>
+<ol>
+<li>创建一个空的 ref 对象并返回它</li>
+<li>在页面上为元素添加 ref 属性，并设置属性值与创建的 ref 对象的名称相同</li>
+<li>当页面渲染完成后，可以通过该 ref 对象获取到页面中对应的DOM元素</li>
+</ol>
+<h2 id="八、Pinia状态管理"><a href="#八、Pinia状态管理" class="headerlink" title="八、Pinia状态管理"></a>八、Pinia状态管理</h2><p>Pinia（小菠萝）是一个轻量级的、基于Vue 3的状态管理库，提供了更简单的 API，支持Typescript和组合式API风格。</p>
+<p>与Vuex相比，Pinia抛弃了Mutation操作，保留state、getters、actions，且提供了更简便的用法。</p>
+<p>官网 <a target="_blank" rel="noopener" href="https://pinia.vuejs.org/zh/">https://pinia.vuejs.org/zh/</a></p>
+<p>基本用法，步骤：</p>
+<ol>
+<li><p>定义store</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; ref, computed &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; defineStore &#125; <span class="keyword">from</span> <span class="string">&#x27;pinia&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> useUser = <span class="title function_">defineStore</span>(<span class="string">&#x27;user&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> msg = <span class="title function_">ref</span>(<span class="string">&#x27;welcome to pinia&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> reverseMsg = <span class="title function_">computed</span>(<span class="function">() =&gt;</span> msg.<span class="property">value</span>.<span class="title function_">toUpperCase</span>().<span class="title function_">split</span>(<span class="string">&#x27; &#x27;</span>).<span class="title function_">reverse</span>().<span class="title function_">join</span>(<span class="string">&#x27; &#x27;</span>)) </span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">setMsg</span>(<span class="params">newValue</span>) &#123;</span><br><span class="line">      msg.<span class="property">value</span> = newValue</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    <span class="keyword">return</span> &#123; msg, reverseMsg, setMsg &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用store</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">    import &#123; useUser &#125; from &#x27;@/stores/user&#x27;</span><br><span class="line"></span><br><span class="line">    const user = useUser()</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;p&gt;&#123;&#123; user.msg &#125;&#125;&lt;/p&gt;</span><br><span class="line">    &lt;p&gt;&#123;&#123; user.reverseMsg &#125;&#125;&lt;/p&gt;</span><br><span class="line">    &lt;button @click=&quot;user.setMsg(&#x27;hello world&#x27;)&quot;&gt;按钮&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="附录：vite常用插件"><a href="#附录：vite常用插件" class="headerlink" title="附录：vite常用插件"></a>附录：vite常用插件</h2><h3 id="1-unplugin-auto-import"><a href="#1-unplugin-auto-import" class="headerlink" title="1. unplugin-auto-import"></a>1. unplugin-auto-import</h3><p>unplugin-auto-import 自动导入插件，能够自动引入ref、reavtive等函数，不需要再自己引入</p>
+<p>步骤：</p>
+<ol>
+<li><p>安装插件</p>
+<p> 执行<code>npm install -D unplugin-auto-import </code> </p>
+</li>
+<li><p>配置插件，编辑vite.config.js</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">AutoImport</span> <span class="keyword">from</span> <span class="string">&#x27;unplugin-auto-import/vite&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="attr">plugins</span>: [</span><br><span class="line">    <span class="title function_">vue</span>(),</span><br><span class="line">    <span class="title class_">AutoImport</span>(&#123;</span><br><span class="line">      <span class="attr">imports</span>:[<span class="string">&#x27;vue&#x27;</span>,<span class="string">&#x27;vue-router&#x27;</span>,<span class="string">&#x27;pinia&#x27;</span>] <span class="comment">// 自动导入相关函数</span></span><br><span class="line">    &#125;)</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">resolve</span>: &#123;</span><br><span class="line">    <span class="attr">alias</span>: &#123;</span><br><span class="line">      <span class="string">&#x27;@&#x27;</span>: <span class="title function_">fileURLToPath</span>(<span class="keyword">new</span> <span class="title function_">URL</span>(<span class="string">&#x27;./src&#x27;</span>, <span class="keyword">import</span>.<span class="property">meta</span>.<span class="property">url</span>))</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="2-vite-plugin-pages"><a href="#2-vite-plugin-pages" class="headerlink" title="2. vite-plugin-pages"></a>2. vite-plugin-pages</h3><p>vite-plugin-pages 自动读取指定目录下的文件，生成路由信息，不需要自己去逐个配置路由</p>
+<p>步骤：</p>
+<ol>
+<li><p>安装插件</p>
+<p> 执行<code>npm install -D vite-plugin-pages </code> </p>
+</li>
+<li><p>配置插件，编辑vite.config.js</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">AutoImport</span> <span class="keyword">from</span> <span class="string">&#x27;unplugin-auto-import/vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Pages</span> <span class="keyword">from</span>  <span class="string">&#x27;vite-plugin-pages&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="attr">plugins</span>: [</span><br><span class="line">    <span class="title function_">vue</span>(),</span><br><span class="line">    <span class="title class_">AutoImport</span>(&#123;</span><br><span class="line">      <span class="attr">imports</span>:[<span class="string">&#x27;vue&#x27;</span>,<span class="string">&#x27;vue-router&#x27;</span>,<span class="string">&#x27;pinia&#x27;</span>] <span class="comment">// 自动导入相关函数</span></span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="title class_">Pages</span>(&#123;</span><br><span class="line">      <span class="attr">dirs</span>:[ &#123; <span class="attr">dir</span>: <span class="string">&quot;src/views&quot;</span>, <span class="attr">baseRoute</span>: <span class="string">&quot;&quot;</span> &#125;], <span class="comment">// 修改默认文件夹</span></span><br><span class="line">      <span class="attr">importMode</span>: <span class="string">&quot;async&quot;</span></span><br><span class="line">    &#125;)	</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">resolve</span>: &#123;</span><br><span class="line">    <span class="attr">alias</span>: &#123;</span><br><span class="line">      <span class="string">&#x27;@&#x27;</span>: <span class="title function_">fileURLToPath</span>(<span class="keyword">new</span> <span class="title function_">URL</span>(<span class="string">&#x27;./src&#x27;</span>, <span class="keyword">import</span>.<span class="property">meta</span>.<span class="property">url</span>))</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自动生成路由，编辑router&#x2F;index.js</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> routes <span class="keyword">from</span> <span class="string">&#x27;~pages&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> router = <span class="title function_">createRouter</span>(&#123;</span><br><span class="line">  <span class="attr">history</span>: <span class="title function_">createWebHistory</span>(<span class="keyword">import</span>.<span class="property">meta</span>.<span class="property">env</span>.<span class="property">BASE_URL</span>),</span><br><span class="line">  routes</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> router</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>注意：</p>
+<ul>
+<li>vite-plugin-pages默认读取的页面文件夹是 pages，默认读取的页面是 index.vue</li>
+<li>所以最好先在pages文件夹下面创建一个 index.vue文件</li>
+</ul>
+
   </div>
   
   
@@ -2609,10 +2760,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-08-22T16:31:19+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-08-23T08:52:03+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Aug 22, 2023</p>
+    <p>更新于：Aug 23, 2023</p>
   </a>
 </div>
 
@@ -2620,6 +2771,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/vue/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>vue</p></a></div>
+  <span hidden itemprop="keywords">vue</span>
+  
+
 
         
       
@@ -2754,7 +2912,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%AE%80%E4%BB%8B"><span class="toc-text">一、简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BB%8B%E7%BB%8D"><span class="toc-text">1. 介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BC%98%E7%82%B9"><span class="toc-text">2. 优点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%88%9B%E5%BB%BAVue3%E9%A1%B9%E7%9B%AE"><span class="toc-text">二、创建Vue3项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%AE%80%E4%BB%8B"><span class="toc-text">1. 简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8-vite"><span class="toc-text">2. 使用 vite</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81API-%E9%A3%8E%E6%A0%BC"><span class="toc-text">三、API 风格</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%80%89%E9%A1%B9%E5%BC%8F-API-Options-API"><span class="toc-text">1. 选项式 API (Options API)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%BB%84%E5%90%88%E5%BC%8F-API-Composition-API"><span class="toc-text">2. 组合式 API (Composition API)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%93%8D%E5%BA%94%E5%BC%8FAPI"><span class="toc-text">四、响应式API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-reactive"><span class="toc-text">1. reactive</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-ref"><span class="toc-text">2. ref</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-toRef"><span class="toc-text">3. toRef</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-toRefs"><span class="toc-text">4. toRefs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-computed"><span class="toc-text">5. computed</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-watch"><span class="toc-text">6. watch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-watchEffect"><span class="toc-text">6. watchEffect</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%BB%84%E4%BB%B6%E9%97%B4%E6%95%B0%E6%8D%AE%E4%BC%A0%E9%80%92"><span class="toc-text">五、组件间数据传递</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6"><span class="toc-text">1. 父子组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5"><span class="toc-text">2. 依赖注入</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0"><span class="toc-text">六、生命周期钩子函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E6%A8%A1%E6%9D%BF-Refs"><span class="toc-text">七、模板 Refs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81Pinia%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86"><span class="toc-text">八、Pinia状态管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%84%E5%BD%95%EF%BC%9Avite%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6"><span class="toc-text">附录：vite常用插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-unplugin-auto-import"><span class="toc-text">1. unplugin-auto-import</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-vite-plugin-pages"><span class="toc-text">2. vite-plugin-pages</span></a></li></ol></li></ol>
   </div>
 </section>
 
@@ -3477,7 +3635,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YukiCCC的博客"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/08/22/Vue3学习/","name":"Vue3学习"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"YukiCCC的博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Vue3学习","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/08/22/Vue3%E5%AD%A6%E4%B9%A0/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YukiCCC的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/08/22/Vue3%E5%AD%A6%E4%B9%A0/","wordCount":0,"datePublished":"2023-08-22T08:31:19.000Z","dateModified":"2023-08-22T08:31:19.128Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YukiCCC的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/前端/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/08/22/Vue3学习/","name":"Vue3学习"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"YukiCCC的博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Vue3学习","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/08/22/Vue3%E5%AD%A6%E4%B9%A0/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YukiCCC的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/08/22/Vue3%E5%AD%A6%E4%B9%A0/","wordCount":0,"datePublished":"2023-08-22T08:31:19.000Z","dateModified":"2023-08-23T00:52:03.095Z","articleSection":"前端","keywords":"vue","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
