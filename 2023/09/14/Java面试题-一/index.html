@@ -42,11 +42,11 @@
 <meta property="og:title" content="Java面试题(一)">
 <meta property="og:url" content="http://example.com/2023/09/14/Java%E9%9D%A2%E8%AF%95%E9%A2%98-%E4%B8%80/index.html">
 <meta property="og:site_name" content="YukiCCC的博客">
-<meta property="og:description" content="java中如何实现序列化，有什么意义？ 序列化就是一种用来处理对象流的机制，所谓对象流也就是将对象的内容进行流化。可以对流化后的对象进行读写操作，也可将流化后的对象传输于网络之间。  序列化是为了解决对象流读写操作时可能引发的问题（如果不进行序列化可能会存在数据乱序的问题）。 要实现序列化，需要让一个类实现Serializable接口，该接口是一个标识性接口，标注该类对象是可被序列化的，然后使用一">
+<meta property="og:description" content="String s &#x3D; new String(“xyz”);创建了几个字符串对象？两个对象，一个是静态区的“xyz”，一个是用new创建的对象 String是最基本的数据类型吗？ 不是。Java中的基本数据类型只有8个：byte、short、int、long、float、double、char、boolean；  除了基本类型（primitive type）和枚举类型（enumeratio">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-09-14T11:05:39.000Z">
-<meta property="article:modified_time" content="2023-09-14T11:59:55.405Z">
+<meta property="article:modified_time" content="2023-09-18T04:57:05.264Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="面试技巧">
 <meta name="twitter:card" content="summary">
@@ -2160,7 +2160,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1695004711957),
+    lastupdate: new Date(1695014884616),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2602,7 +2602,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="java中如何实现序列化，有什么意义？"><a href="#java中如何实现序列化，有什么意义？" class="headerlink" title="java中如何实现序列化，有什么意义？"></a>java中如何实现序列化，有什么意义？</h2><ul>
+    <h2 id="String-s-x3D-new-String-“xyz”-创建了几个字符串对象？"><a href="#String-s-x3D-new-String-“xyz”-创建了几个字符串对象？" class="headerlink" title="String s &#x3D; new String(“xyz”);创建了几个字符串对象？"></a>String s &#x3D; new String(“xyz”);创建了几个字符串对象？</h2><p>两个对象，一个是静态区的“xyz”，一个是用new创建的对象</p>
+<h2 id="String是最基本的数据类型吗？"><a href="#String是最基本的数据类型吗？" class="headerlink" title="String是最基本的数据类型吗？"></a>String是最基本的数据类型吗？</h2><ul>
+<li><p>不是。Java中的基本数据类型只有8个：byte、short、int、long、float、double、char、boolean；</p>
+</li>
+<li><p>除了基本类型（primitive type）和枚举类型（enumeration type），剩下的都是引用类型（reference type）。</p>
+</li>
+</ul>
+<h2 id="两个对象值相同（x-equals-y-x3D-x3D-true），但却可有不同的hashcode，这句话对不对？"><a href="#两个对象值相同（x-equals-y-x3D-x3D-true），但却可有不同的hashcode，这句话对不对？" class="headerlink" title="两个对象值相同（x.equals(y)&#x3D;&#x3D;true），但却可有不同的hashcode，这句话对不对？"></a>两个对象值相同（x.equals(y)&#x3D;&#x3D;true），但却可有不同的hashcode，这句话对不对？</h2><p>不对，如果两个对象x和y满足x.equals(y) &#x3D;&#x3D; true，它们的哈希码（hash code）应当相同。Java对于eqauls方法和hashCode方法是这样规定的：</p>
+<ul>
+<li>如果两个对象相同（equals方法返回true），那么它们的hashCode值一定要相同；</li>
+<li>如果两个对象的hashCode相同，它们并不一定相同。当然，你未必要按照要求去做，但是如果你违背了上述原则就会发现在使用容器时，相同的对象可以出现在Set集合中，同时增加新元素的效率会大大下降（对于使用哈希存储的系统，如果哈希码频繁的冲突将会造成存取性能急剧下降）。</li>
+</ul>
+<h2 id="java中如何实现序列化，有什么意义？"><a href="#java中如何实现序列化，有什么意义？" class="headerlink" title="java中如何实现序列化，有什么意义？"></a>java中如何实现序列化，有什么意义？</h2><ul>
 <li><p>序列化就是一种用来处理对象流的机制，所谓对象流也就是将对象的内容进行流化。可以对流化后的对象进行读写操作，也可将流化后的对象传输于网络之间。</p>
 </li>
 <li><p>序列化是为了解决对象流读写操作时可能引发的问题（如果不进行序列化可能会存在数据乱序的问题）。 要实现序列化，需要让一个类实现Serializable接口，该接口是一个标识性接口，标注该类对象是可被序列化的，然后使用一个输出流来构造一个对象输出流并通过writeObject(Object)方法就可以将实现对象写出（即保存其状态）；如果需要反序列化则可以用一个输入流建立对象输入流，然后通过readObject方法从流中读取对象。序列化除了能够实现对象的持久化之外，还能够用于对象的深度克隆。</p>
@@ -2631,6 +2643,446 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 </li>
 </ul>
+<h2 id="Anonymous-Inner-Class-匿名内部类-是否可以继承其他类？是否可以实现接口？"><a href="#Anonymous-Inner-Class-匿名内部类-是否可以继承其他类？是否可以实现接口？" class="headerlink" title="Anonymous Inner Class(匿名内部类)是否可以继承其他类？是否可以实现接口？"></a>Anonymous Inner Class(匿名内部类)是否可以继承其他类？是否可以实现接口？</h2><p>可以继承其他类或实现其他接口，在Swing编程和Android开发中常用此方式来实现事件监听和回调。</p>
+<h2 id="什么是方法的返回值？返回值在类的方法里的作用是什么？"><a href="#什么是方法的返回值？返回值在类的方法里的作用是什么？" class="headerlink" title="什么是方法的返回值？返回值在类的方法里的作用是什么？"></a>什么是方法的返回值？返回值在类的方法里的作用是什么？</h2><p>方法的返回值是指我们获取到的某个方法体中的代码执行后产生的结果！（前提是该方法可能产生结果）。返回值的作用：接收出接货，使得它可以作用于其他的操作！</p>
+<h2 id="面向对象三大特征"><a href="#面向对象三大特征" class="headerlink" title="面向对象三大特征"></a>面向对象三大特征</h2><ul>
+<li><p>封装 : 安全性  </p>
+<ul>
+<li>体现:把属性私有化，通过公共的get&#x2F;set或is&#x2F;set进行公开出去，以后通过方法对属性进行操作。这样做的好处，是在方法中可以对属性的安全性和有效性作出验证。</li>
+</ul>
+<p>	</p>
+</li>
+<li><p>继承 : 重用性、扩展性 </p>
+<ul>
+<li><p>满足is a的关系  </p>
+</li>
+<li><p>用到extends关键字 </p>
+</li>
+<li><p>子类能继承父类中非私有的属性和方法 </p>
+</li>
+<li><p>方法重写 </p>
+</li>
+<li><p>@Override  </p>
+</li>
+<li><p>使用super关键字 </p>
+<ul>
+<li>this:	代表当前类的对象</li>
+<li>super:    代表当前类的父类对象</li>
+</ul>
+</li>
+<li><p>在java中的类是单继承 </p>
+</li>
+<li><p>任何类的祖类都是Object，可以省略 extends Object</p>
+</li>
+</ul>
+</li>
+<li><p>多态性：维护性、扩展性 </p>
+<ul>
+<li>口诀:<ul>
+<li>父类引用指向父类实例，只能调用父类的属性和方法</li>
+<li>子类引用指向子类实例，可以调用父类中非私有的属性和方法</li>
+<li>父类引用指向子类实例，只能调用父类的属性和方法，但是方法被子类重写，以子类的实现为准。</li>
+</ul>
+</li>
+<li>开闭原则<ul>
+<li>对扩展开放</li>
+<li>对修改关闭</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="在调用子类构造方法之前会先调用父类没有参数的构造方法，其目的是？"><a href="#在调用子类构造方法之前会先调用父类没有参数的构造方法，其目的是？" class="headerlink" title="在调用子类构造方法之前会先调用父类没有参数的构造方法，其目的是？"></a>在调用子类构造方法之前会先调用父类没有参数的构造方法，其目的是？</h2><p>帮助子类做初始化工作</p>
+<h2 id="switch是否能作用在byte上，是否能作用在long上，是否能作用在String上"><a href="#switch是否能作用在byte上，是否能作用在long上，是否能作用在String上" class="headerlink" title="switch是否能作用在byte上，是否能作用在long上，是否能作用在String上"></a>switch是否能作用在byte上，是否能作用在long上，是否能作用在String上</h2><ul>
+<li><p>在Java 5以前，switch(expr)中，expr只能是byte、short、char、int。</p>
+</li>
+<li><p>从Java 5开始，Java中引入了枚举类型，expr也可以是enum类型</p>
+</li>
+<li><p>从Java 7开始，expr还可以是字符串（String），但是长整型（long）在目前所有的版本中都是不可以的。</p>
+</li>
+</ul>
+<h2 id="用最有效率的方法算出2乘以8等于几？"><a href="#用最有效率的方法算出2乘以8等于几？" class="headerlink" title="用最有效率的方法算出2乘以8等于几？"></a>用最有效率的方法算出2乘以8等于几？</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span> &lt;&lt; <span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>因为将一个数左移n位，就相当于乘以了2的n次方，那么，一个数乘以8只要将其左移3位即可，而位运算cpu直接支持的，效率最高，所以，2乘以8等於几的最效率的方法是 2 &lt;&lt; 3。</li>
+</ul>
+<h2 id="访问修改符的理解"><a href="#访问修改符的理解" class="headerlink" title="访问修改符的理解"></a>访问修改符的理解</h2><ul>
+<li><p>java中共有四个修饰符</p>
+<ul>
+<li>private			同一个类</li>
+<li>default                   同一个包</li>
+<li>protected              同一个包+不同包子类</li>
+<li>public                     所有包</li>
+<li>注:访问修饰符最低原则，为了安全性</li>
+</ul>
+</li>
+<li><p>类有两个</p>
+<ul>
+<li>public                 所有类</li>
+<li>default              同一个包</li>
+</ul>
+</li>
+<li><p>方法和属性有四个</p>
+<ul>
+<li>private			同一个类</li>
+<li>default                   同一个包</li>
+<li>protected              同一个包+不同包子类</li>
+<li>public                     所有包</li>
+</ul>
+</li>
+</ul>
+<h2 id="Object类中常用的方法"><a href="#Object类中常用的方法" class="headerlink" title="Object类中常用的方法"></a>Object类中常用的方法</h2><ul>
+<li>Object clone()    			: 克隆。protected它r指的是在同一个包，或不同包子类中能访问</li>
+<li>boolean equals(Object)      : 地址相等</li>
+<li>void finalize()                       : 垃圾回收器调用此方法来回收对象所占空间。protected</li>
+<li>Class getClass()                  ：得到Class对象                   </li>
+<li>int hasCode()                        :对象的哈希码。同个对象的哈唏码一致。</li>
+<li>String toString()                   ：把对象用字符串输。一般我们自定义的类都会重写此方法。</li>
+<li>void wait()                               ：线程所用方法，后面讲  </li>
+<li>void notify()                           ：线程所用方法，后面讲  </li>
+<li>void notifyAll()                         ：线程所用方法，后面讲</li>
+</ul>
+<h2 id="方法重写的特性"><a href="#方法重写的特性" class="headerlink" title="方法重写的特性"></a>方法重写的特性</h2><ul>
+<li>父子类</li>
+<li>方法名相同，参数列表相同</li>
+<li>子类的访问修饰符&gt;&#x3D;父类</li>
+<li>子类返回类型&lt;&#x3D;父类（&lt;&#x3D;指是父子类）</li>
+<li>子类抛的异常&lt;&#x3D;父类（&lt;&#x3D;指是父子类）</li>
+</ul>
+<h2 id="方法重载的特性"><a href="#方法重载的特性" class="headerlink" title="方法重载的特性"></a>方法重载的特性</h2><ul>
+<li><p>在同一个类下</p>
+</li>
+<li><p>方法名一样</p>
+</li>
+<li><p>参数的类型、个数和‘顺序’至少有一个不一样</p>
+</li>
+</ul>
+<h2 id="重载和重写的区别"><a href="#重载和重写的区别" class="headerlink" title="重载和重写的区别"></a>重载和重写的区别</h2><ul>
+<li>重载： 发生在同一个类中，方法名必须相同，参数类型不同、个数不同、顺序不同，方法返回值和访问修饰符可以不同，发生在编译时。 　　</li>
+<li>重写： 发生在父子类中，方法名、参数列表必须相同，返回值范围小于等于父类，抛出的异常范围小于等于父类，访问修饰符范围大于等于父类；如果父类方法访问修饰符为 private 则子类就不能重写该方法。</li>
+</ul>
+<h2 id="值传递与引用区别"><a href="#值传递与引用区别" class="headerlink" title="值传递与引用区别"></a>值传递与引用区别</h2><ul>
+<li><p>值传递: 参数的类型为值类型时，则为值传递。值传递，传递的是值复本。</p>
+</li>
+<li><p>引用传递: 参数的类型为引用类型时，则为引用传递。引用传递，传递的是引用的复本。</p>
+</li>
+<li><p>两者区别:</p>
+<ul>
+<li>值传递，在方法里改变值，之前的值不会改变</li>
+<li>引用传递，在方法里改变值，之前的值会发生改变。但String、StringBufferer、StringBuilder和枚举除外。</li>
+</ul>
+</li>
+</ul>
+<h2 id="String、StringBuffer和StringBuilder区别"><a href="#String、StringBuffer和StringBuilder区别" class="headerlink" title="String、StringBuffer和StringBuilder区别"></a>String、StringBuffer和StringBuilder区别</h2><p>String 是不能改变自身，</p>
+<p>StringBuffer和StringBuilder是改变自身</p>
+<p>StringBuffer是线程安全的，相对而言性能较差，StringBuilder是线和不安全的，相对而言性能较好</p>
+<h2 id="成员变量与局部变量的区别有哪些？"><a href="#成员变量与局部变量的区别有哪些？" class="headerlink" title="成员变量与局部变量的区别有哪些？"></a>成员变量与局部变量的区别有哪些？</h2><ol>
+<li><p>从语法形式上看:</p>
+<p>成员变量是属于类的，而局部变量是在方法中定义的变量或是方法的参数；</p>
+<p>成员变量可以被 public,protected,default,private, static和final 等修饰符所修饰，而局部变量不能被访问控制修饰符及 static 所修饰；但是，成员变量和局部变量都能被 final 所修饰。</p>
+</li>
+<li><p>从变量在内存中的存储方式来看:如果成员变量是使用static修饰的，那么这个成员变量是属于类的，如果没有使用使用static修饰，这个成员变量是属于实例的。而对象存在于堆内存，局部变量则存在于栈内存。</p>
+</li>
+<li><p>从变量在内存中的生存时间上看:成员变量是对象的一部分，它随着对象的创建而存在，而局部变量随着方法的调用而自动消失。</p>
+</li>
+<li><p>成员变量如果没有被赋初值:则会自动以类型的默认值而赋值（一种情况例外被 final 修饰的成员变量也必须显示地赋值），而局部变量则不会自动赋值。</p>
+</li>
+</ol>
+<h2 id="抽象类与接口有什么区别"><a href="#抽象类与接口有什么区别" class="headerlink" title="抽象类与接口有什么区别"></a>抽象类与接口有什么区别</h2><ul>
+<li>相同点:<ul>
+<li>都可以有静态常量</li>
+<li>都可以有抽象方法</li>
+<li>都不能被实例化</li>
+</ul>
+</li>
+<li>区别点:<ul>
+<li>抽象类中有属性、实现的方法、抽象方法等，但接口中只公共静态常量、公共抽象方法</li>
+<li>抽象类中的访问修饰符有四种，但接口中只有public访问修饰符</li>
+<li>子类单继承抽象类，子类多实现接口，接口多继承接口</li>
+<li>抽象类中包含构造方法，接口没有构造方法</li>
+</ul>
+</li>
+<li>使用时机<ul>
+<li>当所有方法都不知道如何实现时，用接口。一般用标准的制订（方法功能描述）</li>
+<li>当有些方法知道如何实现，有些不知道时，使用抽象。</li>
+<li>示例<ul>
+<li>数据访问实现<ul>
+<li>使用接口制订数据访问方法的标签</li>
+<li>使用抽象类 实现接口，实现其中公共代码。（已知如何实现），未知实现（不清楚具体数据）写成抽象方法。</li>
+<li>使用MySQL数据类 继承 抽象类，实现抽象方法。（已知用MySQL数据库实例 ）</li>
+<li>使用Oralce数据类 继承 抽象类，实现抽象方法。（已知用Oralce数据库实例 ）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="队列和栈是什么？有什么区别？"><a href="#队列和栈是什么？有什么区别？" class="headerlink" title="队列和栈是什么？有什么区别？"></a>队列和栈是什么？有什么区别？</h2><ul>
+<li><p>队列（Queue）：是限定只能在表的一端进行插入和另一端删除操作的线性表</p>
+</li>
+<li><p>栈（Stack）：是限定之能在表的一端进行插入和删除操作的线性表</p>
+</li>
+<li><p><strong>队列和栈的规则</strong> ：</p>
+<ul>
+<li>队列：先进先出</li>
+<li>栈：先进后出</li>
+</ul>
+</li>
+<li><p><strong>队列和栈的遍历数据速度</strong> ：</p>
+<ul>
+<li><p>队列：基于地址指针进行遍历，而且可以从头部或者尾部进行遍历，但不能同时遍历，无需开辟空间，因为在遍历的过程中不影响数据结构，所以遍历速度要快</p>
+</li>
+<li><p>栈：只能从顶部取数据，也就是说最先进入栈底的，需要遍历整个栈才能取出来，遍历数据时需要微数据开辟临时空间，保持数据在遍历前的一致性</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Java有没有goto？"><a href="#Java有没有goto？" class="headerlink" title="Java有没有goto？"></a>Java有没有goto？</h2><p>goto 是Java中的保留字，在目前版本的Java中没有使用。（根据James Gosling（Java之父）编写的《The Java Programming Language》一书的附录中给出了一个Java关键字列表，其中有goto和const，但是这两个是目前无法使用的关键字，因此有些地方将其称之为保留字，其实保留字这个词应该有更广泛的意义，因为熟悉C语言的程序员都知道，在系统类库中使用过的有特殊意义的单词或单词的组合都被视为保留字）</p>
+<h2 id="是否可以从一个static方法内部发出对非static方法的调用-？"><a href="#是否可以从一个static方法内部发出对非static方法的调用-？" class="headerlink" title="是否可以从一个static方法内部发出对非static方法的调用 ？"></a>是否可以从一个static方法内部发出对非static方法的调用 ？</h2><p>不能直接调用 ，但可以通类的对象进行调用 </p>
+<p>类中的静态方法和静态变量，也称类方法和类变量</p>
+<p>静态方法中只能直接调用静态方法和静态变量，如果要调用非静态的内容，必须通过实例.方法()或实例.变量的方式 去进行调用 </p>
+<h2 id="java中的final关键字有哪些用法？"><a href="#java中的final关键字有哪些用法？" class="headerlink" title="java中的final关键字有哪些用法？"></a>java中的final关键字有哪些用法？</h2><p>修饰类：表示该类不能被继承；</p>
+<p>修饰方法：表示方法不能被重写；</p>
+<p>修饰变量：表示变量只能一次赋值以后值不能被修改（常量）</p>
+<h2 id="final，finally和finalize的区别？"><a href="#final，finally和finalize的区别？" class="headerlink" title="final，finally和finalize的区别？"></a>final，finally和finalize的区别？</h2><ul>
+<li>final：修饰符（关键字）有三种用法：如果一个类被声明为final，意味着它不能再派生出新的子类，即不能被继承，因此它和abstract是反义词。将变量声明为final，可以保证它们在使用中不被改变，被声明为final的变量必须在声明时给定初值，而在以后的引用中只能读取不可修改。被声明为final的方法也同样只能使用，不能在子类中被重写。</li>
+<li>finally：通常放在try…catch…的后面构造总是执行代码块，这就意味着程序无论正常执行还是发生异常，这里的代码只要JVM不关闭都能执行，可以将释放外部资源的代码写在finally块中。</li>
+<li>finalize：Object类中定义的方法，Java中允许使用finalize()方法在垃圾收集器将对象从内存中清除出去之前做必要的清理工作。这个方法是由垃圾收集器在销毁对象时调用的，通过重写finalize()方法可以整理系统资源或者执行其他清理工作。</li>
+</ul>
+<h2 id="使用final关键字修饰一个变量时，是引用不能变，还是引用的对象不能变"><a href="#使用final关键字修饰一个变量时，是引用不能变，还是引用的对象不能变" class="headerlink" title="使用final关键字修饰一个变量时，是引用不能变，还是引用的对象不能变"></a>使用final关键字修饰一个变量时，是引用不能变，还是引用的对象不能变</h2><p>使用final关键字修饰一个变量时，是指引用变量不能变，引用变量所指向的对象中的内容还是可以改变的。例如，对于如下语句：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> StringBuffer a=<span class="keyword">new</span> <span class="title class_">StringBuffer</span>(<span class="string">&#x27;immutable&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>执行如下语句将报告编译期错误：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="keyword">new</span> <span class="title class_">StringBuffer</span>(<span class="string">&#x27;&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>但是，执行如下语句则可以通过编译：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.append(<span class="string">&#x27; broken!&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="抽象的（abstract）方法是否可同时是静态的（static），是否可同时是本地方法（native），是否可同时被synchronized修饰？"><a href="#抽象的（abstract）方法是否可同时是静态的（static），是否可同时是本地方法（native），是否可同时被synchronized修饰？" class="headerlink" title="抽象的（abstract）方法是否可同时是静态的（static），是否可同时是本地方法（native），是否可同时被synchronized修饰？"></a>抽象的（abstract）方法是否可同时是静态的（static），是否可同时是本地方法（native），是否可同时被synchronized修饰？</h2><p>都不能。抽象方法需要子类重写，而静态的方法是无法被重写的，因此二者是矛盾的。本地方法是由本地代码（如C代码）实现的方法，而抽象方法是没有实现的，也是矛盾的。synchronized和方法的实现细节有关，抽象方法不涉及实现细节，因此也是相互矛盾的。</p>
+<h2 id="异常该如何处理"><a href="#异常该如何处理" class="headerlink" title="异常该如何处理"></a>异常该如何处理</h2><ul>
+<li>try		:  存放可能出现异常的代码块，一但在此代码块中有了异常，则立即到跳转到catch中，并把对应异常对象传递给Catch中的形参，如果赋值不对应，则仍然处理不了<ul>
+<li>不能单独使用</li>
+</ul>
+</li>
+<li>catch     ：捕获处理<ul>
+<li>不能单独使用</li>
+<li>与try匹配catch可以有多个，分别捕获处理不同的异常，范围大异常一定要后面</li>
+<li>当所有catch中的类型都不能匹配时，则相当于catch捕获处理不，仍然终止程序</li>
+</ul>
+</li>
+<li>finally  ：最终地无论如何也要执行的代码，一般用于资源的释放。比如，文件的关闭，数据库连接关闭<ul>
+<li>不能单独使用</li>
+<li>try-catch</li>
+<li>try-catch-catch</li>
+<li>try-finally<ul>
+<li>这种情况要注意，如果没catch，则在try中有了异常，相当于没有处理，程序程序会终止，只不过会执行finally中的语句，一般不省略catch</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>throw  : 抛的是一个对象 ，放置在方法里边<ul>
+<li>一般有了throw，要加上throws</li>
+<li>throw是抛给上一级处理，上一级指的是谁调用谁处理</li>
+<li>上一级可以选择try-catch掉，也可以选择继续抛，如果到了main仍然继续抛出，则相当于抛了JVM，且等于没有处理异常，程序终止，所以一般到main必须处理掉。</li>
+</ul>
+</li>
+<li>throws : 抛的是异常类型，放置方法后面，可以有多个</li>
+</ul>
+<h2 id="异常分类和常见异常"><a href="#异常分类和常见异常" class="headerlink" title="异常分类和常见异常"></a>异常分类和常见异常</h2><ul>
+<li>运行时异常				： 都是RuntimeException的子类<ul>
+<li>ArithmeticException</li>
+<li>ArrayIndexOutofBoundsException</li>
+<li>NullPointerException</li>
+</ul>
+</li>
+<li>非运行时异常（编译时异常）: 都是Exception的子类<ul>
+<li>ParseException</li>
+<li>IOException</li>
+<li>ClassNotFoundException</li>
+</ul>
+</li>
+</ul>
+<h2 id="运行异常与非运行时异常有何异同？"><a href="#运行异常与非运行时异常有何异同？" class="headerlink" title="运行异常与非运行时异常有何异同？"></a>运行异常与非运行时异常有何异同？</h2><ul>
+<li>运行时异常表示虚拟机的通常操作中可能遇到的异常，是一种常见运行错误，只要程序设计得没有问题通常就不会发生。</li>
+<li>受检异常跟程序运行的上下文环境有关，即使程序设计无误，仍然可能因使用的问题而引发。</li>
+</ul>
+<h2 id="错误与异常的区别"><a href="#错误与异常的区别" class="headerlink" title="错误与异常的区别"></a>错误与异常的区别</h2><ul>
+<li><p>Object</p>
+<ul>
+<li>Throwable<ul>
+<li>Error</li>
+<li>Exception</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Error类:  一般指的是硬件问题，跟程序员无关，比如说硬盘空间不足，内容不够</p>
+</li>
+<li><p>Exception类: 一般指提程序员不小心造成的，有可能在某些时候出现（偶现），或都每次都出现（必须），这些异常本可以避免的。例如：算术异常、空指针异常和下标越界异常等</p>
+</li>
+<li><p>注: </p>
+<ul>
+<li>我们只关心异常，所以以后我提到异常也好，错误也罢，全指异常。</li>
+<li>Exception是所有异常类的祖类</li>
+</ul>
+</li>
+</ul>
+<h2 id="一个类的构造方法的作用是什么？若一个类没有声明构造方法，该程序能正确执行吗？为什么？"><a href="#一个类的构造方法的作用是什么？若一个类没有声明构造方法，该程序能正确执行吗？为什么？" class="headerlink" title="一个类的构造方法的作用是什么？若一个类没有声明构造方法，该程序能正确执行吗？为什么？"></a>一个类的构造方法的作用是什么？若一个类没有声明构造方法，该程序能正确执行吗？为什么？</h2><p>创建类的对象+初始化成员变量</p>
+<p>可以执行，因为一个类即使没有声明构造方法  JVM会自动创建的空参参数的构造方法。</p>
+<h2 id="静态方法和实例方法有何不同"><a href="#静态方法和实例方法有何不同" class="headerlink" title="静态方法和实例方法有何不同"></a>静态方法和实例方法有何不同</h2><ul>
+<li><p>在外部调用静态方法时，可以使用’类名.方法名’的方式，也可以使用’对象名.方法名’的方式。而实例方法只有后面这种方式。也就是说，调用静态方法可以无需创建对象。</p>
+</li>
+<li><p>静态方法在访问本类的成员时，只允许访问静态成员（即静态成员变量和静态方法），而不允许访问直接实例成员变量和和实例方法；实例方法可以直接文章实例方法和实例变量，也可以访问静态方法</p>
+</li>
+</ul>
+<h2 id="请手写一下冒泡排序【插入】，接着再用递归的方式写一遍"><a href="#请手写一下冒泡排序【插入】，接着再用递归的方式写一遍" class="headerlink" title="请手写一下冒泡排序【插入】，接着再用递归的方式写一遍"></a>请手写一下冒泡排序【插入】，接着再用递归的方式写一遍</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"><span class="comment">// 12,45,9,67,455,用冒泡排序实现升序排列。</span></span><br><span class="line">    <span class="type">int</span>[] arr = &#123; <span class="number">12</span>, <span class="number">45</span>, <span class="number">9</span>, <span class="number">67</span>, <span class="number">455</span> &#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; arr.length - <span class="number">1</span> - i; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</span><br><span class="line">                <span class="type">int</span> temp;</span><br><span class="line">                temp = arr[j];</span><br><span class="line">                arr[j] = arr[j + <span class="number">1</span>];</span><br><span class="line">                arr[j + <span class="number">1</span>] = temp;</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">    System.out.println(<span class="string">&quot;排序后：&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length; i++)</span><br><span class="line">    System.out.print(arr[i] + <span class="string">&quot;\t&quot;</span>);</span><br><span class="line">    </span><br><span class="line"> 	<span class="comment">//创建一个数组用于排序</span></span><br><span class="line">    <span class="type">int</span>[]arr2=&#123;<span class="number">1</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">6</span>,<span class="number">12</span>,<span class="number">10</span>&#125;;</span><br><span class="line">    <span class="comment">//调用递归的冒泡</span></span><br><span class="line">    arr2=recursiveBubble(arr2,arr2.length);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;arr2.length;i++)&#123;</span><br><span class="line">        System.out.print(arr2[i]);</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//冒泡排序之递归方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span>[] recursiveBubble(<span class="type">int</span>[] arr2,<span class="type">int</span> e)&#123;</span><br><span class="line">    <span class="keyword">if</span>(e==<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> arr2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;e-<span class="number">1</span>;i++)&#123;</span><br><span class="line">            <span class="type">int</span> temp=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span>(arr2[i]&gt;arr2[i+<span class="number">1</span>])&#123;</span><br><span class="line">                temp=arr2[i];</span><br><span class="line">                arr2[i]=arr2[i+<span class="number">1</span>];</span><br><span class="line">                arr2[i+<span class="number">1</span>]=temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        e--;</span><br><span class="line">        <span class="comment">//System.out.println(e);</span></span><br><span class="line">        recursiveBubble(arr2,e);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="静态嵌套类（Static-Nested-Class）和内部类（Inner-Class）的不同"><a href="#静态嵌套类（Static-Nested-Class）和内部类（Inner-Class）的不同" class="headerlink" title="静态嵌套类（Static Nested Class）和内部类（Inner Class）的不同?"></a>静态嵌套类（Static Nested Class）和内部类（Inner Class）的不同?</h2><p>Static Nested Class是被声明为静态（static）的内部类，它可以不依赖于外部类实例被实例化。而通常的内部类需要在外部类实例化后才能实例化。</p>
+<h2 id="Math-round-11-5-等于多少？Math-round-11-5-等于多少？"><a href="#Math-round-11-5-等于多少？Math-round-11-5-等于多少？" class="headerlink" title="Math.round(11.5)等于多少？Math.round(-11.5)等于多少？"></a>Math.round(11.5)等于多少？Math.round(-11.5)等于多少？</h2><p>Math.round(11.5)的返回值是12，Math.round(-11.5)的返回值是-11。四舍五入的原理是在参数上加0.5然后进行下取整。</p>
+<h2 id="阐述静态变量和实例变量的区别。"><a href="#阐述静态变量和实例变量的区别。" class="headerlink" title="阐述静态变量和实例变量的区别。"></a>阐述静态变量和实例变量的区别。</h2><ul>
+<li><p>静态变量是被static修饰符修饰的变量，也称为类变量，它属于类，不属于类的任何一个对象，一个类不管创建多少个对象，静态变量在内存中有且仅有一个拷贝；</p>
+</li>
+<li><p>实例变量必须依存于某一实例，需要先创建对象然后通过对象才能访问到它。静态变量可以实现让多个对象共享内存。</p>
+</li>
+</ul>
+<h2 id="请讲讲冒泡排序、快速排序、插入排序-这两种排序的原理"><a href="#请讲讲冒泡排序、快速排序、插入排序-这两种排序的原理" class="headerlink" title="请讲讲冒泡排序、快速排序、插入排序 这两种排序的原理"></a>请讲讲冒泡排序、快速排序、插入排序 这两种排序的原理</h2><p>冒泡排序原理：<br>1，比较相邻的元素。如果第一个比第二个大，就交换他们两个。<br>2，对每一对相邻元素做同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最大的数。<br>3，针对所有的元素重复以上的步骤，除了最后一个。<br>4，持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。</p>
+<p>快速排序原理：<br>1，先定义两个指针，一个在最前面，一个在最后面，第一次要对数组进行划分，先找出一个中间数，<br>2，一般默认把第一个数作为中间数，然后从后往前找比中间数小的，把他放在前一个指针的位置，<br>3，在从前往后找比中间数大的，找到后把它放在第二个指针的位置，直到前面和后面的指针指向同一个位置，<br>4，我们就把中间值放在这里即可，这样根据中间数，把整个需要排序的数组分为两部分，<br>5，前一部分都小于中间数，后一部分都大于中间数，此时这两部分的数还是无序的，最后递归调用排序方法，对两部分分别进行排序即可。</p>
+<p>插入排序原理：</p>
+<h2 id="说说你对多态的理解"><a href="#说说你对多态的理解" class="headerlink" title="说说你对多态的理解"></a>说说你对多态的理解</h2><ol>
+<li><p>现象：</p>
+<p>调用同一个类型对象的同一个方法，会出现不同的结果</p>
+</li>
+<li><p>实现多态的三个条件：</p>
+<p>1）要有继承；</p>
+<p>2）要有方法重写；</p>
+<p>3）要有父类指针（引用）指向子类对象。</p>
+</li>
+<li><p>多态的原理：</p>
+<p>动态连编，根据实际对象的类型来判断重写方法的调用。多态的原理：动态连编，根据实际对象的类型来判断重写方法的调用</p>
+</li>
+</ol>
+<h2 id="写clone方法时，通常都有一行代码，是什么？"><a href="#写clone方法时，通常都有一行代码，是什么？" class="headerlink" title="写clone方法时，通常都有一行代码，是什么？"></a>写clone方法时，通常都有一行代码，是什么？</h2><p>clone 有缺省行为，super.clone();因为首先要把父类中的成员复制到位，然后才是复制自己的成员。</p>
+<h2 id="Java中是如何支持正则表达式操作的？"><a href="#Java中是如何支持正则表达式操作的？" class="headerlink" title="Java中是如何支持正则表达式操作的？"></a>Java中是如何支持正则表达式操作的？</h2><p>Java中的String类提供了支持正则表达式操作的方法，包括：matches()、replaceAll()、replaceFirst()、split()。<br>此外，Java中可以用Pattern类表示正则表达式对象，它提供了丰富的API进行各种正则表达式操作，请参考下面面试题的代码。</p>
+<h2 id="Java序列化中如果有写字段不想进行序列化，怎么办？"><a href="#Java序列化中如果有写字段不想进行序列化，怎么办？" class="headerlink" title="Java序列化中如果有写字段不想进行序列化，怎么办？"></a>Java序列化中如果有写字段不想进行序列化，怎么办？</h2><p>对于不想进行序列化的变量，使用transient关键字修饰。<br>transient关键字的作用是：阻止实例中那些用此关键字修饰的的变量序列化；当对象被反序列化时，被transient修饰的变量值不会被持久化和恢复。transient只能修饰变量，不能修饰类和方法。 </p>
+<h2 id="构造器（constructor）是否可被重写（override）"><a href="#构造器（constructor）是否可被重写（override）" class="headerlink" title="构造器（constructor）是否可被重写（override）"></a>构造器（constructor）是否可被重写（override）</h2><p>构造器不能被继承，因此不能被重写，但可以被重载。</p>
+<h2 id="65-int和Integer的区别？"><a href="#65-int和Integer的区别？" class="headerlink" title="65. int和Integer的区别？"></a>65. int和Integer的区别？</h2><ul>
+<li>java是一个的面向对象编程语言，但是为了编程的方便还是引入了基本数据类型，但是为了能够将这些基本数据类型当成对象操作，Java为每一个基本数据类型都引入了对应的包装类型（wrapper class），int的包装类就是Integer，从Java 5开始引入了自动装箱&#x2F;拆箱机制，使得二者可以相互转换。</li>
+<li>Java 为每个原始类型提供了包装类型：<ul>
+<li>原始类型: boolean，char，byte，short，int，long，float，double</li>
+<li>包装类型：Boolean，Character，Byte，Short，Integer，Long，Float，Double</li>
+</ul>
+</li>
+</ul>
+<h2 id="自动装箱与拆箱"><a href="#自动装箱与拆箱" class="headerlink" title="自动装箱与拆箱"></a>自动装箱与拆箱</h2><p>装箱：将基本类型用它们对应的引用类型包装起来；</p>
+<p>拆箱：将包装类型转换为基本数据类型；</p>
+<h2 id="x3D-x3D-与equals的区别？"><a href="#x3D-x3D-与equals的区别？" class="headerlink" title="&#x3D;&#x3D;与equals的区别？"></a>&#x3D;&#x3D;与equals的区别？</h2><ul>
+<li>&#x3D;&#x3D; <ul>
+<li>值类型：判断是值是否相等</li>
+<li>引用类型：判断是引用地址是否相等</li>
+</ul>
+</li>
+<li>equals() <ul>
+<li>是Object中的方法，表示地址是否相等</li>
+<li>但String 中的 equals 方法是被重写过的，它表示的是值相等</li>
+</ul>
+</li>
+</ul>
+<h2 id="构造方法调用顺序"><a href="#构造方法调用顺序" class="headerlink" title="构造方法调用顺序"></a>构造方法调用顺序</h2><p>实例化一个子类首先会调用父类中的空的构造方法，再调用子类中对应的构造方法</p>
+<p>除非在子类构造方法的第一行有super(xxx)，则调用父类对应构造方法。</p>
+<p>一般在子类构造方法的第一行即为super()，默认是可以省略的，所以推荐在父类一般保留一个空的构造方法</p>
+<h2 id="java和-javaX有什么区别"><a href="#java和-javaX有什么区别" class="headerlink" title="java和 javaX有什么区别"></a>java和 javaX有什么区别</h2><p>刚开始的时候 JavaAPI 所必需的包是 java 开头的包，javax 当时只是扩展 API 包来使用。然而随着时间的推移，javax 逐渐地扩展成为 Java API 的组成部分。但是，但是，将扩展从 javax 包移动到 java 包确实太麻烦了，最终会破坏一堆现有的代码。因此，最终决定 javax 包将成为标准API的一部分。<br>所以，实际上java和javax没有区别。这都是一个名字</p>
+<h2 id="amp-和-amp-amp-的区别"><a href="#amp-和-amp-amp-的区别" class="headerlink" title="&amp;和&amp;&amp;的区别"></a>&amp;和&amp;&amp;的区别</h2><ul>
+<li>&amp;按位与；&amp;&amp;逻辑与。</li>
+<li>&amp;非短信与; &amp;&amp;运算符是短路与运算<ul>
+<li>逻辑与跟短路与的差别是非常巨大的，虽然二者都要求运算符左右两端的布尔值都是true整个表达式的值才是true。</li>
+<li>&amp;&amp;之所以称为短路运算是因为，如果&amp;&amp;左边的表达式的值是false，右边的表达式会被直接短路掉，不会进行运算。很多时候我们可能都需要用&amp;&amp;而不是&amp;，</li>
+<li>例如在验证用户登录时判定用户名不是null而且不是空字符串，应当写为：username !&#x3D; null &amp;&amp;!username.equals(‘’)，二者的顺序不能交换，更不能用&amp;运算符，因为第一个条件如果不成立，根本不能进行字符串的equals比较，否则会产生NullPointerException异常。</li>
+<li>注意：逻辑或运算符（|）和短路或运算符（||）的差别也是如此。</li>
+</ul>
+</li>
+</ul>
+<h2 id="说一下类加载的执行过程"><a href="#说一下类加载的执行过程" class="headerlink" title="说一下类加载的执行过程"></a>说一下类加载的执行过程</h2><p>java程序在执行过程中，类，对象以及它们成员加载、初始化的顺序如下：</p>
+<ol>
+<li>首先加载父类。</li>
+<li>对静态成员进行加载，主要包括静态成员变量的初始化，静态语句块的执行，在加载时按代码的先后顺序进行。</li>
+<li>加载非静态的成员，主要包括非静态成员变量的初始化，非静态语句块的执行，在加载时按代码的先后顺序进行。</li>
+<li>最后执行构造器，构造器执行完毕，对象生成。</li>
+</ol>
+<h2 id="java中实现多态的机制是什么"><a href="#java中实现多态的机制是什么" class="headerlink" title="java中实现多态的机制是什么"></a>java中实现多态的机制是什么</h2><p>靠的是父类或接口定义的引用变量可以指向子类或具体实现类的实例对象，而程序调用的方法在运行期才动态绑定，就是引用变量所指向的具体实例对象的方法，也就是内存里正在运行的那个对象的方法，而不是引用变量的类型中定义的方法。</p>
+<h2 id="是否可以继承string类"><a href="#是否可以继承string类" class="headerlink" title="是否可以继承string类"></a>是否可以继承string类</h2><p>String 类是final类，不可以被继承。 </p>
+<h2 id="数据类型之间的转换：如何将字符串转换为基本数据类型？如何将基本数据类型转换为字符串？"><a href="#数据类型之间的转换：如何将字符串转换为基本数据类型？如何将基本数据类型转换为字符串？" class="headerlink" title="数据类型之间的转换：如何将字符串转换为基本数据类型？如何将基本数据类型转换为字符串？"></a>数据类型之间的转换：如何将字符串转换为基本数据类型？如何将基本数据类型转换为字符串？</h2><ul>
+<li><p>调用基本数据类型对应的包装类中的方法parseXXX(String)或valueOf(String)即可返回相应基本类型；</p>
+</li>
+<li><p>一种方法是将基本数据类型与空字符串（’’）连接（+）即可获得其所对应的字符串；</p>
+</li>
+<li><p>另一种方法是调用String 类中的valueOf()方法返回相应字符串</p>
+</li>
+</ul>
+<h2 id="接口是否可以继承（extends）接口，抽象类是否可以实现-implements-接口-抽象类是否可以继承具体类-concrete-class"><a href="#接口是否可以继承（extends）接口，抽象类是否可以实现-implements-接口-抽象类是否可以继承具体类-concrete-class" class="headerlink" title="接口是否可以继承（extends）接口，抽象类是否可以实现(implements)接口,抽象类是否可以继承具体类(concrete class)?"></a>接口是否可以继承（extends）接口，抽象类是否可以实现(implements)接口,抽象类是否可以继承具体类(concrete class)?</h2><ul>
+<li><p>接口可以继承接口，而且支持多重继承。</p>
+</li>
+<li><p>抽象类可以实现(implements)接口，抽象类可继承具体类也可以继承抽象类。</p>
+</li>
+</ul>
+<h2 id="内部类可以引用它的包含类（外部类）的成员吗？有没有什么限制？"><a href="#内部类可以引用它的包含类（外部类）的成员吗？有没有什么限制？" class="headerlink" title="内部类可以引用它的包含类（外部类）的成员吗？有没有什么限制？"></a>内部类可以引用它的包含类（外部类）的成员吗？有没有什么限制？</h2><p>一个内部类对象可以访问创建它的外部类对象的成员，包括私有成员</p>
+<h2 id="简述一下你了解的设计模式？"><a href="#简述一下你了解的设计模式？" class="headerlink" title="简述一下你了解的设计模式？"></a>简述一下你了解的设计模式？</h2><ul>
+<li><p>所谓设计模式，就是一套被反复使用的代码设计经验的总结（情境中一个问题经过证实的一个解决方案）。</p>
+</li>
+<li><p>使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。</p>
+</li>
+<li><p>设计模式使人们可以更加简单方便的复用成功的设计和体系结构。将已证实的技术表述成设计模式也会使新系统开发者更加容易理解其设计思路。</p>
+</li>
+<li><p>在GoF的《Design Patterns: Elements of Reusable Object-Oriented Software》中给出了三类（创建型[对类的实例化过程的抽象化]、结构型[描述如何将类或对象结合在一起形成更大的结构]、行为型[对在不同的对象之间划分责任和算法的抽象化]）共23种设计模式，</p>
+</li>
+<li><p>包括：</p>
+<p>Abstract Factory（抽象工厂模式），<br>Builder（建造者模式），<br>Factory Method（工厂方法模式），<br>Prototype（原始模型模式），<br>Singleton（单例模式）；<br>Facade（门面模式），<br>Adapter（适配器模式），<br>Bridge（桥梁模式），<br>Composite（合成模式），<br>Decorator（装饰模式），<br>Flyweight（享元模式），<br>Proxy（代理模式）；<br>Command（命令模式），<br>Interpreter（解释器模式），<br>Visitor（访问者模式），<br>Iterator（迭代子模式），<br>Mediator（调停者模式），<br>Memento（备忘录模式），<br>Observer（观察者模式），<br>State（状态模式），<br>Strategy（策略模式），<br>Template Method（模板方法模式），<br>Chain Of Responsibility（责任链模式）。<br>面试被问到关于设计模式的知识时，可以拣最常用的作答，例如：</p>
+</li>
+<li><p>工厂模式：工厂类可以根据条件生成不同的子类实例，这些子类有一个公共的抽象父类并且实现了相同的方法，但是这些方法针对不同的数据进行了不同的操作（多态方法）。当得到子类的实例后，开发人员可以调用基类中的方法而不必考虑到底返回的是哪一个子类的实例。</p>
+</li>
+<li><p>代理模式：给一个对象提供一个代理对象，并由代理对象控制原对象的引用。实际开发中，按照使用目的的不同，代理可以分为：远程代理、虚拟代理、保护代理、Cache代理、防火墙代理、同步化代理、智能引用代理。</p>
+</li>
+<li><p>适配器模式：把一个类的接口变换成客户端所期待的另一种接口，从而使原本因接口不匹配而无法在一起使用的类能够一起工作。</p>
+</li>
+<li><p>模板方法模式：提供一个抽象类，将部分逻辑以具体方法或构造器的形式实现，然后声明一些抽象方法来迫使子类实现剩余的逻辑。不同的子类可以以不同的方式实现这些抽象方法（多态实现），从而实现不同的业务逻辑。<br>除此之外，还可以讲讲上面提到的门面模式、桥梁模式、单例模式、装潢模式（Collections工具类和I&#x2F;O系统中都使用装潢模式）等，反正基本原则就是拣自己最熟悉的、用得最多的作答，以免言多必失。</p>
+</li>
+</ul>
+<h2 id="什么是单例模式？实现步骤？"><a href="#什么是单例模式？实现步骤？" class="headerlink" title="什么是单例模式？实现步骤？"></a>什么是单例模式？实现步骤？</h2><p>单例模式分为：</p>
+<ol>
+<li>懒汉式：用的时候，才去创建对象（不会出现线程问题的单例模式）</li>
+<li>饿汉式：类一加载就创建对象（可能会线程问题的单例模式）</li>
+</ol>
+<ul>
+<li><p>饿汉代码</p>
+<ul>
+<li>外部使用者如果需要使用SingletonClass的实例，只能通过getInstance()方法，并且它的构造方法是private的，这样就保证了只能有一个对象存在。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SingletonClass</span> &#123; </span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> <span class="type">SingletonClass</span> <span class="variable">instance</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SingletonClass</span>(); </span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> SingletonClass <span class="title function_">getInstance</span><span class="params">()</span> &#123; </span><br><span class="line">    <span class="keyword">return</span> instance; </span><br><span class="line">  &#125; </span><br><span class="line"></span><br><span class="line">  <span class="keyword">private</span> <span class="title function_">SingletonClass</span><span class="params">()</span> &#123;  </span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>懒汉代码</p>
+<ul>
+<li>上面的代码虽然简单，但无论这个类是否被使用，都会创建一个instance对象</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SingletonClass</span> &#123; </span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> <span class="type">SingletonClass</span> <span class="variable">instance</span> <span class="operator">=</span> <span class="literal">null</span>; </span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> SingletonClass <span class="title function_">getInstance</span><span class="params">()</span> &#123; </span><br><span class="line">    <span class="keyword">if</span>(instance == <span class="literal">null</span>) &#123; </span><br><span class="line">      instance = <span class="keyword">new</span> <span class="title class_">SingletonClass</span>(); </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">return</span> instance; </span><br><span class="line">  &#125; </span><br><span class="line">  <span class="keyword">private</span> <span class="title function_">SingletonClass</span><span class="params">()</span> &#123; </span><br><span class="line">    </span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>上述代码会有线程安全的问题</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SingletonClass</span> &#123; </span><br><span class="line"></span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> <span class="type">SingletonClass</span> <span class="variable">instance</span> <span class="operator">=</span> <span class="literal">null</span>; </span><br><span class="line">    </span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">static</span> SingletonClass <span class="title function_">getInstance</span><span class="params">()</span> &#123; </span><br><span class="line">    <span class="keyword">if</span>(instance == <span class="literal">null</span>) &#123; </span><br><span class="line">      instance = <span class="keyword">new</span> <span class="title class_">SingletonClass</span>(); </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">return</span> instance; </span><br><span class="line">  &#125; </span><br><span class="line">    </span><br><span class="line">  <span class="keyword">private</span> <span class="title function_">SingletonClass</span><span class="params">()</span> &#123; </span><br><span class="line">     </span><br><span class="line">  &#125; </span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>性能调优一下,double-check</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SingletonClass</span> &#123; </span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> <span class="type">SingletonClass</span> <span class="variable">instance</span> <span class="operator">=</span> <span class="literal">null</span>; </span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> SingletonClass <span class="title function_">getInstance</span><span class="params">()</span> &#123; </span><br><span class="line">    <span class="keyword">if</span> (instance == <span class="literal">null</span>) &#123; </span><br><span class="line">      <span class="keyword">synchronized</span> (SingletonClass.class) &#123; </span><br><span class="line">        <span class="keyword">if</span> (instance == <span class="literal">null</span>) &#123; </span><br><span class="line">          instance = <span class="keyword">new</span> <span class="title class_">SingletonClass</span>(); </span><br><span class="line">        &#125; </span><br><span class="line">      &#125; </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">return</span> instance; </span><br><span class="line">  &#125; </span><br><span class="line">  <span class="keyword">private</span> <span class="title function_">SingletonClass</span><span class="params">()</span> &#123; </span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>创建一个变量需要哪些步骤呢？一个是申请一块内存，调用构造方法进行初始化操作，另一个是分配一个指针指向这块内存。这两个操作谁在前谁在后呢？JMM规范并没有规定。</p>
+<p>线程1开始创建SingletonClass的实例，此时线程B调用了getInstance()方法，首先判断instance是否为null。按照我们上面所说的内存模型，1已经把instance指向了那块内存，只是还没有调用构造方法，因此2检测到instance不为null，于是直接把instance返回了——问题出现了，尽管instance不为null，但它并没有构造完成，就像一套房子已经给了你钥匙，但你并不能住进去，因为里面还是毛坯房</p>
+<p>只要我们简单的把instance加上volatile关键字就可以了。volatile在Java并发编程中常用于保持内存可见性和防止指令重排序</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SingletonClass</span> &#123; </span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">static</span> <span class="type">SingletonClass</span> <span class="variable">instance</span> <span class="operator">=</span> <span class="literal">null</span>; </span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> SingletonClass <span class="title function_">getInstance</span><span class="params">()</span> &#123; </span><br><span class="line">    <span class="keyword">if</span> (instance == <span class="literal">null</span>) &#123; </span><br><span class="line">      <span class="keyword">synchronized</span> (SingletonClass.class) &#123; </span><br><span class="line">        <span class="keyword">if</span>(instance == <span class="literal">null</span>) &#123; </span><br><span class="line">          instance = <span class="keyword">new</span> <span class="title class_">SingletonClass</span>(); </span><br><span class="line">        &#125; </span><br><span class="line">      &#125; </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">return</span> instance; </span><br><span class="line">  &#125; </span><br><span class="line">  <span class="keyword">private</span> <span class="title function_">SingletonClass</span><span class="params">()</span> &#123; </span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
 
   </div>
   
@@ -2655,10 +3107,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-14T19:59:55+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-18T12:57:05+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Sep 14, 2023</p>
+    <p>更新于：Sep 18, 2023</p>
   </a>
 </div>
 
@@ -2814,7 +3266,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#java%E4%B8%AD%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BA%8F%E5%88%97%E5%8C%96%EF%BC%8C%E6%9C%89%E4%BB%80%E4%B9%88%E6%84%8F%E4%B9%89%EF%BC%9F"><span class="toc-text">java中如何实现序列化，有什么意义？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E6%9C%89%E5%93%AA%E4%BA%9B%E7%89%B9%E6%80%A7%EF%BC%9F"><span class="toc-text">构造方法有哪些特性？</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#String-s-x3D-new-String-%E2%80%9Cxyz%E2%80%9D-%E5%88%9B%E5%BB%BA%E4%BA%86%E5%87%A0%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AF%B9%E8%B1%A1%EF%BC%9F"><span class="toc-text">String s &#x3D; new String(“xyz”);创建了几个字符串对象？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String%E6%98%AF%E6%9C%80%E5%9F%BA%E6%9C%AC%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%90%97%EF%BC%9F"><span class="toc-text">String是最基本的数据类型吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E5%AF%B9%E8%B1%A1%E5%80%BC%E7%9B%B8%E5%90%8C%EF%BC%88x-equals-y-x3D-x3D-true%EF%BC%89%EF%BC%8C%E4%BD%86%E5%8D%B4%E5%8F%AF%E6%9C%89%E4%B8%8D%E5%90%8C%E7%9A%84hashcode%EF%BC%8C%E8%BF%99%E5%8F%A5%E8%AF%9D%E5%AF%B9%E4%B8%8D%E5%AF%B9%EF%BC%9F"><span class="toc-text">两个对象值相同（x.equals(y)&#x3D;&#x3D;true），但却可有不同的hashcode，这句话对不对？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java%E4%B8%AD%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BA%8F%E5%88%97%E5%8C%96%EF%BC%8C%E6%9C%89%E4%BB%80%E4%B9%88%E6%84%8F%E4%B9%89%EF%BC%9F"><span class="toc-text">java中如何实现序列化，有什么意义？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E6%9C%89%E5%93%AA%E4%BA%9B%E7%89%B9%E6%80%A7%EF%BC%9F"><span class="toc-text">构造方法有哪些特性？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Anonymous-Inner-Class-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB-%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E7%BB%A7%E6%89%BF%E5%85%B6%E4%BB%96%E7%B1%BB%EF%BC%9F%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%AE%9E%E7%8E%B0%E6%8E%A5%E5%8F%A3%EF%BC%9F"><span class="toc-text">Anonymous Inner Class(匿名内部类)是否可以继承其他类？是否可以实现接口？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%96%B9%E6%B3%95%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC%EF%BC%9F%E8%BF%94%E5%9B%9E%E5%80%BC%E5%9C%A8%E7%B1%BB%E7%9A%84%E6%96%B9%E6%B3%95%E9%87%8C%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">什么是方法的返回值？返回值在类的方法里的作用是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81"><span class="toc-text">面向对象三大特征</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E8%B0%83%E7%94%A8%E5%AD%90%E7%B1%BB%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E4%B9%8B%E5%89%8D%E4%BC%9A%E5%85%88%E8%B0%83%E7%94%A8%E7%88%B6%E7%B1%BB%E6%B2%A1%E6%9C%89%E5%8F%82%E6%95%B0%E7%9A%84%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%EF%BC%8C%E5%85%B6%E7%9B%AE%E7%9A%84%E6%98%AF%EF%BC%9F"><span class="toc-text">在调用子类构造方法之前会先调用父类没有参数的构造方法，其目的是？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#switch%E6%98%AF%E5%90%A6%E8%83%BD%E4%BD%9C%E7%94%A8%E5%9C%A8byte%E4%B8%8A%EF%BC%8C%E6%98%AF%E5%90%A6%E8%83%BD%E4%BD%9C%E7%94%A8%E5%9C%A8long%E4%B8%8A%EF%BC%8C%E6%98%AF%E5%90%A6%E8%83%BD%E4%BD%9C%E7%94%A8%E5%9C%A8String%E4%B8%8A"><span class="toc-text">switch是否能作用在byte上，是否能作用在long上，是否能作用在String上</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%9C%80%E6%9C%89%E6%95%88%E7%8E%87%E7%9A%84%E6%96%B9%E6%B3%95%E7%AE%97%E5%87%BA2%E4%B9%98%E4%BB%A58%E7%AD%89%E4%BA%8E%E5%87%A0%EF%BC%9F"><span class="toc-text">用最有效率的方法算出2乘以8等于几？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E4%BF%AE%E6%94%B9%E7%AC%A6%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">访问修改符的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Object%E7%B1%BB%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">Object类中常用的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99%E7%9A%84%E7%89%B9%E6%80%A7"><span class="toc-text">方法重写的特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD%E7%9A%84%E7%89%B9%E6%80%A7"><span class="toc-text">方法重载的特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E8%BD%BD%E5%92%8C%E9%87%8D%E5%86%99%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">重载和重写的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%80%BC%E4%BC%A0%E9%80%92%E4%B8%8E%E5%BC%95%E7%94%A8%E5%8C%BA%E5%88%AB"><span class="toc-text">值传递与引用区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String%E3%80%81StringBuffer%E5%92%8CStringBuilder%E5%8C%BA%E5%88%AB"><span class="toc-text">String、StringBuffer和StringBuilder区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-text">成员变量与局部变量的区别有哪些？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8E%A5%E5%8F%A3%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="toc-text">抽象类与接口有什么区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%9F%E5%88%97%E5%92%8C%E6%A0%88%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">队列和栈是什么？有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E6%9C%89%E6%B2%A1%E6%9C%89goto%EF%BC%9F"><span class="toc-text">Java有没有goto？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E4%BB%8E%E4%B8%80%E4%B8%AAstatic%E6%96%B9%E6%B3%95%E5%86%85%E9%83%A8%E5%8F%91%E5%87%BA%E5%AF%B9%E9%9D%9Estatic%E6%96%B9%E6%B3%95%E7%9A%84%E8%B0%83%E7%94%A8-%EF%BC%9F"><span class="toc-text">是否可以从一个static方法内部发出对非static方法的调用 ？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java%E4%B8%AD%E7%9A%84final%E5%85%B3%E9%94%AE%E5%AD%97%E6%9C%89%E5%93%AA%E4%BA%9B%E7%94%A8%E6%B3%95%EF%BC%9F"><span class="toc-text">java中的final关键字有哪些用法？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#final%EF%BC%8Cfinally%E5%92%8Cfinalize%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">final，finally和finalize的区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8final%E5%85%B3%E9%94%AE%E5%AD%97%E4%BF%AE%E9%A5%B0%E4%B8%80%E4%B8%AA%E5%8F%98%E9%87%8F%E6%97%B6%EF%BC%8C%E6%98%AF%E5%BC%95%E7%94%A8%E4%B8%8D%E8%83%BD%E5%8F%98%EF%BC%8C%E8%BF%98%E6%98%AF%E5%BC%95%E7%94%A8%E7%9A%84%E5%AF%B9%E8%B1%A1%E4%B8%8D%E8%83%BD%E5%8F%98"><span class="toc-text">使用final关键字修饰一个变量时，是引用不能变，还是引用的对象不能变</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E7%9A%84%EF%BC%88abstract%EF%BC%89%E6%96%B9%E6%B3%95%E6%98%AF%E5%90%A6%E5%8F%AF%E5%90%8C%E6%97%B6%E6%98%AF%E9%9D%99%E6%80%81%E7%9A%84%EF%BC%88static%EF%BC%89%EF%BC%8C%E6%98%AF%E5%90%A6%E5%8F%AF%E5%90%8C%E6%97%B6%E6%98%AF%E6%9C%AC%E5%9C%B0%E6%96%B9%E6%B3%95%EF%BC%88native%EF%BC%89%EF%BC%8C%E6%98%AF%E5%90%A6%E5%8F%AF%E5%90%8C%E6%97%B6%E8%A2%ABsynchronized%E4%BF%AE%E9%A5%B0%EF%BC%9F"><span class="toc-text">抽象的（abstract）方法是否可同时是静态的（static），是否可同时是本地方法（native），是否可同时被synchronized修饰？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E8%AF%A5%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86"><span class="toc-text">异常该如何处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E5%88%86%E7%B1%BB%E5%92%8C%E5%B8%B8%E8%A7%81%E5%BC%82%E5%B8%B8"><span class="toc-text">异常分类和常见异常</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E5%BC%82%E5%B8%B8%E4%B8%8E%E9%9D%9E%E8%BF%90%E8%A1%8C%E6%97%B6%E5%BC%82%E5%B8%B8%E6%9C%89%E4%BD%95%E5%BC%82%E5%90%8C%EF%BC%9F"><span class="toc-text">运行异常与非运行时异常有何异同？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%94%99%E8%AF%AF%E4%B8%8E%E5%BC%82%E5%B8%B8%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">错误与异常的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E7%B1%BB%E7%9A%84%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E8%8B%A5%E4%B8%80%E4%B8%AA%E7%B1%BB%E6%B2%A1%E6%9C%89%E5%A3%B0%E6%98%8E%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%EF%BC%8C%E8%AF%A5%E7%A8%8B%E5%BA%8F%E8%83%BD%E6%AD%A3%E7%A1%AE%E6%89%A7%E8%A1%8C%E5%90%97%EF%BC%9F%E4%B8%BA%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">一个类的构造方法的作用是什么？若一个类没有声明构造方法，该程序能正确执行吗？为什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E5%92%8C%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95%E6%9C%89%E4%BD%95%E4%B8%8D%E5%90%8C"><span class="toc-text">静态方法和实例方法有何不同</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B7%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%8B%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E3%80%90%E6%8F%92%E5%85%A5%E3%80%91%EF%BC%8C%E6%8E%A5%E7%9D%80%E5%86%8D%E7%94%A8%E9%80%92%E5%BD%92%E7%9A%84%E6%96%B9%E5%BC%8F%E5%86%99%E4%B8%80%E9%81%8D"><span class="toc-text">请手写一下冒泡排序【插入】，接着再用递归的方式写一遍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%B5%8C%E5%A5%97%E7%B1%BB%EF%BC%88Static-Nested-Class%EF%BC%89%E5%92%8C%E5%86%85%E9%83%A8%E7%B1%BB%EF%BC%88Inner-Class%EF%BC%89%E7%9A%84%E4%B8%8D%E5%90%8C"><span class="toc-text">静态嵌套类（Static Nested Class）和内部类（Inner Class）的不同?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Math-round-11-5-%E7%AD%89%E4%BA%8E%E5%A4%9A%E5%B0%91%EF%BC%9FMath-round-11-5-%E7%AD%89%E4%BA%8E%E5%A4%9A%E5%B0%91%EF%BC%9F"><span class="toc-text">Math.round(11.5)等于多少？Math.round(-11.5)等于多少？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%90%E8%BF%B0%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E5%AE%9E%E4%BE%8B%E5%8F%98%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB%E3%80%82"><span class="toc-text">阐述静态变量和实例变量的区别。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B7%E8%AE%B2%E8%AE%B2%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E3%80%81%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E3%80%81%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F-%E8%BF%99%E4%B8%A4%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-text">请讲讲冒泡排序、快速排序、插入排序 这两种排序的原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E4%BD%A0%E5%AF%B9%E5%A4%9A%E6%80%81%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">说说你对多态的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99clone%E6%96%B9%E6%B3%95%E6%97%B6%EF%BC%8C%E9%80%9A%E5%B8%B8%E9%83%BD%E6%9C%89%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%EF%BC%8C%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">写clone方法时，通常都有一行代码，是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E4%B8%AD%E6%98%AF%E5%A6%82%E4%BD%95%E6%94%AF%E6%8C%81%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%9A%84%EF%BC%9F"><span class="toc-text">Java中是如何支持正则表达式操作的？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%AD%E5%A6%82%E6%9E%9C%E6%9C%89%E5%86%99%E5%AD%97%E6%AE%B5%E4%B8%8D%E6%83%B3%E8%BF%9B%E8%A1%8C%E5%BA%8F%E5%88%97%E5%8C%96%EF%BC%8C%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F"><span class="toc-text">Java序列化中如果有写字段不想进行序列化，怎么办？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8%EF%BC%88constructor%EF%BC%89%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A2%AB%E9%87%8D%E5%86%99%EF%BC%88override%EF%BC%89"><span class="toc-text">构造器（constructor）是否可被重写（override）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#65-int%E5%92%8CInteger%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">65. int和Integer的区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E8%A3%85%E7%AE%B1%E4%B8%8E%E6%8B%86%E7%AE%B1"><span class="toc-text">自动装箱与拆箱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#x3D-x3D-%E4%B8%8Eequals%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">&#x3D;&#x3D;与equals的区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8%E9%A1%BA%E5%BA%8F"><span class="toc-text">构造方法调用顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java%E5%92%8C-javaX%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="toc-text">java和 javaX有什么区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#amp-%E5%92%8C-amp-amp-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">&amp;和&amp;&amp;的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E4%B8%80%E4%B8%8B%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%9A%84%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="toc-text">说一下类加载的执行过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java%E4%B8%AD%E5%AE%9E%E7%8E%B0%E5%A4%9A%E6%80%81%E7%9A%84%E6%9C%BA%E5%88%B6%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">java中实现多态的机制是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E7%BB%A7%E6%89%BFstring%E7%B1%BB"><span class="toc-text">是否可以继承string类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2%EF%BC%9A%E5%A6%82%E4%BD%95%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%9F%E5%A6%82%E4%BD%95%E5%B0%86%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%9F"><span class="toc-text">数据类型之间的转换：如何将字符串转换为基本数据类型？如何将基本数据类型转换为字符串？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E7%BB%A7%E6%89%BF%EF%BC%88extends%EF%BC%89%E6%8E%A5%E5%8F%A3%EF%BC%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%AE%9E%E7%8E%B0-implements-%E6%8E%A5%E5%8F%A3-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E7%BB%A7%E6%89%BF%E5%85%B7%E4%BD%93%E7%B1%BB-concrete-class"><span class="toc-text">接口是否可以继承（extends）接口，抽象类是否可以实现(implements)接口,抽象类是否可以继承具体类(concrete class)?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E9%83%A8%E7%B1%BB%E5%8F%AF%E4%BB%A5%E5%BC%95%E7%94%A8%E5%AE%83%E7%9A%84%E5%8C%85%E5%90%AB%E7%B1%BB%EF%BC%88%E5%A4%96%E9%83%A8%E7%B1%BB%EF%BC%89%E7%9A%84%E6%88%90%E5%91%98%E5%90%97%EF%BC%9F%E6%9C%89%E6%B2%A1%E6%9C%89%E4%BB%80%E4%B9%88%E9%99%90%E5%88%B6%EF%BC%9F"><span class="toc-text">内部类可以引用它的包含类（外部类）的成员吗？有没有什么限制？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E8%BF%B0%E4%B8%80%E4%B8%8B%E4%BD%A0%E4%BA%86%E8%A7%A3%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%9F"><span class="toc-text">简述一下你了解的设计模式？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%EF%BC%9F%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4%EF%BC%9F"><span class="toc-text">什么是单例模式？实现步骤？</span></a></li></ol>
   </div>
 </section>
 
@@ -3537,7 +3989,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YukiCCC的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/Java/","name":"Java"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/09/14/Java面试题-一/","name":"Java面试题(一)"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"YukiCCC的博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Java面试题(一)","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/09/14/Java%E9%9D%A2%E8%AF%95%E9%A2%98-%E4%B8%80/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YukiCCC的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/09/14/Java%E9%9D%A2%E8%AF%95%E9%A2%98-%E4%B8%80/","wordCount":0,"datePublished":"2023-09-14T11:05:39.000Z","dateModified":"2023-09-14T11:59:55.405Z","articleSection":"Java","keywords":"面试技巧","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YukiCCC的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/Java/","name":"Java"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/09/14/Java面试题-一/","name":"Java面试题(一)"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"YukiCCC的博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Java面试题(一)","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/09/14/Java%E9%9D%A2%E8%AF%95%E9%A2%98-%E4%B8%80/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YukiCCC的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/09/14/Java%E9%9D%A2%E8%AF%95%E9%A2%98-%E4%B8%80/","wordCount":0,"datePublished":"2023-09-14T11:05:39.000Z","dateModified":"2023-09-18T04:57:05.264Z","articleSection":"Java","keywords":"面试技巧","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
