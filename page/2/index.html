@@ -2155,7 +2155,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1697419785504),
+    lastupdate: new Date(1697421075727),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2517,6 +2517,145 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <section class="post-list">
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/18/Java面试题-四-多线程/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="YukiCCC的博客">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="YukiCCC的博客">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/09/18/Java%E9%9D%A2%E8%AF%95%E9%A2%98-%E5%9B%9B-%E5%A4%9A%E7%BA%BF%E7%A8%8B/"  itemprop="url">
+        Java面试题-四(多线程)
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        1. 说说并发与并行的区别
+并发： 同一时间段，多个任务都在执行 (单位时间内不一定同时执行)；
+
+并行： 单位时间内，多个任务同时执行。
+
+
+2. 进程
+进程是程序的一次执行过程，是系统运行程序的基本单位，因此进程是动态的。系统运行一个程序即是一个进程从创建，运行到消亡的过程。
+
+在 Java 中，当我们启动 main 函数时其实就是启动了一个 JVM 的进程，而 main 函数所在的线程...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-09-18T13:21:24+08:00">2023-09-18</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Java/">Java</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Java/" itemprop="url"><span itemprop="name">Java</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/09/18/Java%E9%9D%A2%E8%AF%95%E9%A2%98-%E5%9B%9B-%E5%A4%9A%E7%BA%BF%E7%A8%8B/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/18/Java面试题-三-JavaWeb/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="YukiCCC的博客">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="YukiCCC的博客">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/09/18/Java%E9%9D%A2%E8%AF%95%E9%A2%98-%E4%B8%89-JavaWeb/"  itemprop="url">
+        Java面试题-三(JavaWeb)
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        1. 如何解决POST请求中文乱码问题，GET的又是如何处理的
+解决post请求乱码问题：
+
+在web.xml中配置一个CharacterEncodingFilter过滤器，设置成UTF-8；
+123456789101112&lt;filter&gt;    &lt;filter-name&gt;CharacterEncodingFilter&lt;/filter-name&gt;    &...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-09-18T13:17:52+08:00">2023-09-18</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Java/">Java</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Java/" itemprop="url"><span itemprop="name">Java</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/09/18/Java%E9%9D%A2%E8%AF%95%E9%A2%98-%E4%B8%89-JavaWeb/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -3061,144 +3200,6 @@ EasyPOI
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/24/Shiro学习/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="YukiCCC的博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="YukiCCC的博客">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/08/24/Shiro%E5%AD%A6%E4%B9%A0/"  itemprop="url">
-        Shiro学习
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        一、Shiro简介1. Shiro是什么？Apache Shiro是一个强大且易用的开源Java安全框架，执行身份认证、授权、密码学和会话管理等
-Spring Security也是一个开源的权限管理框架，Spring Security 和 Shiro 的比较如下：
-
-Spring Security 是一个重量级的安全管理框架； Shiro 则是一个轻量级的安全管理框架
-Spring Secu...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-08-24T11:15:48+08:00">2023-08-24</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java/">Java</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Java/" itemprop="url"><span itemprop="name">Java</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/08/24/Shiro%E5%AD%A6%E4%B9%A0/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/22/Vue3学习/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="YukiCCC的博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="YukiCCC的博客">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/08/22/Vue3%E5%AD%A6%E4%B9%A0/"  itemprop="url">
-        Vue3学习
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        一、简介1. 介绍​	Vue 2 将于 2023 年 12 月 31 日停止维护，详见 Vue 2 延长 LTS。
-​	Vue 3是Vue.js的下一个主要版本，最初于2020年9月发布，Vue 3支持Vue 2的大多数特性。
-2. 优点
-更快更省
-  Object.defineProperty ——&gt; Proxy
-  重构 Virtual DOM
-  运行速度更快，打包体积更小
-
-更...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-08-22T16:31:19+08:00">2023-08-22</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url"><span itemprop="name">前端</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/08/22/Vue3%E5%AD%A6%E4%B9%A0/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3213,7 +3214,7 @@ Spring Secu...
           </a>
         
         <p class="current">
-          2 / 5
+          2 / 6
         </p>
         
           <a class="next" rel="next" href="/page/3/">
@@ -3390,7 +3391,7 @@ Spring Secu...
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>49 篇</div>
+          <div>51 篇</div>
         </div>
       
 
@@ -3429,7 +3430,7 @@ Spring Secu...
 
 
   <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/2023/10/16/Nginx/"><div class="item"><time>2023-10-16</time></div><span>Nginx</span></a></li><li><a class="widget-last" href="/2023/10/11/Spring-Cloud/"><div class="item"><time>2023-10-11</time><span>Java</span></div><span>Spring Cloud</span></a></li><li><a class="widget-last" href="/2023/10/05/MyBatis%E9%9D%A2%E8%AF%95%E9%A2%98/"><div class="item"><time>2023-10-05</time><span>Java</span></div><span>MyBatis面试题</span></a></li><li><a class="widget-last" href="/2023/10/05/SpringMVC%E9%9D%A2%E8%AF%95%E9%A2%98/"><div class="item"><time>2023-10-05</time><span>Java</span></div><span>SpringMVC面试题</span></a></li><li><a class="widget-last" href="/2023/10/05/Spring%E9%9D%A2%E8%AF%95%E9%A2%98/"><div class="item"><time>2023-10-05</time><span>Java</span></div><span>Spring面试题</span></a></li></ul>
+    <ul class="list entry navigation"><li><a class="widget-last" href="/2023/10/16/rabbitMQ/"><div class="item"><time>2023-10-16</time></div><span>rabbitMQ</span></a></li><li><a class="widget-last" href="/2023/10/16/mybatisplus/"><div class="item"><time>2023-10-16</time></div><span>mybatisplus</span></a></li><li><a class="widget-last" href="/2023/10/16/Nginx/"><div class="item"><time>2023-10-16</time></div><span>Nginx</span></a></li><li><a class="widget-last" href="/2023/10/11/Spring-Cloud/"><div class="item"><time>2023-10-11</time><span>Java</span></div><span>Spring Cloud</span></a></li><li><a class="widget-last" href="/2023/10/05/MyBatis%E9%9D%A2%E8%AF%95%E9%A2%98/"><div class="item"><time>2023-10-05</time><span>Java</span></div><span>MyBatis面试题</span></a></li></ul>
   </div>
 </section>
 
