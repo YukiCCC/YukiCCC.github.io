@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2023/10/17/redis-锁机制/"/>
+  <link rel="canonical" href="http://example.com/2024/09/13/mybatis-plus日志/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,21 +34,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Redis-锁机制 - YukiCCC的博客</title>
-  <meta name="keywords" content="Redis,null">
+  <title>Mybatis-Plus日志 - YukiCCC的博客</title>
+  <meta name="keywords" content="Mybatis-plus,null">
   <meta desc name="description" content="YukiCCC的博客 - John Doe - YukiCCC的博客">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Redis-锁机制">
-<meta property="og:url" content="http://example.com/2023/10/17/Redis-%E9%94%81%E6%9C%BA%E5%88%B6/index.html">
+<meta property="og:title" content="Mybatis-Plus日志">
+<meta property="og:url" content="http://example.com/2024/09/13/Mybatis-Plus%E6%97%A5%E5%BF%97/index.html">
 <meta property="og:site_name" content="YukiCCC的博客">
-<meta property="og:description" content="一、实现原理1.1基本原理JDK 原生的锁可以让不同线程之间以互斥的方式来访问共享资源，但如果想要在不同进程之间以互斥的方式来访问共享资源，JDK 原生的锁就无能为力了。此时可以使用 Redis 来实现分布式锁。 Redis 实现分布式锁的核心命令如下： 1SETNX key value SETNX 命令的作用是：如果指定的 key 不存在，则创建并为其设置值，然后返回状态码 1；如果指定的 ke">
+<meta property="og:description" content="Mybatis-Plus日志在项目中日志中经常会出现如下日志： 12345678Creating a new SqlSessionSqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@42607e80] was not registered for synchronization because synchronizati">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-10-17T11:30:45.000Z">
-<meta property="article:modified_time" content="2023-10-19T11:03:30.679Z">
+<meta property="article:published_time" content="2024-09-13T13:23:46.000Z">
+<meta property="article:modified_time" content="2024-09-13T13:42:14.356Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="Redis">
+<meta property="article:tag" content="Mybatis-plus">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2519,7 +2519,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/17/Redis-锁机制/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/09/13/Mybatis-Plus日志/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="YukiCCC的博客">
   </span>
@@ -2540,7 +2540,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Redis-锁机制
+        Mybatis-Plus日志
       </h1>
       <div class='new-meta-box'>
         
@@ -2557,29 +2557,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  
-  
-  <div class='new-meta-item category'>
-    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/Java/">Java</a>
-    
-      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/Java/" itemprop="url"><span itemprop="name">Java</span></a>
-      </span>
-    
-  </div>
-  
-
 
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-10-17T19:30:45+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-09-13T21:23:46+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Oct 17, 2023</p>
+    <p>发布于：Sep 13, 2024</p>
   </a>
 </div>
 
@@ -2602,52 +2588,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="一、实现原理"><a href="#一、实现原理" class="headerlink" title="一、实现原理"></a>一、实现原理</h2><h3 id="1-1基本原理"><a href="#1-1基本原理" class="headerlink" title="1.1基本原理"></a>1.1基本原理</h3><p>JDK 原生的锁可以让不同线程之间以互斥的方式来访问共享资源，但如果想要在不同进程之间以互斥的方式来访问共享资源，JDK 原生的锁就无能为力了。此时可以使用 Redis 来实现分布式锁。</p>
-<p>Redis 实现分布式锁的核心命令如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SETNX key value</span><br></pre></td></tr></table></figure>
-<p>SETNX 命令的作用是：如果指定的 key 不存在，则创建并为其设置值，然后返回状态码 1；如果指定的 key 存在，则直接返回 0。如果返回值为 1，代表获得该锁；此时其他进程再次尝试创建时，由于 key 已经存在，则都会返回 0 ，代表锁已经被占用。</p>
-<p>当获得锁的进程处理完成业务后，再通过 del 命令将该 key 删除，其他进程就可以再次竞争性地进行创建，获得该锁。</p>
-<p>通常为了避免死锁，我们会为锁设置一个超时时间，在 Redis 中可以通过 expire 命令来进行实现：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">EXPIRE key seconds</span><br></pre></td></tr></table></figure>
-<p>这里我们将两者结合起来，并使用 Jedis 客户端来进行实现，其代码如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Long result = jedis.setnx(&quot;lockKey&quot;, &quot;lockValue&quot;);</span><br><span class="line">if (result == 1) &#123;</span><br><span class="line">    // 如果此处程序被异常终止（如直接kill -9进程），则设置超时的操作就无法进行，该锁就会出现死锁</span><br><span class="line">    jedis.expire(&quot;lockKey&quot;, 3);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>上面的代码存在原子性问题，即 setnx + expire 操作是非原子性的，如果在设置超时时间前，程序被异常终止，则程序就会出现死锁。此时可以将 SETNX 和 EXPIRE 两个命令写在同一个 Lua 脚本中，然后通过调用 Jedis 的 eval() 方法来执行，并由 Redis 来保证整个 Lua 脚本操作的原子性。这种方式实现比较繁琐，因此官方文档中推荐了另外一种更加优雅的实现方法：</p>
-<h3 id="1-2-官方推荐"><a href="#1-2-官方推荐" class="headerlink" title="1.2 官方推荐"></a>1.2 官方推荐</h3><p>[官方文档]( Distributed locks with Redis) 中推荐直接使用 set 命令来进行实现：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SET key value [EX seconds|PX milliseconds] [NX|XX] [KEEPTTL]</span><br></pre></td></tr></table></figure>
-<p>这里我们主要关注以下四个参数：</p>
-<ul>
-<li>EX ：设置超时时间，单位是秒；</li>
-<li>PX ：设置超时时间，单位是毫秒；</li>
-<li>NX ：当且仅当对应的 Key 不存在时才进行设置；</li>
-<li>XX：当且仅当对应的 Key 存在时才进行设置。<br>这四个参数从 Redis 2.6.12 版本开始支持，因为当前大多数在用的 Redis 都已经高于这个版本，所以推荐直接使用该命令来实现分布式锁。对应的 Jedis 代码如下：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jedis.set(&quot;lockKey&quot;, &quot;lockValue&quot;, SetParams.setParams().nx().ex(3));</span><br></pre></td></tr></table></figure>
-此时一条命令就可以完成值和超时时间的设置，并且因为只有一条命令，因此其原子性也得到了保证。但因为引入了超时时间来避免死锁，也带来一些问题。可以估计业务的最大处理时间，然后保证设置的过期时间大于最大处理时间。但是由于业务会面临各种复杂的情况，因此可能无法保证业务每一次都能在规定的过期时间内处理完成，此时可以使用延长锁时效的策略。</li>
-</ul>
-<h3 id="1-3-延长锁时效"><a href="#1-3-延长锁时效" class="headerlink" title="1.3 延长锁时效"></a>1.3 延长锁时效</h3><p>延长锁时效的方案如下：假设锁超时时间是 30 秒，此时程序需要每隔一段时间去扫描一下该锁是否还存在，扫描时间需要小于超时时间，通常可以设置为超时时间的 1&#x2F;3，在这里也就是 10 秒扫描一次。如果锁还存在，则重置其超时时间恢复到 30 秒。通过这种方案，只要业务还没有处理完成，锁就会一直有效；而当业务一旦处理完成，程序也会马上删除该锁。</p>
-<p>Redis 的 Java 客户端 Redisson 提供的分布式锁就支持类似的延长锁时效的策略，称为 WatchDog，直译过来就是 “看门狗” 机制。</p>
-<p>以上讨论的都是单机环境下的 Redis 分布式锁，而想要保证 Redis 分布式锁是高可用，首先 Redis 得是高可用的，Redis 的高可用模式主要有两种：哨兵模式和集群模式。以下分别进行讨论：</p>
-<h2 id="二、哨兵模式与分布式锁"><a href="#二、哨兵模式与分布式锁" class="headerlink" title="二、哨兵模式与分布式锁"></a>二、哨兵模式与分布式锁</h2><p>哨兵模式是主从模式的升级版，能够在故障发生时自动进行故障切换，选举出新的主节点。但由于 Redis 的复制机制是异步的，因此在哨兵模式下实现的分布式锁是不可靠的，原因如下：</p>
-<ul>
-<li>由于主从之间的复制操作是异步的，当主节点上创建好锁后，此时从节点上的锁可能尚未创建。而如果此时主节点发生了宕机，从节点上将不会创建该分布式锁；</li>
-<li>从节点晋升为主节点后，其他进程（或线程）仍然可以在该新主节点创建分布式锁，此时就存在多个进程（或线程）同时进入了临界区，分布式锁就失效了。<br>因此在哨兵模式下，无法避免锁失效的问题。因此想要实现高可用的分布式锁，可以采取 Redis 的另一个高可用方案 —— Redis 集群模式。</li>
-</ul>
-<h2 id="三、集群模式与分布式锁"><a href="#三、集群模式与分布式锁" class="headerlink" title="三、集群模式与分布式锁"></a>三、集群模式与分布式锁</h2><h3 id="3-1-RedLock-方案"><a href="#3-1-RedLock-方案" class="headerlink" title="3.1 RedLock 方案"></a>3.1 RedLock 方案</h3><p>想要在集群模式下实现分布式锁，Redis 提供了一种称为 RedLock 的方案，假设我们有 N 个 Redis 实例，此时客户端的执行过程如下：</p>
-<ul>
-<li>以毫秒为单位记录当前的时间，作为开始时间；</li>
-<li>接着采用和单机版相同的方式，依次尝试在每个实例上创建锁。为了避免客户端长时间与某个故障的 Redis 节点通讯而导致阻塞，这里采用快速轮询的方式：假设创建锁时设置的超时时间为 10 秒，则访问每个 Redis 实例的超时时间可能在 5 到 50 毫秒之间，如果在这个时间内还没有建立通信，则尝试连接下一个实例；</li>
-<li>如果在至少 N&#x2F;2+1 个实例上都成功创建了锁。并且 当前时间 - 开始时间 &lt; 锁的超时时间 ，则认为已经获取了锁，锁的有效时间等于 超时时间 - 花费时间（如果考虑不同 Redis 实例所在服务器的时钟漂移，则还需要减去时钟漂移）；</li>
-<li>如果少于 N&#x2F;2+1 个实例，则认为创建分布式锁失败，此时需要删除这些实例上已创建的锁，以便其他客户端进行创建。</li>
-<li>该客户端在失败后，可以等待一个随机的时间后，再次进行重试。<br>以上就是 RedLock 的实现方案，可以看到主要是由客户端来实现的，并不真正涉及到 Redis 集群相关的功能。因此这里的 N 个 Redis 实例并不要求是一个真正的 Redis 集群，它们彼此之间可以是完全独立的，但由于只需要半数节点获得锁就能真正获得锁，因此其仍然具备容错性和高可用性。后面使用 Redisson 来演示 RedLock 时会再次验证这一点。</li>
-</ul>
-<h3 id="3-2-低延迟通讯"><a href="#3-2-低延迟通讯" class="headerlink" title="3.2 低延迟通讯"></a>3.2 低延迟通讯</h3><p>另外实现 RedLock 方案的客户端与所有 Redis 实例进行通讯时，必须要保证低延迟，而且最好能使用多路复用技术来保证一次性将 SET 命令发送到所有 Redis 节点上，并获取到对应的执行结果。如果网络延迟较高，假设客户端 A 和 B 都在尝试创建锁：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SET key 随机数A EX 3 NX  #A客户端</span><br><span class="line">SET key 随机数B EX 3 NX  #B客户端</span><br></pre></td></tr></table></figure>
-<p>此时可能客户端 A 在一半节点上创建了锁，而客户端 B 在另外一半节点上创建了锁，那么两个客户端都将无法获取到锁。如果并发很高，则可能存在多个客户端分别在部分节点上创建了锁，而没有一个客户端的数量超过 N&#x2F;2+1。这也就是上面过程的最后一步中，强调一旦客户端失败后，需要等待一个随机时间后再进行重试的原因，如果是一个固定时间，则所有失败的客户端又同时发起重试，情况就还是一样。</p>
-<p>因此最佳的实现就是客户端的 SET 命令能几乎同时到达所有节点，并几乎同时接受到所有执行结果。 想要保证这一点，低延迟的网络通信极为关键，下文介绍的 Redisson 就采用 Netty 框架来保证这一功能的实现</p>
-<h3 id="3-3-持久化与高可用"><a href="#3-3-持久化与高可用" class="headerlink" title="3.3 持久化与高可用"></a>3.3 持久化与高可用</h3><p>为了保证高可用，所有 Redis 节点还需要开启持久化。假设不开启持久化，假设进程 A 获得锁后正在处理业务逻辑，此时节点宕机重启，因为锁数据丢失了，其他进程便可以再次创建该锁，因此所有 Redis 节点都需要开启 AOF 的持久化方式。</p>
-<p>AOF 默认的同步机制为 everysec，即每秒进程一次持久化，此时能够兼顾性能与数据安全，发生意外宕机的时，最多会丢失一秒的数据。但如果碰巧就是在这一秒的时间内进程 A 创建了锁，并由于宕机而导致数据丢失。此时其他进程还可以创建该锁，锁的互斥性也就失效了。想要解决这个问题有两种方式：</p>
-<ul>
-<li><strong>方式一：</strong>修改 Redis.conf 中 appendfsync 的值为 always，即每次命令后都进行持久化，此时会降低 Redis 性能，进而也会降低分布式锁的性能，但锁的互斥性得到了绝对的保证；</li>
-<li><strong>方式二：</strong>一旦节点宕机了，需要等到锁的超时时间过了之后才进行重启，此时相当于原有锁自然失效（但你首先需要保证业务能在设定的超时时间内完成），这种方案也称为延时重启。</li>
-</ul>
+    <h2 id="Mybatis-Plus日志"><a href="#Mybatis-Plus日志" class="headerlink" title="Mybatis-Plus日志"></a>Mybatis-Plus日志</h2><p>在项目中日志中经常会出现如下日志：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Creating a new SqlSession</span><br><span class="line">SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@42607e80] was not registered for synchronization because synchronization is not active</span><br><span class="line">JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@56ebc6bb] will not be managed by Spring</span><br><span class="line">==&gt;  Preparing: SELECT app_id, app_code, app_name FROM t_sys_application </span><br><span class="line">==&gt; Parameters: </span><br><span class="line">&lt;==    Columns: app_id, app_code, app_name</span><br><span class="line">&lt;==      Total: 2</span><br><span class="line">Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@42607e80]</span><br></pre></td></tr></table></figure>
+<p>在程序中并无代码体现，那么为什么会打印这些日志呢？<br>是因为Mybatis-plus自带的SQL日志，首先我们学习一下更基础更通用的mybatis示例。<br>开启的方法是是由org.apache.ibatis.logging.stdout.StdOutImpl控制的根据StdOutImpl.java可看出日志都是System.out.println(s);的控制台输出，配置及源码如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mybatis:</span><br><span class="line">  configuration:</span><br><span class="line">    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 控制台输出日志</span><br><span class="line">logging:</span><br><span class="line">  level:</span><br><span class="line">    com.XXX.dao: debug</span><br></pre></td></tr></table></figure>
+<p>将使用mybatis的类的level配置为debug，因为mybatis内部仅打印debug级别的SQL日志。<br>而本项目使用的Mybatis-plus配置起来更复杂一些</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># mybatis-plus 配置内容</span><br><span class="line">mybatis-plus:</span><br><span class="line">  configuration:</span><br><span class="line">  	### 开启驼峰配置</span><br><span class="line">    map-underscore-to-camel-case: true # 虽然默认为 true ，但是还是显示去指定下。</span><br><span class="line">  global-config:</span><br><span class="line">    db-config:</span><br><span class="line">      id-type: auto # ID 主键自增</span><br><span class="line">      logic-delete-value: 1 # 逻辑已删除值(默认为 1)</span><br><span class="line">      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)</span><br><span class="line">  # xml扫描，多个目录用逗号或者分号分隔（告诉 Mapper 所对应的 XML 文件位置）</span><br><span class="line">  mapper-locations: classpath*:mapper/*.xml</span><br><span class="line">logging:</span><br><span class="line">  level:</span><br><span class="line">    com.XXX.dao: debug</span><br><span class="line">    cn:</span><br><span class="line">      iocoder:</span><br><span class="line">  		springboot:</span><br><span class="line">    	  lab12:</span><br><span class="line">      		mybatis:</span><br><span class="line">      		  mapper:info# 将Mapper 层设置日志级别为 info，这将记录较为简要的重要信息，通常包括 SQL 执行过程和结果</span><br><span class="line">  config:classpath:log/logback-spring.xml</span><br><span class="line">  file.path</span><br></pre></td></tr></table></figure>
+<p>这样配置为 MyBatis-Plus 的 SQL 执行提供更细粒度的日志输出，帮助开发者在开发和调试过程中看到详细的 SQL 语句和执行过程，同时在生产环境中记录必要的日志信息用于运维分析。</p>
 
   </div>
   
@@ -2672,10 +2619,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-19T19:03:30+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-09-13T21:42:14+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Oct 19, 2023</p>
+    <p>更新于：Sep 13, 2024</p>
   </a>
 </div>
 
@@ -2686,8 +2633,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Redis/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Redis</p></a></div>
-  <span hidden itemprop="keywords">Redis</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Mybatis-plus/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Mybatis-plus</p></a></div>
+  <span hidden itemprop="keywords">Mybatis-plus</span>
   
 
 
@@ -2701,7 +2648,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/10/17/Redis-%E9%94%81%E6%9C%BA%E5%88%B6/&title=Redis-锁机制 - YukiCCC的博客&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2024/09/13/Mybatis-Plus%E6%97%A5%E5%BF%97/&title=Mybatis-Plus日志 - YukiCCC的博客&summary="
           
           >
           
@@ -2713,7 +2660,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/10/17/Redis-%E9%94%81%E6%9C%BA%E5%88%B6/&title=Redis-锁机制 - YukiCCC的博客&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/09/13/Mybatis-Plus%E6%97%A5%E5%BF%97/&title=Mybatis-Plus日志 - YukiCCC的博客&summary="
           
           >
           
@@ -2725,7 +2672,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/10/17/Redis-%E9%94%81%E6%9C%BA%E5%88%B6/&title=Redis-锁机制 - YukiCCC的博客&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2024/09/13/Mybatis-Plus%E6%97%A5%E5%BF%97/&title=Mybatis-Plus日志 - YukiCCC的博客&summary="
           
           >
           
@@ -2758,17 +2705,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/10/18/RabbitMQ%E8%AF%A6%E7%BB%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>RabbitMQ详细学习笔记</p>
-          <p class='content'>一、MQ相关的概念1.1、MQ的基本概念什么是MQMQ(message queue)，从字面意思上看就个 FIFO 先入先出的队列，只不过队列中存放的内容是 message 而已，它是一种具有接...</p>
-        </a>
       
-      
-        <a class='next' href='/2023/10/17/Redis%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5/'>
-          <p class='title'>Redis淘汰策略<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>volatile-lru：从已设置过期时间的数据集中挑选最近最少使用的数据淘汰。
-volatile-ttl：从已设置过期时间的数据集中挑选将要过期的数据淘汰。
-volatile-random：从...</p>
+        <a class='next' href='/2024/09/07/%E5%9F%BA%E4%BA%8EAOP%E7%9A%84%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F/'>
+          <p class='title'>基于AOP的日志系统<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>基于AOP的日志模块本文旨在分析参与项目中的日志，如何基于AOP面向切面原理实现controller请求及响应信息打印。本项目将日志记录的逻辑封装成一个切面，然后通过切入点和通知来指定在哪些方法...</p>
         </a>
       
     </div>
@@ -2787,7 +2727,7 @@ volatile-random：从...</p>
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/10/17/Redis-%E9%94%81%E6%9C%BA%E5%88%B6/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2024/09/13/Mybatis-Plus%E6%97%A5%E5%BF%97/index.html#comments">
     </span>
     <p ct><i class='fas fa-comments'></i> 评论</p>
     
@@ -2829,7 +2769,7 @@ volatile-random：从...</p>
 
 
   <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-text">一、实现原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="toc-text">1.1基本原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%AE%98%E6%96%B9%E6%8E%A8%E8%8D%90"><span class="toc-text">1.2 官方推荐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E5%BB%B6%E9%95%BF%E9%94%81%E6%97%B6%E6%95%88"><span class="toc-text">1.3 延长锁时效</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F%E4%B8%8E%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81"><span class="toc-text">二、哨兵模式与分布式锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%9B%86%E7%BE%A4%E6%A8%A1%E5%BC%8F%E4%B8%8E%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81"><span class="toc-text">三、集群模式与分布式锁</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-RedLock-%E6%96%B9%E6%A1%88"><span class="toc-text">3.1 RedLock 方案</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E4%BD%8E%E5%BB%B6%E8%BF%9F%E9%80%9A%E8%AE%AF"><span class="toc-text">3.2 低延迟通讯</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E6%8C%81%E4%B9%85%E5%8C%96%E4%B8%8E%E9%AB%98%E5%8F%AF%E7%94%A8"><span class="toc-text">3.3 持久化与高可用</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Mybatis-Plus%E6%97%A5%E5%BF%97"><span class="toc-text">Mybatis-Plus日志</span></a></li></ol>
   </div>
 </section>
 
@@ -3552,7 +3492,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YukiCCC的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/Java/","name":"Java"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/10/17/Redis-锁机制/","name":"Redis-锁机制"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"YukiCCC的博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Redis-锁机制","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/10/17/Redis-%E9%94%81%E6%9C%BA%E5%88%B6/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YukiCCC的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/10/17/Redis-%E9%94%81%E6%9C%BA%E5%88%B6/","wordCount":0,"datePublished":"2023-10-17T11:30:45.000Z","dateModified":"2023-10-19T11:03:30.679Z","articleSection":"Java","keywords":"Redis","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YukiCCC的博客"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/09/13/Mybatis-Plus日志/","name":"Mybatis-Plus日志"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"YukiCCC的博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Mybatis-Plus日志","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/09/13/Mybatis-Plus%E6%97%A5%E5%BF%97/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YukiCCC的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/09/13/Mybatis-Plus%E6%97%A5%E5%BF%97/","wordCount":0,"datePublished":"2024-09-13T13:23:46.000Z","dateModified":"2024-09-13T13:42:14.356Z","keywords":"Mybatis-plus","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
