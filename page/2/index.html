@@ -2155,7 +2155,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1740484916356),
+    lastupdate: new Date(1740658011457),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2517,6 +2517,67 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <section class="post-list">
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/27/等待异步线程池跑完再执行后续代码的方法/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="YukiCCC的博客">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="YukiCCC的博客">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/08/27/%E7%AD%89%E5%BE%85%E5%BC%82%E6%AD%A5%E7%BA%BF%E7%A8%8B%E6%B1%A0%E8%B7%91%E5%AE%8C%E5%86%8D%E6%89%A7%E8%A1%8C%E5%90%8E%E7%BB%AD%E4%BB%A3%E7%A0%81%E7%9A%84%E6%96%B9%E6%B3%95/"  itemprop="url">
+        等待异步线程池跑完再执行后续代码的方法
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        等待异步线程池跑完再执行后续代码的方法等待异步线程池跑完再执行指定方法的三种方式(condition、CountDownLatch、CyclicBarrier)，最近本人使用的CountDownLatch
+CountDownLatch应用场景
+
+某个线程需要在其他n个线程执行完毕后再向下执行
+多个线程并行执行同一个任务，提高响应速度
+
+1234567891011121314151617181...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-08-27T22:34:04+08:00">2024-08-27</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/08/27/%E7%AD%89%E5%BE%85%E5%BC%82%E6%AD%A5%E7%BA%BF%E7%A8%8B%E6%B1%A0%E8%B7%91%E5%AE%8C%E5%86%8D%E6%89%A7%E8%A1%8C%E5%90%8E%E7%BB%AD%E4%BB%A3%E7%A0%81%E7%9A%84%E6%96%B9%E6%B3%95/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -3084,65 +3145,6 @@ allkeys...
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/16/Nginx/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="YukiCCC的博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="YukiCCC的博客">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/10/16/Nginx/"  itemprop="url">
-        Nginx
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1. 域名解析一个域名一定会被解析为一个或多个ip，一般包含两步：
-
-本地域名解析
-浏览器会首先在本机的hosts文件中查找域名映射的IP地址，如果找到就返回IP，没找到则进行域名服务器解析，一般本地解析都会失败，因为默认这个文件是空的。
-Windows下的hosts文件地址：C:&#x2F;windows&#x2F;system32&#x2F;drivers&#x2F;etc&#x2F;h...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-10-16T09:22:27+08:00">2023-10-16</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/10/16/Nginx/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3329,7 +3331,7 @@ Windows下的hosts文件地址：C:&#x2F;windows&#x2F;system32&#x2F;drivers&#x2F
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>58 篇</div>
+          <div>59 篇</div>
         </div>
       
 
@@ -3343,7 +3345,7 @@ Windows下的hosts文件地址：C:&#x2F;windows&#x2F;system32&#x2F;drivers&#x2F
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2025-02-25 日</div>
+          <div id="last-update-show">2025-02-27 日</div>
         </div>
       
     </div>
@@ -3368,7 +3370,7 @@ Windows下的hosts文件地址：C:&#x2F;windows&#x2F;system32&#x2F;drivers&#x2F
 
 
   <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/2025/02/25/%E8%85%BE%E8%AE%AF%E5%AE%9E%E4%B9%A0%E7%94%9F%E4%B8%80%E9%9D%A2-%E5%A4%B1%E8%B4%A5/"><div class="item"><time>2025-02-25</time></div><span>腾讯实习生一面--失败</span></a></li><li><a class="widget-last" href="/2025/02/22/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/"><div class="item"><time>2025-02-22</time></div><span>自动部署</span></a></li><li><a class="widget-last" href="/2025/02/20/%E7%BB%9F%E8%AE%A1%E7%BD%91%E7%AB%99UVPV/"><div class="item"><time>2025-02-20</time><span>Java</span></div><span>统计网站UVPV</span></a></li><li><a class="widget-last" href="/2025/02/19/%E7%9F%AD%E4%BF%A1%E9%AA%8C%E8%AF%81%E5%8A%9F%E8%83%BD/"><div class="item"><time>2025-02-19</time></div><span>短信验证功能</span></a></li><li><a class="widget-last" href="/2024/09/30/DynamicDataSource%E5%A4%9A%E6%95%B0%E6%8D%AE/"><div class="item"><time>2024-09-30</time></div><span>DynamicDataSource多数据</span></a></li></ul>
+    <ul class="list entry navigation"><li><a class="widget-last" href="/2025/02/27/SpringBootApplication%E5%92%8CComponentScan%E6%B3%A8%E9%87%8A/"><div class="item"><time>2025-02-27</time></div><span>SpringBootApplication和ComponentScan注释</span></a></li><li><a class="widget-last" href="/2025/02/25/%E8%85%BE%E8%AE%AF%E5%AE%9E%E4%B9%A0%E7%94%9F%E4%B8%80%E9%9D%A2-%E5%A4%B1%E8%B4%A5/"><div class="item"><time>2025-02-25</time></div><span>腾讯实习生一面--失败</span></a></li><li><a class="widget-last" href="/2025/02/22/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/"><div class="item"><time>2025-02-22</time></div><span>自动部署</span></a></li><li><a class="widget-last" href="/2025/02/20/%E7%BB%9F%E8%AE%A1%E7%BD%91%E7%AB%99UVPV/"><div class="item"><time>2025-02-20</time><span>Java</span></div><span>统计网站UVPV</span></a></li><li><a class="widget-last" href="/2025/02/19/%E7%9F%AD%E4%BF%A1%E9%AA%8C%E8%AF%81%E5%8A%9F%E8%83%BD/"><div class="item"><time>2025-02-19</time></div><span>短信验证功能</span></a></li></ul>
   </div>
 </section>
 

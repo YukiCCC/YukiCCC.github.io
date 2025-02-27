@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/friends/"/>
+  <link rel="canonical" href="http://example.com/2025/02/27/springbootapplication和componentscan注释/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,19 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>我的朋友们 - YukiCCC的博客</title>
+  <title>SpringBootApplication和ComponentScan注释 - YukiCCC的博客</title>
   <meta name="keywords" content="null">
-  <meta desc name="description" content="这里写友链上方的内容。 - John Doe - YukiCCC的博客">
+  <meta desc name="description" content="YukiCCC的博客 - John Doe - YukiCCC的博客">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="我的朋友们">
-<meta property="og:url" content="http://example.com/friends/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringBootApplication和ComponentScan注释">
+<meta property="og:url" content="http://example.com/2025/02/27/SpringBootApplication%E5%92%8CComponentScan%E6%B3%A8%E9%87%8A/index.html">
 <meta property="og:site_name" content="YukiCCC的博客">
-<meta property="og:description" content="这里写友链上方的内容。">
+<meta property="og:description" content="在 Spring Boot 中，@SpringBootApplication 和 @ComponentScan 一般不会直接冲突，但如果配置不当可能会出现问题。下面详细分析可能出现的冲突情况及解决办法。 冲突原因分析 @SpringBootApplication 注解原理：@SpringBootApplication 是一个组合注解，它包含了 @SpringBootConfiguration、@E">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-10-08T00:54:52.725Z">
-<meta property="article:modified_time" content="2023-07-01T08:26:42.000Z">
+<meta property="article:published_time" content="2025-02-27T12:05:25.000Z">
+<meta property="article:modified_time" content="2025-02-27T12:06:42.717Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2151,7 +2151,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2517,8 +2517,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-  <article id="friends" class="md post article article-entry l_friends white-box reveal shadow floatable blur article-type-friends" itemscope itemprop="blogPost">
-    
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2025/02/27/SpringBootApplication和ComponentScan注释/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="YukiCCC的博客">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="YukiCCC的博客">
+    <meta itemprop="description" content="">
+  </span>
+  
 
 
   
@@ -2531,7 +2539,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        我的朋友们
+        SpringBootApplication和ComponentScan注释
       </h1>
       <div class='new-meta-box'>
         
@@ -2553,10 +2561,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-10-08T08:54:52+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-02-27T20:05:25+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Oct 8, 2024</p>
+    <p>发布于：Feb 27, 2025</p>
   </a>
 </div>
 
@@ -2577,10 +2585,46 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </div>
 
 
-    <p>这里写友链上方的内容。</p>
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>在 Spring Boot 中，<code>@SpringBootApplication</code> 和 <code>@ComponentScan</code> 一般不会直接冲突，但如果配置不当可能会出现问题。下面详细分析可能出现的冲突情况及解决办法。</p>
+<h3 id="冲突原因分析"><a href="#冲突原因分析" class="headerlink" title="冲突原因分析"></a>冲突原因分析</h3><ul>
+<li><strong><code>@SpringBootApplication</code> 注解原理</strong>：<code>@SpringBootApplication</code> 是一个组合注解，它包含了 <code>@SpringBootConfiguration</code>、<code>@EnableAutoConfiguration</code> 和 <code>@ComponentScan</code> 这三个注解。默认情况下，<code>@SpringBootApplication</code> 会扫描主应用类所在包及其子包下的组件。</li>
+<li><strong>冲突情况</strong>：当你在 <code>@SpringBootApplication</code> 中使用 <code>scanBasePackages</code> 属性指定扫描包路径，同时又使用 <code>@ComponentScan</code> 注解指定不同的扫描包路径时，就可能会出现冲突。这可能导致组件重复扫描或者某些组件未被扫描到。</li>
+</ul>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="1-只使用-SpringBootApplication-的-scanBasePackages-属性"><a href="#1-只使用-SpringBootApplication-的-scanBasePackages-属性" class="headerlink" title="1. 只使用 @SpringBootApplication 的 scanBasePackages 属性"></a>1. 只使用 <code>@SpringBootApplication</code> 的 <code>scanBasePackages</code> 属性</h4><p>如果你只需要指定一个扫描包路径，那么可以直接在 <code>@SpringBootApplication</code> 中使用 <code>scanBasePackages</code> 属性，避免使用 <code>@ComponentScan</code> 注解。</p>
+<p><strong>示例代码</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SpringBootApplication(scanBasePackages = &quot;com.example.demo.service&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DemoApplication</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        SpringApplication.run(DemoApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，Spring Boot 会扫描 <code>com.example.demo.service</code> 包及其子包下的组件。</p>
+<h4 id="2-合并扫描包路径"><a href="#2-合并扫描包路径" class="headerlink" title="2. 合并扫描包路径"></a>2. 合并扫描包路径</h4><p>如果你需要指定多个扫描包路径，可以将这些路径合并到 <code>@SpringBootApplication</code> 的 <code>scanBasePackages</code> 属性中。</p>
+<p><strong>示例代码</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SpringBootApplication(scanBasePackages = &#123;&quot;com.example.demo.service&quot;, &quot;com.example.demo.repository&quot;&#125;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DemoApplication</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        SpringApplication.run(DemoApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样，Spring Boot 会同时扫描 <code>com.example.demo.service</code> 和 <code>com.example.demo.repository</code> 包及其子包下的组件。</p>
+<h4 id="3-移除-SpringBootApplication-中的-scanBasePackages-属性，使用-ComponentScan"><a href="#3-移除-SpringBootApplication-中的-scanBasePackages-属性，使用-ComponentScan" class="headerlink" title="3. 移除 @SpringBootApplication 中的 scanBasePackages 属性，使用 @ComponentScan"></a>3. 移除 <code>@SpringBootApplication</code> 中的 <code>scanBasePackages</code> 属性，使用 <code>@ComponentScan</code></h4><p>如果你更倾向于使用 <code>@ComponentScan</code> 注解来指定扫描包路径，可以移除 <code>@SpringBootApplication</code> 中的 <code>scanBasePackages</code> 属性。</p>
+<p><strong>示例代码</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.ComponentScan;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@ComponentScan(basePackages = &#123;&quot;com.example.demo.service&quot;, &quot;com.example.demo.repository&quot;&#125;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DemoApplication</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        SpringApplication.run(DemoApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>@ComponentScan</code> 注解会覆盖 <code>@SpringBootApplication</code> 中默认的扫描包路径，Spring Boot 会扫描 <code>com.example.demo.service</code> 和 <code>com.example.demo.repository</code> 包及其子包下的组件。</p>
+<p>通过以上方法，你可以避免 <code>@SpringBootApplication</code> 和 <code>@ComponentScan</code> 之间的冲突，确保组件能够被正确扫描。</p>
+
+  </div>
+  
+  
     
-    <br><br>
-    <p>这里可以写友链页面下方的文字备注，例如自己的友链规范、示例等。</p>
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+    </div>
+  
+  
     
 
 
@@ -2588,10 +2632,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-07-01T16:26:42+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-02-27T20:06:42+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jul 1, 2023</p>
+    <p>更新于：Feb 27, 2025</p>
   </a>
 </div>
 
@@ -2610,7 +2654,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/friends/index.html&title=我的朋友们 - YukiCCC的博客&summary=这里写友链上方的内容。"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2025/02/27/SpringBootApplication%E5%92%8CComponentScan%E6%B3%A8%E9%87%8A/&title=SpringBootApplication和ComponentScan注释 - YukiCCC的博客&summary="
           
           >
           
@@ -2622,7 +2666,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/friends/index.html&title=我的朋友们 - YukiCCC的博客&summary=这里写友链上方的内容。"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2025/02/27/SpringBootApplication%E5%92%8CComponentScan%E6%B3%A8%E9%87%8A/&title=SpringBootApplication和ComponentScan注释 - YukiCCC的博客&summary="
           
           >
           
@@ -2634,7 +2678,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/friends/index.html&title=我的朋友们 - YukiCCC的博客&summary=这里写友链上方的内容。"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2025/02/27/SpringBootApplication%E5%92%8CComponentScan%E6%B3%A8%E9%87%8A/&title=SpringBootApplication和ComponentScan注释 - YukiCCC的博客&summary="
           
           >
           
@@ -2661,14 +2705,43 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </div>
 
 
-  </article>
   
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2025/02/25/%E8%85%BE%E8%AE%AF%E5%AE%9E%E4%B9%A0%E7%94%9F%E4%B8%80%E9%9D%A2-%E5%A4%B1%E8%B4%A5/'>
+          <p class='title'>腾讯实习生一面--失败<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+自我介绍  – 不熟悉
+空白期干了什么
+让我简单说一下我的课题
+短信认证中UUID起到了什么作用
+UUID会被窃取吗？
+用户拿到的UUID是加密后的吗？
+后端也是拿到的UUID吗
+UUID加密...</p>
+        </a>
+      
+    </div>
+  
+  <!-- 文章推荐 -->
+  
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
   
 
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/friends/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2025/02/27/SpringBootApplication%E5%92%8CComponentScan%E6%B3%A8%E9%87%8A/index.html#comments">
     </span>
     <p ct><i class='fas fa-comments'></i> 评论</p>
     
@@ -2679,7 +2752,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2708,7 +2783,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%B2%E7%AA%81%E5%8E%9F%E5%9B%A0%E5%88%86%E6%9E%90"><span class="toc-text">冲突原因分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="toc-text">解决办法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%8F%AA%E4%BD%BF%E7%94%A8-SpringBootApplication-%E7%9A%84-scanBasePackages-%E5%B1%9E%E6%80%A7"><span class="toc-text">1. 只使用 @SpringBootApplication 的 scanBasePackages 属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%90%88%E5%B9%B6%E6%89%AB%E6%8F%8F%E5%8C%85%E8%B7%AF%E5%BE%84"><span class="toc-text">2. 合并扫描包路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E7%A7%BB%E9%99%A4-SpringBootApplication-%E4%B8%AD%E7%9A%84-scanBasePackages-%E5%B1%9E%E6%80%A7%EF%BC%8C%E4%BD%BF%E7%94%A8-ComponentScan"><span class="toc-text">3. 移除 @SpringBootApplication 中的 scanBasePackages 属性，使用 @ComponentScan</span></a></li></ol></li></ol>
   </div>
 </section>
 
@@ -2720,6 +2795,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <!-- Custom Files side end -->
 </aside>
+
 
 
         </div>
@@ -3430,7 +3506,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YukiCCC的博客"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"YukiCCC的博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"我的朋友们","description":"这里写友链上方的内容。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/friends/index.html"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YukiCCC的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/friends/index.html","wordCount":11,"datePublished":"2024-10-08T00:54:52.725Z","dateModified":"2023-07-01T08:26:42.000Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YukiCCC的博客"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2025/02/27/SpringBootApplication和ComponentScan注释/","name":"SpringBootApplication和ComponentScan注释"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"YukiCCC的博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"SpringBootApplication和ComponentScan注释","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2025/02/27/SpringBootApplication%E5%92%8CComponentScan%E6%B3%A8%E9%87%8A/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YukiCCC的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2025/02/27/SpringBootApplication%E5%92%8CComponentScan%E6%B3%A8%E9%87%8A/","wordCount":0,"datePublished":"2025-02-27T12:05:25.000Z","dateModified":"2025-02-27T12:06:42.717Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
