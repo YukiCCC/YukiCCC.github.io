@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://example.com/archives/2024/"/>
+  <link rel="canonical" href="http://example.com/tags/多线程/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,12 +34,12 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Archive: 2024 - YukiCCC的博客</title>
+  <title>Tag: 多线程 - YukiCCC的博客</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="YukiCCC的博客 - John Doe - YukiCCC的博客">
   <meta property="og:type" content="website">
 <meta property="og:title" content="YukiCCC的博客">
-<meta property="og:url" content="http://example.com/archives/2024/index.html">
+<meta property="og:url" content="http://example.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/index.html">
 <meta property="og:site_name" content="YukiCCC的博客">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2220,7 +2220,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2507,97 +2507,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div id="l_body">
       <div id="l_cover">
   
-    
-      <div class="cover-wrapper  search" id='half'>
-        
-  <div class='cover-bg lazyload placeholder' data-bg="https://images4.alphacoders.com/955/955760.jpg"></div>
-
-<div class='cover-body'>
-  <div class='top'>
-    
-    
-      <p class="title">YukiCCC的博客</p>
-    
-    
-      <p class="subtitle">乐观者可能会失败，但悲观者已经失败了</p>
-    
-  </div>
-  <div class='bottom'>
-    
-      <div class="m_search">
-        <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="搜索一下" />
-          <i class="icon fa-solid fa-search fa-fw"></i>
-        </form>
-      </div>
-    
-    <div class='menu navigation'>
-      <div class='list-h'>
-        
-          
-            <a href="/"
-              
-              
-              active-action="action-home">
-              <p>主页</p>
-            </a>
-          
-            <a href="/categories/"
-              
-              
-              active-action="action-categories">
-              <p>分类</p>
-            </a>
-          
-            <a href="/tags/"
-              
-              
-              active-action="action-tags">
-              <p>标签</p>
-            </a>
-          
-            <a href="/archives/"
-              
-              
-              active-action="action-archives">
-              <p>归档</p>
-            </a>
-          
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-      </div>
-    
-  
 </div>
 
       <div id="safearea">
         <div class="body-wrapper">
           
+
 <div id="l_main" class=''>
-	
-		
+  
+    
+      
   <section class="post-list">
     
       
         
           
         
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
       
     
     
@@ -2605,7 +2530,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/09/30/DynamicDataSource多数据/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2025/07/04/不同任务的线程池设置/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="YukiCCC的博客">
   </span>
@@ -2623,16 +2548,41 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/09/30/DynamicDataSource%E5%A4%9A%E6%95%B0%E6%8D%AE/"  itemprop="url">
-        DynamicDataSource多数据
+      <a href="/2025/07/04/%E4%B8%8D%E5%90%8C%E4%BB%BB%E5%8A%A1%E7%9A%84%E7%BA%BF%E7%A8%8B%E6%B1%A0%E8%AE%BE%E7%BD%AE/"  itemprop="url">
+        不同任务的线程池设置
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        DynamicDataSource多数据多数据源的典型使用场景1、业务复杂应用没有拆，数据库拆分了2、读写分离解决数据库的读性能瓶颈（读比写性能更高，写锁会影响阻塞，影响性能）
-引入依赖12345&lt;dependency&gt;	&lt;groupId&gt;com.baomidou&lt;/groupId&gt;	&lt;artifactId&gt;dynamic-datasource...
+        主要特性对比
+
+
+特性
+CPU密集型任务
+IO密集型任务
+
+
+
+主要瓶颈
+CPU计算能力
+外部I&#x2F;O资源速度限制
+
+
+线程配置建议
+核心线程数 ≈ CPU核心数 + 1
+核心线程数 ≈ CPU核心数 * 2 或更多
+
+
+任务特征
+高计算量、长时间占用CPU
+高I&#x2F;O操作、长时间等待外部资源
+
+
+性能优化
+限制线程数，避免频繁上下文切换
+增加线程数，优化I&#x2F;O操作...
       
     
   </div>
@@ -2640,349 +2590,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2024-09-30T22:43:00+08:00">2024-09-30</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/09/30/DynamicDataSource%E5%A4%9A%E6%95%B0%E6%8D%AE/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/09/13/Mybatis-Plus日志/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="YukiCCC的博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="YukiCCC的博客">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/09/13/Mybatis-Plus%E6%97%A5%E5%BF%97/"  itemprop="url">
-        Mybatis-Plus日志
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        Mybatis-Plus日志在项目中日志中经常会出现如下日志：
-12345678Creating a new SqlSessionSqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@42607e80] was not registered for synchronization because synchroniz...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-09-13T21:23:46+08:00">2024-09-13</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/09/13/Mybatis-Plus%E6%97%A5%E5%BF%97/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/09/07/基于AOP的日志系统/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="YukiCCC的博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="YukiCCC的博客">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/09/07/%E5%9F%BA%E4%BA%8EAOP%E7%9A%84%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F/"  itemprop="url">
-        基于AOP的日志系统
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        基于AOP的日志模块本文旨在分析参与项目中的日志，如何基于AOP面向切面原理实现controller请求及响应信息打印。本项目将日志记录的逻辑封装成一个切面，然后通过切入点和通知来指定在哪些方法需要执行日志记录的操作。
-AOP中注解的含义@Aspect：切面。表示一个横切进业务的一个对象。它里面包含切入点(Pointcut)和Advice（通知）。@Pointcut：切入点。表示需要切入的位...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-09-07T01:08:25+08:00">2024-09-07</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/09/07/%E5%9F%BA%E4%BA%8EAOP%E7%9A%84%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/09/02/滑动窗口/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="YukiCCC的博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="YukiCCC的博客">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/09/02/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"  itemprop="url">
-        滑动窗口
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        滑动窗口算法今天刷力扣题目，刷到了一个滑动窗口算法问题，这类算法问题之前没有遇到过，特此记录下来
-解题思路1.首先确定窗口的定义（比如子串的每个字符存在个数&#x2F;子数组的和）2.开始创建变量2.1.window(HashMap&#x2F;int)用来定义窗口。2.2.left right指针[left, right)区间就是我们的窗口。2.3结果res，需根据题意3.window更新窗...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-09-02T23:47:10+08:00">2024-09-02</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/09/02/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/09/01/线程安全/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="YukiCCC的博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="YukiCCC的博客">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/09/01/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/"  itemprop="url">
-        线程安全
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        问题描述在最近的项目中，因为需要多次对某个中台接口进行反复调用，以获取分页数据的全量数据以便在后台进行去重，我写了一个多线程功能代码如下：
-123456789101112pageList.forEach(obj -&gt; &#123;    pool.execute(() -&gt; &#123;        request.setCurrent(obj);        log.inf...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-09-01T00:28:18+08:00">2024-09-01</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/09/01/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/27/等待异步线程池跑完再执行后续代码的方法/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="YukiCCC的博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="YukiCCC的博客">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/08/27/%E7%AD%89%E5%BE%85%E5%BC%82%E6%AD%A5%E7%BA%BF%E7%A8%8B%E6%B1%A0%E8%B7%91%E5%AE%8C%E5%86%8D%E6%89%A7%E8%A1%8C%E5%90%8E%E7%BB%AD%E4%BB%A3%E7%A0%81%E7%9A%84%E6%96%B9%E6%B3%95/"  itemprop="url">
-        等待异步线程池跑完再执行后续代码的方法
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        等待异步线程池跑完再执行后续代码的方法等待异步线程池跑完再执行指定方法的三种方式(condition、CountDownLatch、CyclicBarrier)，最近本人使用的CountDownLatch
-CountDownLatch应用场景
-
-某个线程需要在其他n个线程执行完毕后再向下执行
-多个线程并行执行同一个任务，提高响应速度
-
-1234567891011121314151617181...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-08-27T22:34:04+08:00">2024-08-27</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/08/27/%E7%AD%89%E5%BE%85%E5%BC%82%E6%AD%A5%E7%BA%BF%E7%A8%8B%E6%B1%A0%E8%B7%91%E5%AE%8C%E5%86%8D%E6%89%A7%E8%A1%8C%E5%90%8E%E7%BB%AD%E4%BB%A3%E7%A0%81%E7%9A%84%E6%96%B9%E6%B3%95/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/29/动态可改变时间间隔的定时任务/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="YukiCCC的博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="YukiCCC的博客">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/02/29/%E5%8A%A8%E6%80%81%E5%8F%AF%E6%94%B9%E5%8F%98%E6%97%B6%E9%97%B4%E9%97%B4%E9%9A%94%E7%9A%84%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"  itemprop="url">
-        动态可改变时间间隔的定时任务
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        @Scheduled 和SchedulingConfigurer接口的区别@Schedule注解的一个缺点就是其定时时间不能动态更改，它适用于具有固定任务周期的任务，若要修改任务执行周期，只能走“停服务→修改任务执行周期→重启服务”这条路。
-而基于 SchedulingConfigurer 接口方式可以做。
-SchedulingConfigurer 接口可以实现在@Configuration...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-02-29T21:48:34+08:00">2024-02-29</time>
+        <time itemprop="dateCreated datePublished" datetime="2025-07-04T00:58:52+08:00">2025-07-04</time>
         
           <span class="dot"></span>
           <a class="category-link" href="/categories/Java/">Java</a>
@@ -2995,7 +2603,7 @@ SchedulingConfigurer 接口可以实现在@Configuration...
       </div>
       
         <div>
-          <a class='readmore' href='/2024/02/29/%E5%8A%A8%E6%80%81%E5%8F%AF%E6%94%B9%E5%8F%98%E6%97%B6%E9%97%B4%E9%97%B4%E9%9A%94%E7%9A%84%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/' itemprop="url">
+          <a class='readmore' href='/2025/07/04/%E4%B8%8D%E5%90%8C%E4%BB%BB%E5%8A%A1%E7%9A%84%E7%BA%BF%E7%A8%8B%E6%B1%A0%E8%AE%BE%E7%BD%AE/' itemprop="url">
             Read More
           </a>
         </div>
@@ -3015,7 +2623,8 @@ SchedulingConfigurer 接口可以实现在@Configuration...
   
 
 
-	
+    
+  
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3939,7 +3548,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YukiCCC的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/archives/2024/","name":"2024"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"YukiCCC的博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YukiCCC的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YukiCCC的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/tags/多线程/","name":"多线程"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"YukiCCC的博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YukiCCC的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
