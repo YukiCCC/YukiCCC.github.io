@@ -109,7 +109,7 @@ sidebar:
       shape: rectangle # circle, rectangle
       title: YukiCCC
       subtitle:
-      jinrishici: true # Poetry Today. You can set a string, and it will be displayed when loading fails.
+      jinrishici: false
       social:
         - icon: fa-solid fa-rss
           url: /atom.xml
