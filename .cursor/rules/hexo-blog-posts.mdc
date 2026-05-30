@@ -1,0 +1,41 @@
+---
+description: Hexo 博客文章写作与格式规范
+globs: source/_posts/**/*.md
+alwaysApply: false
+---
+
+# Hexo 博客文章规范
+
+编写或修改 `source/_posts/` 下的文章时，遵循以下约定。
+
+## 标题层级
+
+正文中的章节标题**从 `###` 级开始**，不使用 `#`、`##`。
+
+```markdown
+<!-- ❌ 错误 -->
+## 一、简介
+### 1. 是什么
+
+<!-- ✅ 正确 -->
+### 一、简介
+#### 1. 是什么
+```
+
+- 一级章节：`###`（如 `### 一、Csharp简介`）
+- 二级章节：`####`（如 `#### 1. Csharp是什么？`）
+- 更深层级依次使用 `#####`、`######`
+- Frontmatter 中的 `title` 字段不受此限制
+
+## Frontmatter
+
+保持与现有文章一致：
+
+```yaml
+---
+title: 文章标题
+date: YYYY-MM-DD HH:mm:ss
+tags: 标签名
+category: 分类名   # 可选
+---
+```

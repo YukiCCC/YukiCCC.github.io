@@ -1,44 +1,44 @@
 ---
-title: C#基础知识
+title: Csharp基础知识
 date: 2026-05-30 14:30:00
-tags: C#
-category: C#
+tags: Csharp
+category: Csharp
 ---
 
-## 一、C#简介
+### 一、Csharp简介
 
-### 1. C#是什么？
+#### 1. Csharp是什么？
 
-​	C#（读作 C Sharp）是微软推出的一种**面向对象**的编程语言，运行于 .NET 平台之上。
+​	Csharp（读作 C Sharp）是微软推出的一种**面向对象**的编程语言，运行于 .NET 平台之上。
 
-​	由 Anders Hejlsberg 主导设计，语法风格与 Java、C++ 相近，学习 Java 后再学 C# 上手较快。
+​	由 Anders Hejlsberg 主导设计，语法风格与 Java、C++ 相近，学习 Java 后再学 Csharp 上手较快。
 
 ​	官网：https://dotnet.microsoft.com/
 
-### 2. .NET 与 C# 的关系
+#### 2. .NET 与 Csharp 的关系
 
 - **.NET**：跨平台的开发框架，提供运行时、类库和工具链
 - **CLR**（Common Language Runtime）：公共语言运行时，负责内存管理、垃圾回收、类型安全等
 - **.NET SDK**：开发工具包，包含编译器、运行时、NuGet 包管理器等
-- **C#**：运行在 .NET 上的一种编程语言
+- **Csharp**：运行在 .NET 上的一种编程语言
 
-关系可以理解为：C# 是语言，.NET 是运行和开发平台，二者配合完成应用开发。
+关系可以理解为：Csharp 是语言，.NET 是运行和开发平台，二者配合完成应用开发。
 
-### 3. 为什么学习 C#
+#### 3. 为什么学习 Csharp
 
 - 与 Windows 桌面、ASP.NET Web、Unity 游戏开发等场景结合紧密
 - 语法现代，持续演进（如 LINQ、async/await、模式匹配、记录类型等）
 - .NET 已支持跨平台，可在 Windows、Linux、macOS 上运行
 - 企业级开发、云服务（Azure）生态完善
 
-## 二、开发环境
+### 二、开发环境
 
-### 1. 环境要求
+#### 1. 环境要求
 
 - .NET SDK 6.0 或 8.0 及以上
-- 推荐 IDE：Visual Studio、Visual Studio Code（安装 C# 扩展）、Rider
+- 推荐 IDE：Visual Studio、Visual Studio Code（安装 Csharp 扩展）、Rider
 
-### 2. 安装与验证
+#### 2. 安装与验证
 
 从官网下载并安装 .NET SDK 后，在终端执行：
 
@@ -46,7 +46,7 @@ category: C#
 dotnet --version
 ```
 
-### 3. 创建第一个项目
+#### 3. 创建第一个项目
 
 ```bash
 dotnet new console -n HelloCSharp
@@ -54,7 +54,7 @@ cd HelloCSharp
 dotnet run
 ```
 
-## 三、第一个 C# 程序
+### 三、第一个 Csharp 程序
 
 ```csharp
 using System;
@@ -65,7 +65,7 @@ namespace HelloCSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, C#!");
+            Console.WriteLine("Hello, Csharp!");
         }
     }
 }
@@ -79,9 +79,9 @@ namespace HelloCSharp
 - `static void Main`：程序入口方法
 - `Console.WriteLine`：向控制台输出内容
 
-## 四、基本语法
+### 四、基本语法
 
-### 1. 注释
+#### 1. 注释
 
 ```csharp
 // 单行注释
@@ -95,7 +95,7 @@ namespace HelloCSharp
 /// </summary>
 ```
 
-### 2. 变量与常量
+#### 2. 变量与常量
 
 ```csharp
 int age = 18;              // 整型变量
@@ -107,7 +107,7 @@ var count = 10;              // 隐式类型推断（编译期确定类型）
 const double PI = 3.14159; // 常量，不可修改
 ```
 
-### 3. 常见数据类型
+#### 3. 常见数据类型
 
 | 类型 | 说明 | 示例 |
 | --- | --- | --- |
@@ -120,12 +120,12 @@ const double PI = 3.14159; // 常量，不可修改
 | `bool` | 布尔值 | `bool flag = false;` |
 | `string` | 字符串 | `string s = "hello";` |
 
-### 4. 值类型与引用类型
+#### 4. 值类型与引用类型
 
 - **值类型**：直接存储数据，如 `int`、`double`、`struct`、`enum`，赋值时复制一份
 - **引用类型**：存储对象的引用，如 `class`、`string`、数组、接口，赋值时复制引用
 
-### 5. 字符串常用操作
+#### 5. 字符串常用操作
 
 ```csharp
 string s1 = "Hello";
@@ -134,24 +134,24 @@ string s3 = s1 + " " + s2;           // 拼接
 string s4 = $"{s1} {s2}";              // 字符串插值
 int len = s1.Length;                   // 长度
 bool eq = s1.Equals("hello");        // 比较
-string sub = "Hello C#".Substring(0, 5); // 截取
+string sub = "Hello Csharp".Substring(0, 5); // 截取
 ```
 
-## 五、运算符
+### 五、运算符
 
-### 1. 算术运算符
+#### 1. 算术运算符
 
 `+`、`-`、`*`、`/`、`%`（取余）、`++`、`--`
 
-### 2. 关系运算符
+#### 2. 关系运算符
 
 `==`、`!=`、`>`、`<`、`>=`、`<=`
 
-### 3. 逻辑运算符
+#### 3. 逻辑运算符
 
 `&&`（与）、`||`（或）、`!`（非）
 
-### 4. 其他常用运算符
+#### 4. 其他常用运算符
 
 - `??`：空合并运算符
 - `?.`：空条件运算符
@@ -164,9 +164,9 @@ string display = name ?? "匿名";   // 若 name 为 null，则使用 "匿名"
 int? len = name?.Length;           // 若 name 为 null，则 len 为 null
 ```
 
-## 六、流程控制
+### 六、流程控制
 
-### 1. 条件语句
+#### 1. 条件语句
 
 ```csharp
 int score = 85;
@@ -185,7 +185,7 @@ else
 }
 ```
 
-### 2. switch 语句
+#### 2. switch 语句
 
 ```csharp
 int day = 3;
@@ -204,7 +204,7 @@ switch (day)
 }
 ```
 
-C# 还支持 **switch 表达式**：
+Csharp 还支持 **switch 表达式**：
 
 ```csharp
 string result = day switch
@@ -215,7 +215,7 @@ string result = day switch
 };
 ```
 
-### 3. 循环语句
+#### 3. 循环语句
 
 ```csharp
 // for 循环
@@ -240,7 +240,7 @@ foreach (int n in nums)
 }
 ```
 
-## 七、数组
+### 七、数组
 
 ```csharp
 // 一维数组
@@ -259,15 +259,15 @@ jagged[0] = new int[] { 1, 2 };
 jagged[1] = new int[] { 3, 4, 5 };
 ```
 
-## 八、面向对象
+### 八、面向对象
 
-### 1. 三大特性
+#### 1. 三大特性
 
 - **封装**：将数据和方法包装在类中，通过访问修饰符控制可见性
 - **继承**：子类继承父类的属性和方法
 - **多态**：同一方法在不同对象上表现出不同行为
 
-### 2. 访问修饰符
+#### 2. 访问修饰符
 
 | 修饰符 | 说明 |
 | --- | --- |
@@ -276,7 +276,7 @@ jagged[1] = new int[] { 3, 4, 5 };
 | `protected` | 当前类及子类可访问 |
 | `internal` | 当前程序集内可访问 |
 
-### 3. 定义类与对象
+#### 3. 定义类与对象
 
 ```csharp
 public class Person
@@ -313,7 +313,7 @@ Person p = new Person("张三", 20);
 p.SayHello();
 ```
 
-### 4. 继承
+#### 4. 继承
 
 ```csharp
 public class Student : Person
@@ -336,7 +336,7 @@ public class Student : Person
 - `override`：重写父类虚方法
 - `virtual`：声明可被重写的方法
 
-### 5. 抽象类与接口
+#### 5. 抽象类与接口
 
 **抽象类**：不能实例化，可包含抽象方法和具体方法
 
@@ -374,7 +374,7 @@ public class Bird : Animal, IFlyable
 }
 ```
 
-### 6. static 关键字
+#### 6. static 关键字
 
 ```csharp
 public class MathHelper
@@ -389,16 +389,16 @@ public class MathHelper
 int sum = MathHelper.Add(1, 2);
 ```
 
-## 九、常用集合
+### 九、常用集合
 
-### 1. List<T>
+#### 1. List<T>
 
 ```csharp
 using System.Collections.Generic;
 
 List<string> list = new List<string>();
 list.Add("Java");
-list.Add("C#");
+list.Add("Csharp");
 list.Add("Python");
 
 foreach (string item in list)
@@ -410,7 +410,7 @@ list.Remove("Java");
 Console.WriteLine(list.Count);
 ```
 
-### 2. Dictionary<TKey, TValue>
+#### 2. Dictionary<TKey, TValue>
 
 ```csharp
 Dictionary<int, string> map = new Dictionary<int, string>();
@@ -423,9 +423,9 @@ foreach (var kv in map)
 }
 ```
 
-### 3. 与 Java 集合对照
+#### 3. 与 Java 集合对照
 
-| C# | Java |
+| Csharp | Java |
 | --- | --- |
 | `List<T>` | `ArrayList` / `List` |
 | `Dictionary<K,V>` | `HashMap` |
@@ -433,7 +433,7 @@ foreach (var kv in map)
 | `Queue<T>` | `Queue` |
 | `Stack<T>` | `Stack` |
 
-## 十、异常处理
+### 十、异常处理
 
 ```csharp
 try
@@ -467,9 +467,9 @@ public class BusinessException : Exception
 }
 ```
 
-## 十一、LINQ 简介
+### 十一、LINQ 简介
 
-LINQ（Language Integrated Query）是 C# 中用于**查询集合数据**的语法，风格类似 SQL。
+LINQ（Language Integrated Query）是 Csharp 中用于**查询集合数据**的语法，风格类似 SQL。
 
 ```csharp
 using System.Linq;
@@ -496,9 +496,9 @@ foreach (int n in result)
 - `First` / `FirstOrDefault`：取第一个元素
 - `Count` / `Sum` / `Max` / `Min`：聚合统计
 
-## 十二、异步编程
+### 十二、异步编程
 
-C# 使用 `async` 和 `await` 简化异步编程，避免阻塞主线程。
+Csharp 使用 `async` 和 `await` 简化异步编程，避免阻塞主线程。
 
 ```csharp
 using System.Net.Http;
@@ -526,7 +526,7 @@ public class Demo
 - `await`：等待异步任务完成
 - `Task` / `Task<T>`：表示异步操作
 
-## 十三、命名空间与 using
+### 十三、命名空间与 using
 
 ```csharp
 namespace MyApp.Services
@@ -548,14 +548,14 @@ namespace MyApp.Services
 - `using` 引入命名空间，减少全限定名书写
 - .NET 6+ 支持**文件范围命名空间**和**顶级语句**，可简化小程序结构
 
-## 十四、小结
+### 十四、小结
 
-C# 是一门语法清晰、生态完善的现代语言。学习时可按以下路径循序渐进：
+Csharp 是一门语法清晰、生态完善的现代语言。学习时可按以下路径循序渐进：
 
 1. 掌握基本语法、数据类型和流程控制
 2. 理解面向对象：类、继承、多态、接口
 3. 熟悉常用集合与异常处理
-4. 学习 LINQ 与 async/await 等 C# 特色能力
+4. 学习 LINQ 与 async/await 等 Csharp 特色能力
 5. 结合具体方向深入：ASP.NET Web、WPF/WinForms 桌面、Unity 游戏等
 
-与 Java 相比，C# 在属性语法、LINQ、异步模型等方面更加简洁；有 Java 基础后转 C#，重点放在 .NET 生态和语言特性差异上即可快速上手。
+与 Java 相比，Csharp 在属性语法、LINQ、异步模型等方面更加简洁；有 Java 基础后转 Csharp，重点放在 .NET 生态和语言特性差异上即可快速上手。
