@@ -1,0 +1,29 @@
+---
+description: Hexo 构建与发布流程规范
+alwaysApply: true
+---
+
+# Hexo 构建与发布
+
+生成或发布站点前，**必须先清除旧文件再生成**，避免重命名、删除文章后残留旧页面（如已修复的 `#` 路径 404）。
+
+## 标准命令
+
+```bash
+hexo clean    # 或 hexo c，清除 public/、db.json 等
+hexo generate # 或 hexo g，重新生成静态文件
+hexo deploy   # 或 hexo d，部署到 GitHub Pages（main 分支）
+```
+
+## 发布完整流程
+
+```bash
+hexo clean && hexo generate && hexo deploy
+```
+
+不要跳过 `hexo clean` 直接 `hexo generate`，否则 `public/` 中可能残留已删除或已重命名文章的旧 HTML。
+
+## npm scripts
+
+- `npm run build`：clean + generate
+- `npm run deploy`：clean + generate + deploy

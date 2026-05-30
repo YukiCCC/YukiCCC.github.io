@@ -22,9 +22,6 @@ navbar:
     - name: 友链
       icon: fa-solid fa-link
       url: friends/
-    - name: 关于
-      icon: fa-solid fa-info-circle
-      url: about/
     - name: 暗黑模式 # 可自定义
       icon: fas fa-moon # 可自定义
       toggle: darkmode
@@ -110,7 +107,6 @@ sidebar:
       display: [desktop, mobile] # [desktop, mobile]
       avatar: https://raw.githubusercontent.com/YukiCCC/figure/main/IMG_6998(20230623-135937).JPG # https://gcore.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png
       shape: rectangle # circle, rectangle
-      url: /about/
       title: YukiCCC
       subtitle:
       jinrishici: true # Poetry Today. You can set a string, and it will be displayed when loading fails.
