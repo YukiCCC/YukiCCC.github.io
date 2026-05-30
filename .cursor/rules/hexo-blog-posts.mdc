@@ -27,6 +27,19 @@ alwaysApply: false
 - 更深层级依次使用 `#####`、`######`
 - Frontmatter 中的 `title` 字段不受此限制
 
+## 文件名与 URL
+
+- 文章文件名**不要使用 `#` 等特殊符号**，否则 permalink 生成的 URL 会被浏览器截断导致 404
+- 叙述 Csharp 语言时使用 `Csharp`，避免 `C#`（`#` 在 URL 中表示锚点）
+
+```markdown
+<!-- ❌ 错误：URL 会变成 /2026/05/30/C ，# 后面被当作锚点 -->
+C#基础知识.md
+
+<!-- ✅ 正确 -->
+Csharp基础知识.md
+```
+
 ## Frontmatter
 
 保持与现有文章一致：
