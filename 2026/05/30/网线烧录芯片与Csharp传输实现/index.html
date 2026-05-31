@@ -5,8 +5,8 @@
   <meta name="Volantis" content="6.0.0-alpha.1">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://example.com/archives/2023/page/5/"/>
+  
+  <link rel="canonical" href="http://example.com/2026/05/30/网线烧录芯片与csharp传输实现/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,16 +34,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Archive: 2023 - YukiCCC的博客</title>
-  <meta name="keywords" content="null">
+  <title>网线烧录芯片与Csharp传输实现 - YukiCCC的博客</title>
+  <meta name="keywords" content="Csharp,null">
   <meta desc name="description" content="YukiCCC的博客 - John Doe - YukiCCC的博客">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="YukiCCC的博客">
-<meta property="og:url" content="http://example.com/archives/2023/page/5/index.html">
+  
+<meta property="og:type" content="article">
+<meta property="og:title" content="网线烧录芯片与Csharp传输实现">
+<meta property="og:url" content="http://example.com/2026/05/30/%E7%BD%91%E7%BA%BF%E7%83%A7%E5%BD%95%E8%8A%AF%E7%89%87%E4%B8%8ECsharp%E4%BC%A0%E8%BE%93%E5%AE%9E%E7%8E%B0/index.html">
 <meta property="og:site_name" content="YukiCCC的博客">
+<meta property="og:description" content="一、概述1. 为什么用网线烧录芯片传统烧录方式多依赖 JTAG、SWD、UART 或 USB 下载器，需要物理靠近设备、逐台连接。当芯片或产品板已具备以太网接口（或通过串口转以太网模块联网）时，可以通过网线完成：  固件传输：把 .bin &#x2F; .hex 文件从 PC 发到设备 在线烧录：设备 Bootloader 接收数据并写入 Flash 批量升级：产线、现场设备远程维护  典型场景：">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2026-05-30T09:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-31T06:35:41.316Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Csharp">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2147,7 +2152,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2220,7 +2225,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2473,87 +2478,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div id="l_body">
       <div id="l_cover">
   
-    
-      <div class="cover-wrapper  search" id='half'>
-        
-  <div class='cover-bg lazyload placeholder' data-bg="https://images4.alphacoders.com/955/955760.jpg"></div>
-
-<div class='cover-body'>
-  <div class='top'>
-    
-    
-      <p class="title">YukiCCC的博客</p>
-    
-    
-      <p class="subtitle">乐观者可能会失败，但悲观者已经失败了</p>
-    
-  </div>
-  <div class='bottom'>
-    
-      <div class="m_search">
-        <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="搜索一下" />
-          <i class="icon fa-solid fa-search fa-fw"></i>
-        </form>
-      </div>
-    
-    <div class='menu navigation'>
-      <div class='list-h'>
-        
-          
-            <a href="/"
-              
-              
-              active-action="action-home">
-              <p>主页</p>
-            </a>
-          
-            <a href="/categories/"
-              
-              
-              active-action="action-categories">
-              <p>分类</p>
-            </a>
-          
-            <a href="/tags/"
-              
-              
-              active-action="action-tags">
-              <p>标签</p>
-            </a>
-          
-            <a href="/archives/"
-              
-              
-              active-action="action-archives">
-              <p>归档</p>
-            </a>
-          
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-      </div>
-    
-  
 </div>
 
       <div id="safearea">
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/01/Java-IO流/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2026/05/30/网线烧录芯片与Csharp传输实现/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="YukiCCC的博客">
   </span>
@@ -2562,377 +2494,405 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/07/01/Java-IO%E6%B5%81/"  itemprop="url">
-        Java-IO流
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1. File1.1 File与流
 
-1.2 File练习例11234567891011121314151617181920/*使用File对象，在C盘创建aaa/bbb/ccc的文件夹，在此文件夹下创建1.txt【C:/aaa/bbb/ccc/1.txt】 如果该文件存在，删除1.txt 如果该文件不存在，创建1.txt*/import java.io.File;import java.i...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-07-01T20:15:14+08:00">2023-07-01</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java/">Java</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Java/" itemprop="url"><span itemprop="name">Java</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/07/01/Java-IO%E6%B5%81/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/29/Java-集合/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="YukiCCC的博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="YukiCCC的博客">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/06/29/Java-%E9%9B%86%E5%90%88/"  itemprop="url">
-        Java-集合
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        1. Map集合框架类图
-HashMap常用方法键值对（“key &#x3D; value”），顾名思义，每一个键会对应一个值。
+    
+      <h1 class="title" itemprop="name headline">
+        网线烧录芯片与Csharp传输实现
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">yukiCCC</p>
+  </a>
+</div>
 
-APIAPI 是用于构建应用程序软件的一组子程序定义，协议和工具。一般来说，这是一套明确定义的各种软件组件之间的通信方法。
-
-例1：1234567891011121314151617181920212223242526272829/*1.遍历集合，并将序号与对应...
-      
+          
+        
+          
+            
+  
+  
+  
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/Csharp/">Csharp</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/Csharp/" itemprop="url"><span itemprop="name">Csharp</span></a>
+      </span>
     
   </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-06-29T22:07:43+08:00">2023-06-29</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java/">Java</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Java/" itemprop="url"><span itemprop="name">Java</span></a>
-            </span>
+
+
+
           
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2026-05-30T17:00:00+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：May 30, 2026</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><h4 id="1-为什么用网线烧录芯片"><a href="#1-为什么用网线烧录芯片" class="headerlink" title="1. 为什么用网线烧录芯片"></a>1. 为什么用网线烧录芯片</h4><p>传统烧录方式多依赖 JTAG、SWD、UART 或 USB 下载器，需要物理靠近设备、逐台连接。当芯片或产品板已具备<strong>以太网接口</strong>（或通过串口转以太网模块联网）时，可以通过网线完成：</p>
+<ul>
+<li><strong>固件传输</strong>：把 <code>.bin</code> &#x2F; <code>.hex</code> 文件从 PC 发到设备</li>
+<li><strong>在线烧录</strong>：设备 Bootloader 接收数据并写入 Flash</li>
+<li><strong>批量升级</strong>：产线、现场设备远程维护</li>
+</ul>
+<p>典型场景：工业网关、STM32+W5500 方案、带网口的 PLC、物联网网关批量升级。</p>
+<h4 id="2-整体架构"><a href="#2-整体架构" class="headerlink" title="2. 整体架构"></a>2. 整体架构</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">┌─────────────┐      网线(TCP/IP)      ┌──────────────────┐</span><br><span class="line">│  PC 上位机   │  ──────────────────►  │  目标芯片/设备    │</span><br><span class="line">│ Csharp 工具  │  ◄──────────────────  │  Bootloader      │</span><br><span class="line">└─────────────┘      应答/进度/校验      └────────┬─────────┘</span><br><span class="line">                                                  │ 写 Flash</span><br><span class="line">                                                  ▼</span><br><span class="line">                                           ┌──────────────┐</span><br><span class="line">                                           │  程序存储区   │</span><br><span class="line">                                           └──────────────┘</span><br></pre></td></tr></table></figure>
+
+<p>PC 端负责读固件、分包、校验、重传；设备端 Bootloader 负责擦除、写入、校验、重启。</p>
+<h3 id="二、常见实现方式"><a href="#二、常见实现方式" class="headerlink" title="二、常见实现方式"></a>二、常见实现方式</h3><h4 id="1-自定义-TCP-协议（本文重点）"><a href="#1-自定义-TCP-协议（本文重点）" class="headerlink" title="1. 自定义 TCP 协议（本文重点）"></a>1. 自定义 TCP 协议（本文重点）</h4><p>在应用层定义简单命令帧，通过 TCP 长连接传输固件块。优点是协议可控、Csharp 实现直观，适合自有 Bootloader。</p>
+<h4 id="2-TFTP-x2F-FTP"><a href="#2-TFTP-x2F-FTP" class="headerlink" title="2. TFTP &#x2F; FTP"></a>2. TFTP &#x2F; FTP</h4><p>部分 Bootloader（如 U-Boot）支持 TFTP 拉取固件。PC 端可搭建 TFTP 服务器，设备主动下载。Csharp 可调用现有 TFTP 库或配合第三方工具。</p>
+<h4 id="3-HTTP-OTA"><a href="#3-HTTP-OTA" class="headerlink" title="3. HTTP OTA"></a>3. HTTP OTA</h4><p>设备作为 HTTP Client 从服务器下载固件，或通过 HTTP POST 上传。适合已有 Web 能力的模块（如 ESP32、Linux 嵌入式）。</p>
+<h4 id="4-与-JTAG-远程调试的区别"><a href="#4-与-JTAG-远程调试的区别" class="headerlink" title="4. 与 JTAG 远程调试的区别"></a>4. 与 JTAG 远程调试的区别</h4><p>JTAG over IP 多用于<strong>调试</strong>，烧录仍常走专用工具链。本文侧重<strong>产品化固件升级</strong>：业务协议 + Bootloader + 上位机工具。</p>
+<h3 id="三、协议设计示例"><a href="#三、协议设计示例" class="headerlink" title="三、协议设计示例"></a>三、协议设计示例</h3><h4 id="1-设计原则"><a href="#1-设计原则" class="headerlink" title="1. 设计原则"></a>1. 设计原则</h4><ul>
+<li>固定帧头，便于 Bootloader 识别</li>
+<li>每条命令带序号，支持 ACK&#x2F;NACK</li>
+<li>数据块带 CRC32，防止传输错误写入 Flash</li>
+<li>分阶段：握手 → 擦除 → 传输 → 校验 → 复位</li>
+</ul>
+<h4 id="2-命令定义"><a href="#2-命令定义" class="headerlink" title="2. 命令定义"></a>2. 命令定义</h4><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HELLO</td>
+<td>0x01</td>
+<td>握手，交换版本与 Flash 容量</td>
+</tr>
+<tr>
+<td>ERASE</td>
+<td>0x02</td>
+<td>擦除目标区域</td>
+</tr>
+<tr>
+<td>DATA</td>
+<td>0x03</td>
+<td>传输固件数据块</td>
+</tr>
+<tr>
+<td>VERIFY</td>
+<td>0x04</td>
+<td>整包 CRC 校验</td>
+</tr>
+<tr>
+<td>RESET</td>
+<td>0x05</td>
+<td>复位并跳转 App</td>
+</tr>
+<tr>
+<td>ACK</td>
+<td>0x80</td>
+<td>成功应答</td>
+</tr>
+<tr>
+<td>NACK</td>
+<td>0x81</td>
+<td>失败应答</td>
+</tr>
+</tbody></table>
+<h4 id="3-DATA-帧结构（示例）"><a href="#3-DATA-帧结构（示例）" class="headerlink" title="3. DATA 帧结构（示例）"></a>3. DATA 帧结构（示例）</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+--------+--------+----------+----------+---------+----------+</span><br><span class="line">| Magic  | Cmd    | Seq      | Offset   | Length  | Payload  | CRC32 |</span><br><span class="line">| 2 byte | 1 byte | 2 byte   | 4 byte   | 2 byte  | N byte   | 4 byte|</span><br><span class="line">+--------+--------+----------+----------+---------+----------+</span><br><span class="line">Magic: 0x55AA</span><br></pre></td></tr></table></figure>
+
+<p>块大小常用 512 &#x2F; 1024 &#x2F; 4096 字节，需与 MCU Flash 页大小对齐。</p>
+<h3 id="四、Csharp-上位机实现"><a href="#四、Csharp-上位机实现" class="headerlink" title="四、Csharp 上位机实现"></a>四、Csharp 上位机实现</h3><h4 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1. 环境准备"></a>1. 环境准备</h4><ul>
+<li>.NET 6 或 .NET 8 SDK</li>
+<li>创建控制台项目：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dotnet new console -n FirmwareNetFlasher</span><br><span class="line"><span class="built_in">cd</span> FirmwareNetFlasher</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-固件读取与-CRC-计算"><a href="#2-固件读取与-CRC-计算" class="headerlink" title="2. 固件读取与 CRC 计算"></a>2. 固件读取与 CRC 计算</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"><span class="keyword">using</span> System.IO.Hashing;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">FirmwareFileHelper</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">byte</span>[] <span class="title">ReadFirmware</span>(<span class="params"><span class="built_in">string</span> path</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!File.Exists(path))</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> FileNotFoundException(<span class="string">&quot;固件文件不存在&quot;</span>, path);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> File.ReadAllBytes(path);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">uint</span> <span class="title">CalcCrc32</span>(<span class="params"><span class="built_in">byte</span>[] data</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> BitConverter.ToUInt32(Crc32.Hash(data), <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-协议帧封装"><a href="#3-协议帧封装" class="headerlink" title="3. 协议帧封装"></a>3. 协议帧封装</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Buffers.Binary;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="built_in">enum</span> BootCommand : <span class="built_in">byte</span></span><br><span class="line">&#123;</span><br><span class="line">    Hello = <span class="number">0x01</span>,</span><br><span class="line">    Erase = <span class="number">0x02</span>,</span><br><span class="line">    Data = <span class="number">0x03</span>,</span><br><span class="line">    Verify = <span class="number">0x04</span>,</span><br><span class="line">    Reset = <span class="number">0x05</span>,</span><br><span class="line">    Ack = <span class="number">0x80</span>,</span><br><span class="line">    Nack = <span class="number">0x81</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">BootFrameBuilder</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">const</span> <span class="built_in">ushort</span> Magic = <span class="number">0x55AA</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">byte</span>[] <span class="title">BuildDataFrame</span>(<span class="params"><span class="built_in">ushort</span> seq, <span class="built_in">uint</span> offset, ReadOnlySpan&lt;<span class="built_in">byte</span>&gt; payload</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">int</span> frameLen = <span class="number">2</span> + <span class="number">1</span> + <span class="number">2</span> + <span class="number">4</span> + <span class="number">2</span> + payload.Length + <span class="number">4</span>;</span><br><span class="line">        <span class="built_in">byte</span>[] frame = <span class="keyword">new</span> <span class="built_in">byte</span>[frameLen];</span><br><span class="line">        <span class="built_in">int</span> index = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        BinaryPrimitives.WriteUInt16BigEndian(frame.AsSpan(index, <span class="number">2</span>), Magic);</span><br><span class="line">        index += <span class="number">2</span>;</span><br><span class="line">        frame[index++] = (<span class="built_in">byte</span>)BootCommand.Data;</span><br><span class="line">        BinaryPrimitives.WriteUInt16BigEndian(frame.AsSpan(index, <span class="number">2</span>), seq);</span><br><span class="line">        index += <span class="number">2</span>;</span><br><span class="line">        BinaryPrimitives.WriteUInt32BigEndian(frame.AsSpan(index, <span class="number">4</span>), offset);</span><br><span class="line">        index += <span class="number">4</span>;</span><br><span class="line">        BinaryPrimitives.WriteUInt16BigEndian(frame.AsSpan(index, <span class="number">2</span>), (<span class="built_in">ushort</span>)payload.Length);</span><br><span class="line">        index += <span class="number">2</span>;</span><br><span class="line">        payload.CopyTo(frame.AsSpan(index, payload.Length));</span><br><span class="line">        index += payload.Length;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">uint</span> crc = BitConverter.ToUInt32(System.IO.Hashing.Crc32.Hash(frame.AsSpan(<span class="number">0</span>, index)), <span class="number">0</span>);</span><br><span class="line">        BinaryPrimitives.WriteUInt32BigEndian(frame.AsSpan(index, <span class="number">4</span>), crc);</span><br><span class="line">        <span class="keyword">return</span> frame;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-TCP-连接与发送"><a href="#4-TCP-连接与发送" class="headerlink" title="4. TCP 连接与发送"></a>4. TCP 连接与发送</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Net.Sockets;</span><br><span class="line"><span class="keyword">using</span> System.Threading;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">NetFlasherClient</span> : <span class="title">IAsyncDisposable</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">readonly</span> TcpClient _client = <span class="keyword">new</span>();</span><br><span class="line">    <span class="keyword">private</span> NetworkStream? _stream;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">async</span> Task <span class="title">ConnectAsync</span>(<span class="params"><span class="built_in">string</span> ip, <span class="built_in">int</span> port, CancellationToken token = <span class="literal">default</span></span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">await</span> _client.ConnectAsync(ip, port, token);</span><br><span class="line">        _stream = _client.GetStream();</span><br><span class="line">        _client.ReceiveTimeout = <span class="number">5000</span>;</span><br><span class="line">        _client.SendTimeout = <span class="number">5000</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">async</span> Task <span class="title">SendFrameAsync</span>(<span class="params"><span class="built_in">byte</span>[] frame, CancellationToken token = <span class="literal">default</span></span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (_stream == <span class="literal">null</span>)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> InvalidOperationException(<span class="string">&quot;尚未连接设备&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">await</span> _stream.WriteAsync(frame, token);</span><br><span class="line">        <span class="keyword">await</span> _stream.FlushAsync(token);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">async</span> Task&lt;<span class="built_in">byte</span>[]&gt; ReceiveFrameAsync(<span class="built_in">int</span> maxLength = <span class="number">256</span>, CancellationToken token = <span class="literal">default</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (_stream == <span class="literal">null</span>)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> InvalidOperationException(<span class="string">&quot;尚未连接设备&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">byte</span>[] buffer = <span class="keyword">new</span> <span class="built_in">byte</span>[maxLength];</span><br><span class="line">        <span class="built_in">int</span> read = <span class="keyword">await</span> _stream.ReadAsync(buffer, token);</span><br><span class="line">        <span class="keyword">if</span> (read &lt;= <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">&quot;设备连接已断开&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">byte</span>[] result = <span class="keyword">new</span> <span class="built_in">byte</span>[read];</span><br><span class="line">        Array.Copy(buffer, result, read);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">async</span> ValueTask <span class="title">DisposeAsync</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        _stream?.Dispose();</span><br><span class="line">        _client.Close();</span><br><span class="line">        <span class="keyword">await</span> Task.CompletedTask;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-完整烧录流程"><a href="#5-完整烧录流程" class="headerlink" title="5. 完整烧录流程"></a>5. 完整烧录流程</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Threading;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">FirmwareFlasher</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">const</span> <span class="built_in">int</span> ChunkSize = <span class="number">1024</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">readonly</span> NetFlasherClient _client = <span class="keyword">new</span>();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">async</span> Task <span class="title">FlashAsync</span>(<span class="params"><span class="built_in">string</span> ip, <span class="built_in">int</span> port, <span class="built_in">string</span> firmwarePath, IProgress&lt;<span class="built_in">int</span>&gt;? progress = <span class="literal">null</span></span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">byte</span>[] firmware = FirmwareFileHelper.ReadFirmware(firmwarePath);</span><br><span class="line">        <span class="built_in">uint</span> totalCrc = FirmwareFileHelper.CalcCrc32(firmware);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">await</span> _client.ConnectAsync(ip, port);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1. 握手</span></span><br><span class="line">        <span class="keyword">await</span> SendHelloAsync();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2. 擦除</span></span><br><span class="line">        <span class="keyword">await</span> SendEraseAsync((<span class="built_in">uint</span>)firmware.Length);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3. 分包写入</span></span><br><span class="line">        <span class="built_in">ushort</span> seq = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> offset = <span class="number">0</span>; offset &lt; firmware.Length; offset += ChunkSize)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">int</span> len = Math.Min(ChunkSize, firmware.Length - offset);</span><br><span class="line">            <span class="built_in">byte</span>[] chunk = <span class="keyword">new</span> <span class="built_in">byte</span>[len];</span><br><span class="line">            Array.Copy(firmware, offset, chunk, <span class="number">0</span>, len);</span><br><span class="line"></span><br><span class="line">            <span class="built_in">byte</span>[] frame = BootFrameBuilder.BuildDataFrame(seq, (<span class="built_in">uint</span>)offset, chunk);</span><br><span class="line">            <span class="keyword">await</span> SendWithRetryAsync(frame);</span><br><span class="line"></span><br><span class="line">            seq++;</span><br><span class="line">            progress?.Report((offset + len) * <span class="number">100</span> / firmware.Length);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4. 校验</span></span><br><span class="line">        <span class="keyword">await</span> SendVerifyAsync(totalCrc);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 5. 复位运行</span></span><br><span class="line">        <span class="keyword">await</span> SendResetAsync();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">await</span> _client.DisposeAsync();</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;烧录完成&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">async</span> Task <span class="title">SendWithRetryAsync</span>(<span class="params"><span class="built_in">byte</span>[] frame, <span class="built_in">int</span> maxRetry = <span class="number">3</span></span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; maxRetry; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">await</span> _client.SendFrameAsync(frame);</span><br><span class="line">            <span class="built_in">byte</span>[] resp = <span class="keyword">await</span> _client.ReceiveFrameAsync();</span><br><span class="line">            <span class="keyword">if</span> (resp.Length &gt; <span class="number">0</span> &amp;&amp; resp[<span class="number">0</span>] == (<span class="built_in">byte</span>)BootCommand.Ack)</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">&quot;设备应答失败，烧录中断&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> Task <span class="title">SendHelloAsync</span>()</span> =&gt; Task.CompletedTask;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> Task <span class="title">SendEraseAsync</span>(<span class="params"><span class="built_in">uint</span> size</span>)</span> =&gt; Task.CompletedTask;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> Task <span class="title">SendVerifyAsync</span>(<span class="params"><span class="built_in">uint</span> crc</span>)</span> =&gt; Task.CompletedTask;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> Task <span class="title">SendResetAsync</span>()</span> =&gt; Task.CompletedTask;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>上述 <code>SendHelloAsync</code> 等方法需按实际协议补全帧内容；核心流程为：<strong>连接 → 擦除 → 分包发送 → 校验 → 复位</strong>。</p>
+</blockquote>
+<h4 id="6-程序入口"><a href="#6-程序入口" class="headerlink" title="6. 程序入口"></a>6. 程序入口</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">async</span> Task <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">string</span> ip = args.Length &gt; <span class="number">0</span> ? args[<span class="number">0</span>] : <span class="string">&quot;192.168.1.100&quot;</span>;</span><br><span class="line">        <span class="built_in">int</span> port = args.Length &gt; <span class="number">1</span> ? <span class="built_in">int</span>.Parse(args[<span class="number">1</span>]) : <span class="number">9000</span>;</span><br><span class="line">        <span class="built_in">string</span> firmware = args.Length &gt; <span class="number">2</span> ? args[<span class="number">2</span>] : <span class="string">&quot;app.bin&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> progress = <span class="keyword">new</span> Progress&lt;<span class="built_in">int</span>&gt;(p =&gt; Console.Write(<span class="string">$&quot;\r进度: <span class="subst">&#123;p&#125;</span>%&quot;</span>));</span><br><span class="line">        <span class="keyword">var</span> flasher = <span class="keyword">new</span> FirmwareFlasher();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">await</span> flasher.FlashAsync(ip, port, firmware, progress);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span> (Exception ex)</span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">$&quot;烧录失败: <span class="subst">&#123;ex.Message&#125;</span>&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dotnet run -- 192.168.1.100 9000 app.bin</span><br></pre></td></tr></table></figure>
+
+<h3 id="五、设备端-Bootloader-要点"><a href="#五、设备端-Bootloader-要点" class="headerlink" title="五、设备端 Bootloader 要点"></a>五、设备端 Bootloader 要点</h3><p>设备端通常用 C 语言编写（与芯片 SDK 配套），PC 端用 Csharp。Bootloader 需实现：</p>
+<ol>
+<li><strong>上电判断</strong>：按键&#x2F;GPIO&#x2F;标志位进入升级模式</li>
+<li><strong>TCP 监听</strong>：绑定固定端口，等待 PC 连接</li>
+<li><strong>Flash 操作</strong>：按页擦除、按地址写入</li>
+<li><strong>应答机制</strong>：每收到 DATA 帧校验 CRC 后回 ACK&#x2F;NACK</li>
+<li><strong>跳转 App</strong>：烧录完成后关闭中断，设置栈指针，跳转到应用程序入口</li>
+</ol>
+<p>Bootloader 占用空间要小，常放在 Flash 起始扇区；App 从偏移地址运行，链接脚本需与 PC 端固件地址一致。</p>
+<h3 id="六、硬件与网络配置"><a href="#六、硬件与网络配置" class="headerlink" title="六、硬件与网络配置"></a>六、硬件与网络配置</h3><h4 id="1-典型硬件组合"><a href="#1-典型硬件组合" class="headerlink" title="1. 典型硬件组合"></a>1. 典型硬件组合</h4><table>
+<thead>
+<tr>
+<th>方案</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>MCU + 以太网 PHY</td>
+<td>如 STM32 + LAN8720，Bootloader 内实现 TCP&#x2F;IP 协议栈（lwIP）</td>
+</tr>
+<tr>
+<td>MCU + W5500</td>
+<td>硬件 TCP&#x2F;IP，减轻 MCU 负担</td>
+</tr>
+<tr>
+<td>串口转以太网模块</td>
+<td>模块网口接 PC，串口接目标 MCU，PC 仍用 TCP 连接模块</td>
+</tr>
+<tr>
+<td>带网口的 Linux 板</td>
+<td>可用 Csharp 工具 + SSH&#x2F;脚本配合，或直接 socket 写 MCU</td>
+</tr>
+</tbody></table>
+<h4 id="2-网络设置"><a href="#2-网络设置" class="headerlink" title="2. 网络设置"></a>2. 网络设置</h4><ul>
+<li>PC 与设备处于同一网段，如 PC <code>192.168.1.10</code>，设备 <code>192.168.1.100</code></li>
+<li>先用 <code>ping</code> 确认连通</li>
+<li>确认防火墙未拦截目标端口（如 9000）</li>
+<li>产线环境建议固定 IP，避免 DHCP 变化导致烧录失败</li>
+</ul>
+<h3 id="七、调试与排错"><a href="#七、调试与排错" class="headerlink" title="七、调试与排错"></a>七、调试与排错</h3><h4 id="1-Wireshark-抓包"><a href="#1-Wireshark-抓包" class="headerlink" title="1. Wireshark 抓包"></a>1. Wireshark 抓包</h4><p>过滤条件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tcp.port == 9000 &amp;&amp; ip.addr == 192.168.1.100</span><br></pre></td></tr></table></figure>
+
+<p>可观察：TCP 三次握手是否成功、每包 DATA 是否有 ACK、是否存在重传。</p>
+<h4 id="2-常见问题"><a href="#2-常见问题" class="headerlink" title="2. 常见问题"></a>2. 常见问题</h4><table>
+<thead>
+<tr>
+<th>现象</th>
+<th>可能原因</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>连接超时</td>
+<td>IP&#x2F;端口错误、设备未进 Bootloader</td>
+<td>Ping + 确认监听端口</td>
+</tr>
+<tr>
+<td>写入后无法启动</td>
+<td>链接地址错误、向量表偏移不对</td>
+<td>核对 Flash 布局与 hex&#x2F;bin 起始地址</td>
+</tr>
+<tr>
+<td>CRC 校验失败</td>
+<td>大小端不一致、块长度不对齐</td>
+<td>统一 BigEndian&#x2F;LittleEndian</td>
+</tr>
+<tr>
+<td>中途断开</td>
+<td>包过大、看门狗复位</td>
+<td>缩小 ChunkSize、喂狗</td>
+</tr>
+</tbody></table>
+<h4 id="3-日志建议"><a href="#3-日志建议" class="headerlink" title="3. 日志建议"></a>3. 日志建议</h4><p>Csharp 上位机建议记录：时间戳、序号、偏移、重试次数、每阶段耗时。产线问题可追溯具体哪一台、哪一包出错。</p>
+<h3 id="八、安全与量产建议"><a href="#八、安全与量产建议" class="headerlink" title="八、安全与量产建议"></a>八、安全与量产建议</h3><ul>
+<li><strong>版本校验</strong>：握手阶段比对硬件版本号，防止错刷固件</li>
+<li><strong>数字签名</strong>：Bootloader 验证固件签名后再写入</li>
+<li><strong>断电保护</strong>：双区备份（A&#x2F;B 分区），写入完成并校验通过再切换启动区</li>
+<li><strong>权限控制</strong>：限制仅内网网段可连接烧录端口</li>
+<li><strong>批量脚本</strong>：Csharp 工具配合 CSV 设备列表，循环 IP 批量升级</li>
+</ul>
+<h3 id="九、小结"><a href="#九、小结" class="headerlink" title="九、小结"></a>九、小结</h3><p>通过网线烧录芯片的本质，是 <strong>TCP&#x2F;IP 传输 + Bootloader 写 Flash + PC 上位机工具</strong> 三者配合。Csharp 适合编写 Windows 工控机上的烧录软件：文件读取、Socket 通讯、进度界面、日志记录都很方便。</p>
+<p>学习与实践路径：</p>
+<ol>
+<li>先用 Netcat 或简易 TCP 工具验证设备端口可达</li>
+<li>定义并文档化 Bootloader 协议</li>
+<li>用 Csharp 实现分包发送与 CRC 校验</li>
+<li>配合 Wireshark 联调</li>
+<li>再在 WinForms &#x2F; WPF 中封装为可视化烧录工具</li>
+</ol>
+<p>与《网络通讯协议与抓包工具学习》结合，可以从协议分层到实际上位机开发形成完整链路。</p>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2023/06/29/Java-%E9%9B%86%E5%90%88/' itemprop="url">
-            Read More
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2026-05-31T14:35:41+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：May 31, 2026</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/29/Java开发利器-idea安装过程详解/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="YukiCCC的博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="YukiCCC的博客">
-    <meta itemprop="description" content="">
-  </span>
+          
   
   
   
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Csharp/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Csharp</p></a></div>
+  <span hidden itemprop="keywords">Csharp</span>
+  
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2026/05/30/%E7%BD%91%E7%BA%BF%E7%83%A7%E5%BD%95%E8%8A%AF%E7%89%87%E4%B8%8ECsharp%E4%BC%A0%E8%BE%93%E5%AE%9E%E7%8E%B0/&title=网线烧录芯片与Csharp传输实现 - YukiCCC的博客&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2026/05/30/%E7%BD%91%E7%BA%BF%E7%83%A7%E5%BD%95%E8%8A%AF%E7%89%87%E4%B8%8ECsharp%E4%BC%A0%E8%BE%93%E5%AE%9E%E7%8E%B0/&title=网线烧录芯片与Csharp传输实现 - YukiCCC的博客&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2026/05/30/%E7%BD%91%E7%BA%BF%E7%83%A7%E5%BD%95%E8%8A%AF%E7%89%87%E4%B8%8ECsharp%E4%BC%A0%E8%BE%93%E5%AE%9E%E7%8E%B0/&title=网线烧录芯片与Csharp传输实现 - YukiCCC的博客&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2026/05/30/%E7%BD%91%E7%BB%9C%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E4%B8%8E%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/'>
+          <p class='title'>网络通讯协议与抓包工具学习<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>一、网络通讯基础1. 为什么需要学习协议日常开发中，前后端联调、接口超时、跨域、HTTPS 证书、WebSocket 断连等问题，本质上都和网络通讯有关。理解协议分层和报文结构，再配合抓包工具，...</p>
+        </a>
+      
+    </div>
+  
+  <!-- 文章推荐 -->
+  
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2026/05/30/%E7%BD%91%E7%BA%BF%E7%83%A7%E5%BD%95%E8%8A%AF%E7%89%87%E4%B8%8ECsharp%E4%BC%A0%E8%BE%93%E5%AE%9E%E7%8E%B0/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fas fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/06/29/Java%E5%BC%80%E5%8F%91%E5%88%A9%E5%99%A8-idea%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3/"  itemprop="url">
-        Java开发利器--idea安装过程详解
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        0. IDEA0.1 安装
 
+    <div id="layoutHelper-comments"></div>
 
-
-
-
-0.2 配置破解11. 打开 readme.txt 安装步骤进行破解
+  </article>
 
 
 
 
 
 
-
-JDK
-
-
-字体
-
-编码
-0.3 运行创建项目
-
-
-
-
-创建Java类
-编写&#x2F;运行源代码
-
-0.4 debug
-0.5 卸载
-
-
-
-
-删除安装目录：
-
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-06-29T21:46:51+08:00">2023-06-29</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java/">Java</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Java/" itemprop="url"><span itemprop="name">Java</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/06/29/Java%E5%BC%80%E5%8F%91%E5%88%A9%E5%99%A8-idea%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/25/ES6及之后新特性一览/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="YukiCCC的博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="YukiCCC的博客">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/06/25/ES6%E5%8F%8A%E4%B9%8B%E5%90%8E%E6%96%B0%E7%89%B9%E6%80%A7%E4%B8%80%E8%A7%88/"  itemprop="url">
-        ES6及之后新特性一览
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        let声明变量let 声明变量1.let 不允许重复声明变量  var 可以重复声明2.let 不支持变量的声明提升，var可以3.let声明的变量会被所有代码块（{}内的范围）限制作用范围 var只会受到函数影响4.let 声明的变量不和顶层变量挂钩
-const 声明常量const 声明常量1.const 不可以重复声明2.不支持声明提升3.作用范围受{}影响4.不和最上层对象window...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-06-25T12:40:11+08:00">2023-06-25</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url"><span itemprop="name">前端</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/06/25/ES6%E5%8F%8A%E4%B9%8B%E5%90%8E%E6%96%B0%E7%89%B9%E6%80%A7%E4%B8%80%E8%A7%88/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/12/Javascript-基础知识/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="YukiCCC的博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="YukiCCC的博客">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/06/12/Javascript-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"  itemprop="url">
-        Javascript 基础知识
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        JavaScript 是互联网上最流行的脚本语言，这门语言可用于 HTML 和 web，更可广泛用于服务器、PC、笔记本电脑、平板电脑和智能手机等设备。
-JavaScrip简介JavaScript 是脚本语言JavaScript 是一种轻量级的编程语言。JavaScript 是可插入 HTML 页面的编程代码。JavaScript 插入 HTML 页面后，可由所有的现代浏览器执行。JavaS...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-06-12T13:11:08+08:00">2023-06-12</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url"><span itemprop="name">前端</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/06/12/Javascript-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-          <a class="prev" rel="prev" href="/archives/2023/page/4/">
-            <section class="post prev white-box shadow floatable blur" >
-              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous&nbsp;
-            </section>
-          </a>
-        
-        <p class="current">
-          5 / 5
-        </p>
-        
-      </div>
-    
-  
-
-
-	
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2941,211 +2901,31 @@ JavaScrip简介JavaScript 是脚本语言JavaScript 是一种轻量级的编程�
     
     
       
-<section class="widget blogger desktop mobile ">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://raw.githubusercontent.com/YukiCCC/figure/main/IMG_6998(20230623-135937).JPG'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>YukiCCC</h2>
-        
-        
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:caiyuqixp@gmail.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/YukiCCC"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Csharp/" href="/categories/Csharp/"
-            active-action="action-categoriesCsharp"
-            ><div class='name'>Csharp</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Java/" href="/categories/Java/"
-            active-action="action-categoriesJava"
-            ><div class='name'>Java</div><div class='badge'>(27)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Linux/" href="/categories/Linux/"
-            active-action="action-categoriesLinux"
-            ><div class='name'>Linux</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%89%8D%E7%AB%AF/" href="/categories/%E5%89%8D%E7%AB%AF/"
-            active-action="action-categoriesE5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(10)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"
-            active-action="action-categoriesE58CBAE59D97E993BE"
-            ><div class='name'>区块链</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"
-            active-action="action-categoriesE695B0E68DAEE5BA93"
-            ><div class='name'>数据库</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BD%91%E7%BB%9C/" href="/categories/%E7%BD%91%E7%BB%9C/"
-            active-action="action-categoriesE7BD91E7BB9C"
-            ><div class='name'>网络</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Ajax/" style="font-size: 14px; color: #999">Ajax</a> <a href="/tags/CORS/" style="font-size: 14px; color: #999">CORS</a> <a href="/tags/Csharp/" style="font-size: 16.5px; color: #888">Csharp</a> <a href="/tags/ES6/" style="font-size: 14px; color: #999">ES6</a> <a href="/tags/JDBC/" style="font-size: 14px; color: #999">JDBC</a> <a href="/tags/JS/" style="font-size: 14px; color: #999">JS</a> <a href="/tags/Java/" style="font-size: 24px; color: #555">Java</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/MarkDown/" style="font-size: 14px; color: #999">MarkDown</a> <a href="/tags/Maven/" style="font-size: 14px; color: #999">Maven</a> <a href="/tags/MyBatis/" style="font-size: 14px; color: #999">MyBatis</a> <a href="/tags/Mybatis-plus/" style="font-size: 16.5px; color: #888">Mybatis-plus</a> <a href="/tags/Mysql/" style="font-size: 19px; color: #777">Mysql</a> <a href="/tags/RabbitMQ/" style="font-size: 14px; color: #999">RabbitMQ</a> <a href="/tags/Redis/" style="font-size: 21.5px; color: #666">Redis</a> <a href="/tags/Shiro/" style="font-size: 14px; color: #999">Shiro</a> <a href="/tags/Spring/" style="font-size: 24px; color: #555">Spring</a> <a href="/tags/Tomcat/" style="font-size: 14px; color: #999">Tomcat</a> <a href="/tags/Vue/" style="font-size: 19px; color: #777">Vue</a> <a href="/tags/jQuery/" style="font-size: 14px; color: #999">jQuery</a> <a href="/tags/vue/" style="font-size: 14px; color: #999">vue</a> <a href="/tags/%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%9F%A5/" style="font-size: 14px; color: #999">代码审查</a> <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" style="font-size: 14px; color: #999">区块链</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 14px; color: #999">多线程</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #999">工具</a> <a href="/tags/%E5%BC%80%E5%8F%91/" style="font-size: 14px; color: #999">开发</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 16.5px; color: #888">数据库</a> <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/" style="font-size: 14px; color: #999">知识点</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">算法</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 14px; color: #999">网络</a>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget desktop">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>65 篇</div>
-        </div>
-      
-
-      
-
-
-      
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          <div id="last-update-show">2026-05-31 日</div>
-        </div>
-      
-    </div>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-
-<section class="widget desktop mobile">
-  
-  <header>
-    
-      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/2026/05/30/%E7%BD%91%E7%BA%BF%E7%83%A7%E5%BD%95%E8%8A%AF%E7%89%87%E4%B8%8ECsharp%E4%BC%A0%E8%BE%93%E5%AE%9E%E7%8E%B0/"><div class="item"><time>2026-05-31</time><span>Csharp</span></div><span>网线烧录芯片与Csharp传输实现</span></a></li><li><a class="widget-last" href="/2026/05/30/%E7%BD%91%E7%BB%9C%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E4%B8%8E%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/"><div class="item"><time>2026-05-31</time><span>网络</span></div><span>网络通讯协议与抓包工具学习</span></a></li><li><a class="widget-last" href="/2026/05/30/Csharp%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"><div class="item"><time>2026-05-30</time><span>Csharp</span></div><span>Csharp基础知识</span></a></li><li><a class="widget-last" href="/2025/03/06/Redis%E5%9C%A8spring%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E8%BF%90%E7%94%A8/"><div class="item"><time>2025-07-05</time><span>Java</span></div><span>Redis在spring项目中的运用</span></a></li><li><a class="widget-last" href="/2025/07/04/%E4%B8%8D%E5%90%8C%E4%BB%BB%E5%8A%A1%E7%9A%84%E7%BA%BF%E7%A8%8B%E6%B1%A0%E8%AE%BE%E7%BD%AE/"><div class="item"><time>2025-07-04</time><span>Java</span></div><span>不同任务的线程池设置</span></a></li></ul>
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky">
+
+  
+  
+
+
+<section class="widget toc-wrapper desktop mobile" id="toc-div" >
+  
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+  <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%A6%82%E8%BF%B0"><span class="toc-text">一、概述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8%E7%BD%91%E7%BA%BF%E7%83%A7%E5%BD%95%E8%8A%AF%E7%89%87"><span class="toc-text">1. 为什么用网线烧录芯片</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84"><span class="toc-text">2. 整体架构</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%B8%B8%E8%A7%81%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="toc-text">二、常见实现方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E8%87%AA%E5%AE%9A%E4%B9%89-TCP-%E5%8D%8F%E8%AE%AE%EF%BC%88%E6%9C%AC%E6%96%87%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-text">1. 自定义 TCP 协议（本文重点）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-TFTP-x2F-FTP"><span class="toc-text">2. TFTP &#x2F; FTP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-HTTP-OTA"><span class="toc-text">3. HTTP OTA</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E4%B8%8E-JTAG-%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">4. 与 JTAG 远程调试的区别</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%8D%8F%E8%AE%AE%E8%AE%BE%E8%AE%A1%E7%A4%BA%E4%BE%8B"><span class="toc-text">三、协议设计示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99"><span class="toc-text">1. 设计原则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%91%BD%E4%BB%A4%E5%AE%9A%E4%B9%89"><span class="toc-text">2. 命令定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-DATA-%E5%B8%A7%E7%BB%93%E6%9E%84%EF%BC%88%E7%A4%BA%E4%BE%8B%EF%BC%89"><span class="toc-text">3. DATA 帧结构（示例）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81Csharp-%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%AE%9E%E7%8E%B0"><span class="toc-text">四、Csharp 上位机实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="toc-text">1. 环境准备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%9B%BA%E4%BB%B6%E8%AF%BB%E5%8F%96%E4%B8%8E-CRC-%E8%AE%A1%E7%AE%97"><span class="toc-text">2. 固件读取与 CRC 计算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%8D%8F%E8%AE%AE%E5%B8%A7%E5%B0%81%E8%A3%85"><span class="toc-text">3. 协议帧封装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-TCP-%E8%BF%9E%E6%8E%A5%E4%B8%8E%E5%8F%91%E9%80%81"><span class="toc-text">4. TCP 连接与发送</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E5%AE%8C%E6%95%B4%E7%83%A7%E5%BD%95%E6%B5%81%E7%A8%8B"><span class="toc-text">5. 完整烧录流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E7%A8%8B%E5%BA%8F%E5%85%A5%E5%8F%A3"><span class="toc-text">6. 程序入口</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E8%AE%BE%E5%A4%87%E7%AB%AF-Bootloader-%E8%A6%81%E7%82%B9"><span class="toc-text">五、设备端 Bootloader 要点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E7%A1%AC%E4%BB%B6%E4%B8%8E%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE"><span class="toc-text">六、硬件与网络配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%85%B8%E5%9E%8B%E7%A1%AC%E4%BB%B6%E7%BB%84%E5%90%88"><span class="toc-text">1. 典型硬件组合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE"><span class="toc-text">2. 网络设置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E8%B0%83%E8%AF%95%E4%B8%8E%E6%8E%92%E9%94%99"><span class="toc-text">七、调试与排错</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Wireshark-%E6%8A%93%E5%8C%85"><span class="toc-text">1. Wireshark 抓包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-text">2. 常见问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E6%97%A5%E5%BF%97%E5%BB%BA%E8%AE%AE"><span class="toc-text">3. 日志建议</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E5%AE%89%E5%85%A8%E4%B8%8E%E9%87%8F%E4%BA%A7%E5%BB%BA%E8%AE%AE"><span class="toc-text">八、安全与量产建议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E5%B0%8F%E7%BB%93"><span class="toc-text">九、小结</span></a></li></ol>
+  </div>
+</section>
+
+  
 
 </div>
 
@@ -3153,6 +2933,7 @@ JavaScrip简介JavaScript 是脚本语言JavaScript 是一种轻量级的编程�
   
   <!-- Custom Files side end -->
 </aside>
+
 
 
         </div>
@@ -3863,7 +3644,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YukiCCC的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/archives/2023/","name":"2023"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"YukiCCC的博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YukiCCC的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YukiCCC的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/Csharp/","name":"Csharp"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2026/05/30/网线烧录芯片与Csharp传输实现/","name":"网线烧录芯片与Csharp传输实现"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"YukiCCC的博客","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"YukiCCC的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"网线烧录芯片与Csharp传输实现","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2026/05/30/%E7%BD%91%E7%BA%BF%E7%83%A7%E5%BD%95%E8%8A%AF%E7%89%87%E4%B8%8ECsharp%E4%BC%A0%E8%BE%93%E5%AE%9E%E7%8E%B0/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YukiCCC的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2026/05/30/%E7%BD%91%E7%BA%BF%E7%83%A7%E5%BD%95%E8%8A%AF%E7%89%87%E4%B8%8ECsharp%E4%BC%A0%E8%BE%93%E5%AE%9E%E7%8E%B0/","wordCount":0,"datePublished":"2026-05-30T09:00:00.000Z","dateModified":"2026-05-31T06:35:41.316Z","articleSection":"Csharp","keywords":"Csharp","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
