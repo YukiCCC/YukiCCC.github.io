@@ -2155,7 +2155,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1780761981657),
+    lastupdate: new Date(1780837427135),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2483,6 +2483,62 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <section class="post-list">
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2025/03/04/代码审查sonar报告问题修改/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="YukiCCC的博客">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="YukiCCC的博客">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2025/03/04/%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%9F%A5sonar%E6%8A%A5%E5%91%8A%E9%97%AE%E9%A2%98%E4%BF%AE%E6%94%B9/"  itemprop="url">
+        代码审查sonar报告问题修改
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        项目引入了sonar做代码质量管理，以下为代码审查修改中反馈的相关问题：
+ Make the enclosing method &quot;static&quot; or remove this set.内容：从非静态方法正确更新静态字段很难做到正确，如果有多个类实例和&#x2F;或多个线程在运行，很容易导致错误。 理想情况下，静态字段仅从同步静态方法中更新。解决方法：将静态字段改为非静态。...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2025-03-04T14:17:03+08:00">2025-03-04</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2025/03/04/%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%9F%A5sonar%E6%8A%A5%E5%91%8A%E9%97%AE%E9%A2%98%E4%BF%AE%E6%94%B9/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -3000,67 +3056,6 @@ AOP中注解的含义@Aspect：切面。表示一个横切进业务的一个对�
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/27/等待异步线程池跑完再执行后续代码的方法/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="YukiCCC的博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="YukiCCC的博客">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/08/27/%E7%AD%89%E5%BE%85%E5%BC%82%E6%AD%A5%E7%BA%BF%E7%A8%8B%E6%B1%A0%E8%B7%91%E5%AE%8C%E5%86%8D%E6%89%A7%E8%A1%8C%E5%90%8E%E7%BB%AD%E4%BB%A3%E7%A0%81%E7%9A%84%E6%96%B9%E6%B3%95/"  itemprop="url">
-        等待异步线程池跑完再执行后续代码的方法
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        等待异步线程池跑完再执行后续代码的方法等待异步线程池跑完再执行指定方法的三种方式(condition、CountDownLatch、CyclicBarrier)，最近本人使用的CountDownLatch
-CountDownLatch应用场景
-
-某个线程需要在其他n个线程执行完毕后再向下执行
-多个线程并行执行同一个任务，提高响应速度
-
-1234567891011121314151617181...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-08-27T22:34:04+08:00">2024-08-27</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/08/27/%E7%AD%89%E5%BE%85%E5%BC%82%E6%AD%A5%E7%BA%BF%E7%A8%8B%E6%B1%A0%E8%B7%91%E5%AE%8C%E5%86%8D%E6%89%A7%E8%A1%8C%E5%90%8E%E7%BB%AD%E4%BB%A3%E7%A0%81%E7%9A%84%E6%96%B9%E6%B3%95/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3203,7 +3198,7 @@ CountDownLatch应用场景
           <li><a class="flat-box"
             title="/categories/%E5%89%8D%E7%AB%AF/" href="/categories/%E5%89%8D%E7%AB%AF/"
             active-action="action-categoriesE5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(10)</div></a></li>
+            ><div class='name'>前端</div><div class='badge'>(11)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"
@@ -3243,7 +3238,7 @@ CountDownLatch应用场景
 
 
     <div class='content'>
-      <a href="/tags/Ajax/" style="font-size: 14px; color: #999">Ajax</a> <a href="/tags/CORS/" style="font-size: 14px; color: #999">CORS</a> <a href="/tags/Csharp/" style="font-size: 16.5px; color: #888">Csharp</a> <a href="/tags/ES6/" style="font-size: 14px; color: #999">ES6</a> <a href="/tags/FPGA/" style="font-size: 14px; color: #999">FPGA</a> <a href="/tags/JDBC/" style="font-size: 14px; color: #999">JDBC</a> <a href="/tags/JS/" style="font-size: 14px; color: #999">JS</a> <a href="/tags/Java/" style="font-size: 24px; color: #555">Java</a> <a href="/tags/LED/" style="font-size: 14px; color: #999">LED</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/MCU/" style="font-size: 14px; color: #999">MCU</a> <a href="/tags/MarkDown/" style="font-size: 14px; color: #999">MarkDown</a> <a href="/tags/Maven/" style="font-size: 14px; color: #999">Maven</a> <a href="/tags/MyBatis/" style="font-size: 14px; color: #999">MyBatis</a> <a href="/tags/Mybatis-plus/" style="font-size: 16.5px; color: #888">Mybatis-plus</a> <a href="/tags/Mysql/" style="font-size: 19px; color: #777">Mysql</a> <a href="/tags/RabbitMQ/" style="font-size: 14px; color: #999">RabbitMQ</a> <a href="/tags/Redis/" style="font-size: 21.5px; color: #666">Redis</a> <a href="/tags/Shiro/" style="font-size: 14px; color: #999">Shiro</a> <a href="/tags/Spring/" style="font-size: 24px; color: #555">Spring</a> <a href="/tags/Tomcat/" style="font-size: 14px; color: #999">Tomcat</a> <a href="/tags/Vue/" style="font-size: 19px; color: #777">Vue</a> <a href="/tags/jQuery/" style="font-size: 14px; color: #999">jQuery</a> <a href="/tags/vue/" style="font-size: 14px; color: #999">vue</a> <a href="/tags/%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%9F%A5/" style="font-size: 14px; color: #999">代码审查</a> <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" style="font-size: 14px; color: #999">区块链</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 14px; color: #999">多线程</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #999">工具</a> <a href="/tags/%E5%BC%80%E5%8F%91/" style="font-size: 14px; color: #999">开发</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 16.5px; color: #888">数据库</a> <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/" style="font-size: 14px; color: #999">知识点</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">算法</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 14px; color: #999">网络</a>
+      <a href="/tags/Ajax/" style="font-size: 14px; color: #999">Ajax</a> <a href="/tags/CORS/" style="font-size: 14px; color: #999">CORS</a> <a href="/tags/Csharp/" style="font-size: 16.5px; color: #888">Csharp</a> <a href="/tags/ES6/" style="font-size: 14px; color: #999">ES6</a> <a href="/tags/FPGA/" style="font-size: 14px; color: #999">FPGA</a> <a href="/tags/JDBC/" style="font-size: 14px; color: #999">JDBC</a> <a href="/tags/JS/" style="font-size: 14px; color: #999">JS</a> <a href="/tags/Java/" style="font-size: 24px; color: #555">Java</a> <a href="/tags/LED/" style="font-size: 14px; color: #999">LED</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/MCU/" style="font-size: 14px; color: #999">MCU</a> <a href="/tags/MarkDown/" style="font-size: 14px; color: #999">MarkDown</a> <a href="/tags/Maven/" style="font-size: 14px; color: #999">Maven</a> <a href="/tags/MyBatis/" style="font-size: 14px; color: #999">MyBatis</a> <a href="/tags/Mybatis-plus/" style="font-size: 16.5px; color: #888">Mybatis-plus</a> <a href="/tags/Mysql/" style="font-size: 19px; color: #777">Mysql</a> <a href="/tags/RabbitMQ/" style="font-size: 14px; color: #999">RabbitMQ</a> <a href="/tags/Redis/" style="font-size: 21.5px; color: #666">Redis</a> <a href="/tags/Shiro/" style="font-size: 14px; color: #999">Shiro</a> <a href="/tags/Spring/" style="font-size: 24px; color: #555">Spring</a> <a href="/tags/Tomcat/" style="font-size: 14px; color: #999">Tomcat</a> <a href="/tags/Vue/" style="font-size: 19px; color: #777">Vue</a> <a href="/tags/jQuery/" style="font-size: 14px; color: #999">jQuery</a> <a href="/tags/vue/" style="font-size: 14px; color: #999">vue</a> <a href="/tags/%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%9F%A5/" style="font-size: 14px; color: #999">代码审查</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 14px; color: #999">前端</a> <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" style="font-size: 14px; color: #999">区块链</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 14px; color: #999">多线程</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #999">工具</a> <a href="/tags/%E5%BC%80%E5%8F%91/" style="font-size: 14px; color: #999">开发</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 16.5px; color: #888">数据库</a> <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/" style="font-size: 14px; color: #999">知识点</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">算法</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 14px; color: #999">网络</a>
     </div>
   </section>
 
@@ -3269,7 +3264,7 @@ CountDownLatch应用场景
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>68 篇</div>
+          <div>69 篇</div>
         </div>
       
 
@@ -3308,7 +3303,7 @@ CountDownLatch应用场景
 
 
   <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/2026/06/07/MCU%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/"><div class="item"><time>2026-06-07</time><span>MCU</span></div><span>MCU基本知识</span></a></li><li><a class="widget-last" href="/2026/05/31/FPGA%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/"><div class="item"><time>2026-06-06</time><span>FPGA</span></div><span>FPGA基本知识</span></a></li><li><a class="widget-last" href="/2026/05/30/%E7%BD%91%E7%BB%9C%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E4%B8%8E%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/"><div class="item"><time>2026-06-06</time><span>网络</span></div><span>网络通讯协议与抓包工具学习</span></a></li><li><a class="widget-last" href="/2026/06/01/LED%E6%98%BE%E7%A4%BA%E5%B1%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"><div class="item"><time>2026-06-06</time><span>LED</span></div><span>LED显示屏基础知识</span></a></li><li><a class="widget-last" href="/2026/05/30/%E7%BD%91%E7%BA%BF%E7%83%A7%E5%BD%95%E8%8A%AF%E7%89%87%E4%B8%8ECsharp%E4%BC%A0%E8%BE%93%E5%AE%9E%E7%8E%B0/"><div class="item"><time>2026-05-31</time><span>Csharp</span></div><span>网线烧录芯片与Csharp传输实现</span></a></li></ul>
+    <ul class="list entry navigation"><li><a class="widget-last" href="/2026/06/07/MVVM%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"><div class="item"><time>2026-06-07</time><span>前端</span></div><span>MVVM设计模式</span></a></li><li><a class="widget-last" href="/2026/05/31/FPGA%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/"><div class="item"><time>2026-06-07</time><span>FPGA</span></div><span>FPGA基本知识</span></a></li><li><a class="widget-last" href="/2026/06/01/LED%E6%98%BE%E7%A4%BA%E5%B1%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"><div class="item"><time>2026-06-07</time><span>LED</span></div><span>LED显示屏基础知识</span></a></li><li><a class="widget-last" href="/2026/06/07/MCU%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/"><div class="item"><time>2026-06-07</time><span>MCU</span></div><span>MCU基本知识</span></a></li><li><a class="widget-last" href="/2026/05/30/%E7%BD%91%E7%BB%9C%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E4%B8%8E%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/"><div class="item"><time>2026-06-07</time><span>网络</span></div><span>网络通讯协议与抓包工具学习</span></a></li></ul>
   </div>
 </section>
 
